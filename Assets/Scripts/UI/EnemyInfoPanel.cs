@@ -44,7 +44,7 @@ namespace UI
             }
         }
 
-        public void UpdateEnemyHealth(int newHealth)
+        public void UpdateEnemyHealth(float newHealth)
         {
             enemyHealthText.text = newHealth.ToString();
         }

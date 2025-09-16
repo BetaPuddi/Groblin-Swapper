@@ -10,17 +10,21 @@ namespace Enemies
 {
     public class Enemy : MonoBehaviour
     {
+        public EnemyBaseStats enemyBaseStats;
         public string enemyName;
-        public int currentHealth;
-        public int maxHealth;
+        public float baseMaxHealth;
+        public float baseAttack;
+        public float baseDefense;
+
+        public float bonusMaxHealth;
+        public float bonusAttack;
+        public float bonusDefense;
+
+        public Sprite enemyIcon;
+        public float currentHealth;
+        public float maxHealth;
         public float attackStat;
         public float defenseStat;
-        public Sprite enemyIcon;
-
-        private void Awake()
-        {
-
-        }
 
         private void Start()
         {
@@ -29,6 +33,20 @@ namespace Enemies
                 Reset();
             }
             currentHealth = maxHealth;
+        }
+
+        public void SetBaseStats()
+        {
+            baseMaxHealth = enemyBaseStats.maxHealth;
+            baseAttack = enemyBaseStats.attack;
+            baseDefense = enemyBaseStats.defense;
+        }
+
+        public void UpdateTotalStats()
+        {
+            maxHealth = baseMaxHealth + bonusMaxHealth;
+            attackStat = baseAttack + bonusAttack;
+            defenseStat = baseDefense + bonusDefense;
         }
 
         public void EnemyIntroduction()
