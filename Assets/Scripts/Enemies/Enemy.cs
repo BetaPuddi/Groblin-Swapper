@@ -1,9 +1,7 @@
-using System;
 using Enums;
 using Managers;
 using UI;
 using UnityEngine;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace Enemies
@@ -32,6 +30,8 @@ namespace Enemies
             {
                 Reset();
             }
+            SetBaseStats();
+            UpdateTotalStats();
             currentHealth = maxHealth;
         }
 
@@ -77,7 +77,6 @@ namespace Enemies
             {
                 EnemyDeath();
             }
-
             EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
         }
 
@@ -88,7 +87,6 @@ namespace Enemies
             {
                 currentHealth = maxHealth;
             }
-
             EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
         }
 
@@ -125,19 +123,21 @@ namespace Enemies
 
         public void ChangeDefense(int amount)
         {
-            defenseStat += amount;
+            bonusDefense += amount;
+            UpdateTotalStats();
             EnemyInfoPanel.instance.UpdateEnemyInfo();
         }
 
         public void ChangeAttack(int amount)
         {
-            attackStat += amount;
+            bonusAttack += amount;
+            UpdateTotalStats();
             EnemyInfoPanel.instance.UpdateEnemyInfo();
         }
 
         public void ChangeMaxHealth(int amount)
         {
-            maxHealth += amount;
+            bonusMaxHealth += amount;
             if (currentHealth > maxHealth)
             {
                 maxHealth = currentHealth;
@@ -147,6 +147,7 @@ namespace Enemies
             {
                 EnemyDeath();
             }
+            UpdateTotalStats();
             EnemyInfoPanel.instance.UpdateEnemyInfo();
         }
     }
