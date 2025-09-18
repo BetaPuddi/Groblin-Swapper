@@ -32,11 +32,11 @@ namespace UI
             if (EnemyManager.instance.targetEnemy != null /*&& GameManager.instance._gameState == EGameStates.Combat*/)
             {
                 panel.SetActive(true);
-                enemyNameText.text = EnemyManager.instance.targetEnemy.enemyName;
+                enemyNameText.text = EnemyManager.instance.targetEnemy.characterName;
                 enemyHealthText.text = EnemyManager.instance.targetEnemy.currentHealth.ToString();
                 enemyATKText.text = EnemyManager.instance.targetEnemy.attackStat.ToString();
                 enemyDEFText.text = EnemyManager.instance.targetEnemy.defenseStat.ToString();
-                icon.sprite = EnemyManager.instance.targetEnemy.enemyIcon;
+                icon.sprite = EnemyManager.instance.targetEnemy.characterSprite;
             }
             else
             {

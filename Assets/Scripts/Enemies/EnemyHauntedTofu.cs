@@ -10,7 +10,7 @@ namespace Enemies
         {
             var damageOut = currentHealth * (100 - PlayerManager.instance.player.defenseStat) / 100 * 0.2f;
             PlayerManager.instance.PlayerTakeDamage(damageOut);
-            LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
+            LogManager.instance.InstantiateDamageLog(characterName, PlayerManager.instance.player.characterName, damageOut);
         }
 
         public override void Skill_01()
@@ -18,9 +18,9 @@ namespace Enemies
             var missingHealth = maxHealth - currentHealth;
             var damageOut = missingHealth * (100 - PlayerManager.instance.player.defenseStat) / 100 * 0.1f;
             PlayerManager.instance.PlayerTakeDamage(damageOut);
-            LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
+            LogManager.instance.InstantiateDamageLog(characterName, PlayerManager.instance.player.characterName, damageOut);
             defenseStat -= 2;
-            LogManager.instance.InstantiateTextLog($"{enemyName} loses 2 Defense!");
+            LogManager.instance.InstantiateTextLog($"{characterName} loses 2 Defense!");
             EnemyInfoPanel.instance.UpdateEnemyInfo();
         }
     }

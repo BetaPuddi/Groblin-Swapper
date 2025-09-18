@@ -1,14 +1,13 @@
 using Managers;
-using UnityEngine;
 
-namespace Character
+namespace Player
 {
     public class PlayerCreamyLisa : Player
     {
         public override void Attack()
         {
             var damageOut = currentHealth * 0.2f;
-            LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
+            LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
             LogManager.instance.InstantiateDamageLog("You", "yourself", damageOut);
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
             TakeDamage(damageOut);
@@ -25,7 +24,7 @@ namespace Character
             {
                 damageOut = attackStat * (100 - EnemyManager.instance.targetEnemy.defenseStat) / 100;
             }
-            LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
+            LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
         }
     }

@@ -1,7 +1,7 @@
 using Managers;
 using UnityEngine;
 
-namespace Character
+namespace Player
 {
     public class PlayerGamblambler : Player
     {
@@ -13,12 +13,12 @@ namespace Character
             {
                 case 0:
                     damageOut *= (100 - defenseStat) / 100;
-                    LogManager.instance.InstantiateDamageLog(playerName, "itself", damageOut);
+                    LogManager.instance.InstantiateDamageLog(characterName, "itself", damageOut);
                     TakeDamage(damageOut);
                     break;
                 case 1:
                     damageOut *= (100 - EnemyManager.instance.targetEnemy.defenseStat) / 100;
-                    LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
+                    LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
                     EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
                     break;
             }
@@ -32,12 +32,12 @@ namespace Character
             {
                 case 0:
                     healOut -= attackStat;
-                    LogManager.instance.InstantiateHealLog(playerName, "itself", healOut);
+                    LogManager.instance.InstantiateHealLog(characterName, "itself", healOut);
                     Heal(healOut);
                     break;
                 case 1:
                     healOut -= EnemyManager.instance.targetEnemy.attackStat;
-                    LogManager.instance.InstantiateHealLog(playerName, EnemyManager.instance.targetEnemy.enemyName, healOut);
+                    LogManager.instance.InstantiateHealLog(characterName, EnemyManager.instance.targetEnemy.characterName, healOut);
                     EnemyManager.instance.targetEnemy.Heal(healOut);
                     break;
             }

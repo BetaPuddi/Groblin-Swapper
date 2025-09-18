@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using TMPro;
-using Character;
 using Managers;
 
 namespace UI
@@ -10,7 +9,7 @@ namespace UI
     {
         public static PlayerInfoPanel instance;
 
-        public Player playerRef;
+        public Player.Player playerRef;
         public TextMeshProUGUI playerNameText;
         public TextMeshProUGUI playerHealthText;
         public TextMeshProUGUI playerATKText;
@@ -41,7 +40,7 @@ namespace UI
         public void UpdatePlayerInfo()
         {
             UpdatePlayerRef();
-            playerNameText.text = playerRef.playerName;
+            playerNameText.text = playerRef.characterName;
             playerHealthText.text = playerRef.currentHealth.ToString();
             playerATKText.text = playerRef.attackStat.ToString();
             playerDEFText.text = playerRef.defenseStat.ToString();

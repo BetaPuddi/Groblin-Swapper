@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6fffa4c8166eb147aba5a56bbaa3db8, type: 3}
-  m_Name: TEST_ENEMY_STATS
+  m_Name: TEST_STATS
   m_EditorClassIdentifier: 
   icon: {fileID: 7482667652216324306, guid: d121908d1e929fe41953b378b144a91a, type: 3}
-  enemyName: TEST ENEMY
+  characterName: TEST
   maxHealth: 200
   attack: 20
   defense: 20

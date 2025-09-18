@@ -1,7 +1,7 @@
 using Managers;
 using UnityEngine;
 
-namespace Character
+namespace Player
 {
     public class PlayerGroblin : Player
     {
@@ -9,7 +9,7 @@ namespace Character
         {
             print("Groblin attack!");
             var damageOut = attackStat - Random.Range(-3, 4);
-            LogManager.instance.InstantiateDamageLog(playerName, EnemyManager.instance.targetEnemy.enemyName, damageOut);
+            LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
         }
 
@@ -17,7 +17,7 @@ namespace Character
         {
             print("Groblin utility skill");
             var healOut = defenseStat - Random.Range(-3, 4);
-            LogManager.instance.InstantiateHealLog(playerName, "itself", healOut);
+            LogManager.instance.InstantiateHealLog(characterName, "itself", healOut);
             PlayerManager.instance.PlayerHeal(healOut);
         }
 

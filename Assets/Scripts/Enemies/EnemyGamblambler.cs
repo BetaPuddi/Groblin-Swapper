@@ -16,13 +16,13 @@ namespace Enemies
                     damageOut *= (100 - defenseStat) / 100;
                     print(damageOut);
                     TakeDamage(damageOut);
-                    LogManager.instance.InstantiateDamageLog(enemyName, "itself", damageOut);
+                    LogManager.instance.InstantiateDamageLog(characterName, "itself", damageOut);
                     break;
                 case 1:
                     damageOut *= (100 - PlayerManager.instance.player.defenseStat) / 100;
                     print(damageOut);
                     PlayerManager.instance.PlayerTakeDamage(damageOut);
-                    LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
+                    LogManager.instance.InstantiateDamageLog(characterName, PlayerManager.instance.player.characterName, damageOut);
                     break;
             }
         }
@@ -36,12 +36,12 @@ namespace Enemies
                 case 0:
                     healOut -= attackStat;
                     Heal(healOut);
-                    LogManager.instance.InstantiateHealLog(enemyName, "itself", healOut);
+                    LogManager.instance.InstantiateHealLog(characterName, "itself", healOut);
                     break;
                 case 1:
                     healOut -= PlayerManager.instance.player.attackStat;
                     PlayerManager.instance.PlayerHeal(healOut);
-                    LogManager.instance.InstantiateHealLog(enemyName, PlayerManager.instance.player.playerName, healOut);
+                    LogManager.instance.InstantiateHealLog(characterName, PlayerManager.instance.player.characterName, healOut);
                     break;
             }
         }
