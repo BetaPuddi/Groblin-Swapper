@@ -41,7 +41,7 @@ namespace Managers
                 case EGameStates.GameOver:
                     EnemyManager.instance.targetEnemy.Reset();
                     PlayerManager.instance.InitialisePlayer();
-                    PlayerManager.instance.player.Reset();
+                    PlayerManager.instance.playerCharacter.Reset();
                     MenuManager.instance.ToggleGameOverMenu();
                     break;
                 case EGameStates.MainMenu:

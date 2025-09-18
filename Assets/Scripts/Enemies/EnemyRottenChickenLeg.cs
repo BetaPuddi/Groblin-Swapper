@@ -9,7 +9,7 @@ namespace Enemies
         {
             var damageOut = attackStat - Random.Range(3, 9);
             PlayerManager.instance.PlayerTakeDamage(damageOut);
-            LogManager.instance.InstantiateDamageLog(characterName, PlayerManager.instance.player.characterName, damageOut);
+            LogManager.instance.InstantiateDamageLog(characterName, PlayerManager.instance.playerCharacter.characterName, damageOut);
         }
 
         public override void Skill_01()

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PlayerRottenChickenLeg : Player
+    public class PlayerRottenChickenLeg : PlayerCharacter
     {
         public override void Attack()
         {

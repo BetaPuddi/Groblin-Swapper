@@ -7,8 +7,8 @@ namespace Items
     {
         public override void UseItem()
         {
-            var currentHealth = PlayerManager.instance.player.currentHealth;
-            var maxHealth = PlayerManager.instance.player.maxHealth;
+            var currentHealth = PlayerManager.instance.playerCharacter.currentHealth;
+            var maxHealth = PlayerManager.instance.playerCharacter.maxHealth;
             PlayerManager.instance.PlayerHeal(maxHealth - currentHealth);
         }
     }

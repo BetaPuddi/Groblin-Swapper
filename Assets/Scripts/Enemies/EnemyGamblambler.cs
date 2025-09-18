@@ -7,7 +7,7 @@ namespace Enemies
     {
         public override void Attack()
         {
-            float damageOut = attackStat + PlayerManager.instance.player.attackStat;
+            float damageOut = attackStat + PlayerManager.instance.playerCharacter.attackStat;
             var targetRoll = Random.Range(0, 2);
             switch (targetRoll)
             {
@@ -19,17 +19,17 @@ namespace Enemies
                     LogManager.instance.InstantiateDamageLog(characterName, "itself", damageOut);
                     break;
                 case 1:
-                    damageOut *= (100 - PlayerManager.instance.player.defenseStat) / 100;
+                    damageOut *= (100 - PlayerManager.instance.playerCharacter.defenseStat) / 100;
                     print(damageOut);
                     PlayerManager.instance.PlayerTakeDamage(damageOut);
-                    LogManager.instance.InstantiateDamageLog(characterName, PlayerManager.instance.player.characterName, damageOut);
+                    LogManager.instance.InstantiateDamageLog(characterName, PlayerManager.instance.playerCharacter.characterName, damageOut);
                     break;
             }
         }
 
         public override void Skill_01()
         {
-            var healOut = defenseStat + PlayerManager.instance.player.defenseStat;
+            var healOut = defenseStat + PlayerManager.instance.playerCharacter.defenseStat;
             var targetRoll = Random.Range(0, 2);
             switch (targetRoll)
             {
@@ -39,9 +39,9 @@ namespace Enemies
                     LogManager.instance.InstantiateHealLog(characterName, "itself", healOut);
                     break;
                 case 1:
-                    healOut -= PlayerManager.instance.player.attackStat;
+                    healOut -= PlayerManager.instance.playerCharacter.attackStat;
                     PlayerManager.instance.PlayerHeal(healOut);
-                    LogManager.instance.InstantiateHealLog(characterName, PlayerManager.instance.player.characterName, healOut);
+                    LogManager.instance.InstantiateHealLog(characterName, PlayerManager.instance.playerCharacter.characterName, healOut);
                     break;
             }
         }

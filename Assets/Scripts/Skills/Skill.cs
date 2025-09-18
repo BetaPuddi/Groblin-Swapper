@@ -2,18 +2,13 @@ using UnityEngine;
 
 namespace Skills
 {
-    public class Skill : MonoBehaviour
+    public abstract class Skill : MonoBehaviour
     {
         public string skillName;
+        public GameObject selfTarget;
+        public GameObject opponentTarget;
 
-        public virtual void UseSkill();
+        public abstract void UseSkill();
 
-        public string GetUser()
-        {
-            if ()
-            {
-
-            }
-        }
     }
 }

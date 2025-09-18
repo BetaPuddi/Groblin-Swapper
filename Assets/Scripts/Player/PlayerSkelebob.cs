@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PlayerSkelebob : Player
+    public class PlayerSkelebob : PlayerCharacter
     {
         public override void Attack()
         {

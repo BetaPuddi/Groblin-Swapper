@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PlayerGroblin : Player
+    public class PlayerGroblin : PlayerCharacter
     {
         public override void Attack()
         {

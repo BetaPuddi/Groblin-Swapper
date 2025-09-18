@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PlayerImpCat : Player
+    public class PlayerImpCat : PlayerCharacter
     {
         public override void Attack()
         {

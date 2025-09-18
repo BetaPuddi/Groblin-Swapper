@@ -3,7 +3,7 @@ using UI;
 
 namespace Player
 {
-    public class PlayerHauntedTofu : Player
+    public class PlayerHauntedTofu : PlayerCharacter
     {
         public override void Attack()
         {

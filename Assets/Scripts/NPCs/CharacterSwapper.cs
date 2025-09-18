@@ -11,7 +11,7 @@ namespace NPCs
         {
             if (GameManager.instance._gameState == EGameStates.NPC)
             {
-                var player = thingToSwap.GetComponent<Player.Player>();
+                var player = thingToSwap.GetComponent<Player.PlayerCharacter>();
                 PlayerManager.instance.SwapPlayer(player);
                 GameManager.instance._gameState = EGameStates.Advance;
                 var text = "You accept the swap.";
@@ -38,7 +38,7 @@ namespace NPCs
         public override void Introduction()
         {
             var text =
-                $"{npcName} appears and offers to swap your form with {thingToSwap.GetComponent<Player.Player>().characterName}!";
+                $"{npcName} appears and offers to swap your form with {thingToSwap.GetComponent<Player.PlayerCharacter>().characterName}!";
             LogManager.instance.InstantiateTextLog(text);
         }
     }

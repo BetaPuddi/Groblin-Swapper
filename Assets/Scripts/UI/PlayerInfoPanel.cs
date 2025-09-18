@@ -9,7 +9,7 @@ namespace UI
     {
         public static PlayerInfoPanel instance;
 
-        public Player.Player playerRef;
+        public Player.PlayerCharacter playerCharacterRef;
         public TextMeshProUGUI playerNameText;
         public TextMeshProUGUI playerHealthText;
         public TextMeshProUGUI playerATKText;
@@ -34,17 +34,17 @@ namespace UI
 
         public void UpdatePlayerRef()
         {
-            playerRef = PlayerManager.instance.player;
+            playerCharacterRef = PlayerManager.instance.playerCharacter;
         }
 
         public void UpdatePlayerInfo()
         {
             UpdatePlayerRef();
-            playerNameText.text = playerRef.characterName;
-            playerHealthText.text = playerRef.currentHealth.ToString();
-            playerATKText.text = playerRef.attackStat.ToString();
-            playerDEFText.text = playerRef.defenseStat.ToString();
-            playerItemText.text = playerRef.itemUses.ToString();
+            playerNameText.text = playerCharacterRef.characterName;
+            playerHealthText.text = playerCharacterRef.currentHealth.ToString();
+            playerATKText.text = playerCharacterRef.attackStat.ToString();
+            playerDEFText.text = playerCharacterRef.defenseStat.ToString();
+            playerItemText.text = playerCharacterRef.itemUses.ToString();
         }
 
         public void SetPlayerStats()

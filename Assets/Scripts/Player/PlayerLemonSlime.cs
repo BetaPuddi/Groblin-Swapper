@@ -2,7 +2,7 @@ using Managers;
 
 namespace Player
 {
-    public class PlayerLemonSlime : Player
+    public class PlayerLemonSlime : PlayerCharacter
     {
         public override void Attack()
         {

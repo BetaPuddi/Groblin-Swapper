@@ -2,7 +2,7 @@ using Managers;
 
 namespace Player
 {
-    public class PlayerCreamyLisa : Player
+    public class PlayerCreamyLisa : PlayerCharacter
     {
         public override void Attack()
         {

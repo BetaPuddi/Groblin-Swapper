@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class Player : CharacterBase
+    public class PlayerCharacter : CharacterBase
     {
         public virtual void Attack()
         {
