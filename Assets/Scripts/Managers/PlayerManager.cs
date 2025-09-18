@@ -1,5 +1,4 @@
 using System;
-using Character;
 using Enums;
 using Items;
 using UI;
@@ -11,8 +10,8 @@ namespace Managers
     {
         public static PlayerManager instance;
 
-        public Player player;
-        public Player defaultPlayer;
+        public Player.Player player;
+        public Player.Player defaultPlayer;
         public Item currentItem;
 
         public delegate void PlayerAttack();
@@ -44,7 +43,7 @@ namespace Managers
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
-        public void SwapPlayer(Player newPlayer)
+        public void SwapPlayer(Player.Player newPlayer)
         {
             if (GameManager.instance._gameState == EGameStates.NPC)
             {

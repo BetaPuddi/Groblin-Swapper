@@ -1,30 +1,12 @@
-using System;
-using Enums;
+using Character;
 using Managers;
 using UI;
 using UnityEngine;
 
-namespace Character
+namespace Player
 {
-    public class Player : MonoBehaviour
+    public class Player : CharacterBase
     {
-        public string playerName;
-        public int currentHealth;
-        public int maxHealth;
-        public float attackStat;
-        public float defenseStat;
-        public int itemUses;
-
-        private void Awake()
-        {
-            currentHealth = maxHealth;
-        }
-
-        private void Start()
-        {
-                Reset();
-        }
-
         public virtual void Attack()
         {
             print("Player attack");
@@ -69,7 +51,7 @@ namespace Character
             Reset();
         }
 
-        public void Reset()
+        public override void Reset()
         {
             currentHealth = maxHealth;
             PlayerInfoPanel.instance.UpdatePlayerInfo();

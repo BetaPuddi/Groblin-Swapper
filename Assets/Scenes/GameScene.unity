@@ -2013,7 +2013,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4597f11bcfbc4a49ac9034f7362eefff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Creamy Lisa
+  characterBase: {fileID: 11400000, guid: f584d16d952155246961e041b9e83554, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
+  baseMaxHealth: 0
+  baseAttack: 0
+  baseDefense: 0
+  bonusMaxHealth: 0
+  bonusAttack: 0
+  bonusDefense: 0
   currentHealth: 0
   maxHealth: 350
   attackStat: 15
@@ -2220,7 +2228,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9581c52cda0f4046818b2a6e6770e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Player
+  characterBase: {fileID: 11400000, guid: 53a6666986ea3a44e9fa9ea893c7150e, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
+  baseMaxHealth: 0
+  baseAttack: 0
+  baseDefense: 0
+  bonusMaxHealth: 0
+  bonusAttack: 0
+  bonusDefense: 0
   currentHealth: 0
   maxHealth: 0
   attackStat: 0
@@ -3222,7 +3238,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a78970a84b5409fa9d7732b1f582aaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Skelebob
+  characterBase: {fileID: 11400000, guid: 7edc8a1e6cae12c48afc8df9a0b09e63, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
+  baseMaxHealth: 0
+  baseAttack: 0
+  baseDefense: 0
+  bonusMaxHealth: 0
+  bonusAttack: 0
+  bonusDefense: 0
   currentHealth: 0
   maxHealth: 250
   attackStat: 16
@@ -3890,19 +3914,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2915a0b4f2a48e4914db6584720de98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBaseStats: {fileID: 11400000, guid: 1c6d32a2579dd9f46848e252948d7c41, type: 2}
-  enemyName: Gamblambler
+  characterBase: {fileID: 11400000, guid: 1c6d32a2579dd9f46848e252948d7c41, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
   baseMaxHealth: 0
   baseAttack: 0
   baseDefense: 0
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  enemyIcon: {fileID: 21300000, guid: e3040541947130c4fba4b0ad98c4ab71, type: 3}
   currentHealth: 0
   maxHealth: 388
   attackStat: 17
   defenseStat: 17
+  itemUses: 0
 --- !u!1 &362698647
 GameObject:
   m_ObjectHideFlags: 0
@@ -4899,19 +4924,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9db293434b284c744b8a8993e89905d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBaseStats: {fileID: 11400000, guid: a3203159f1a96d040a6be7bf6b846f0e, type: 2}
-  enemyName: Bat
+  characterBase: {fileID: 11400000, guid: a3203159f1a96d040a6be7bf6b846f0e, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
   baseMaxHealth: 0
   baseAttack: 0
   baseDefense: 0
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  enemyIcon: {fileID: 21300000, guid: bb2b0d53ad2367f41950f14c0bdfb277, type: 3}
   currentHealth: 18
   maxHealth: 180
   attackStat: 15
   defenseStat: 6
+  itemUses: 0
 --- !u!1 &443641887
 GameObject:
   m_ObjectHideFlags: 0
@@ -5894,7 +5920,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006d0f2d185542e3976cc613d9179699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Haunted Tofu
+  characterBase: {fileID: 11400000, guid: 7b3ff83e6ef4a7a409beeeccee73ed86, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
+  baseMaxHealth: 0
+  baseAttack: 0
+  baseDefense: 0
+  bonusMaxHealth: 0
+  bonusAttack: 0
+  bonusDefense: 0
   currentHealth: 0
   maxHealth: 300
   attackStat: 6
@@ -5944,7 +5978,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b63ba565a03241b99f770931cbc70821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Groblin
+  characterBase: {fileID: 11400000, guid: 2259d69419aa6984abfd300304cd4cdc, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
+  baseMaxHealth: 0
+  baseAttack: 0
+  baseDefense: 0
+  bonusMaxHealth: 0
+  bonusAttack: 0
+  bonusDefense: 0
   currentHealth: 30
   maxHealth: 250
   attackStat: 18
@@ -7191,19 +7233,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089d664fbe0041649023e47155a7fcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBaseStats: {fileID: 11400000, guid: 5f28eda51106e2f4e8827a6e50a28983, type: 2}
-  enemyName: Lemon Slime
+  characterBase: {fileID: 11400000, guid: 5f28eda51106e2f4e8827a6e50a28983, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
   baseMaxHealth: 0
   baseAttack: 0
   baseDefense: 0
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  enemyIcon: {fileID: 21300000, guid: e263d621ac66bd642ad61a555a190540, type: 3}
   currentHealth: 15
   maxHealth: 50
   attackStat: 2
   defenseStat: 20
+  itemUses: 0
 --- !u!1 &696553488
 GameObject:
   m_ObjectHideFlags: 0
@@ -8253,19 +8296,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb096b2908b44515b83272a371483f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBaseStats: {fileID: 11400000, guid: 7b3ff83e6ef4a7a409beeeccee73ed86, type: 2}
-  enemyName: Haunted Tofu
+  characterBase: {fileID: 11400000, guid: 7b3ff83e6ef4a7a409beeeccee73ed86, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
   baseMaxHealth: 0
   baseAttack: 0
   baseDefense: 0
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  enemyIcon: {fileID: 21300000, guid: d6006dd9fe34e444f8bcc7b322958664, type: 3}
   currentHealth: 40
   maxHealth: 300
   attackStat: 6
   defenseStat: 20
+  itemUses: 0
 --- !u!1 &773487508
 GameObject:
   m_ObjectHideFlags: 0
@@ -8310,7 +8354,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf980b868924ed2852bb0f5324eacbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Rotten Chicken Leg
+  characterBase: {fileID: 11400000, guid: 6b9e06c07bfd52544a82e72998c1ebd7, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
+  baseMaxHealth: 0
+  baseAttack: 0
+  baseDefense: 0
+  bonusMaxHealth: 0
+  bonusAttack: 0
+  bonusDefense: 0
   currentHealth: 0
   maxHealth: 75
   attackStat: 5
@@ -10742,19 +10794,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7543b886d724269934fa724ba5a439c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBaseStats: {fileID: 11400000, guid: 42bd3c0fc5f44e047bf29cac6410b507, type: 2}
-  enemyName: An imp and also a cat
+  characterBase: {fileID: 11400000, guid: 42bd3c0fc5f44e047bf29cac6410b507, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
   baseMaxHealth: 0
   baseAttack: 0
   baseDefense: 0
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  enemyIcon: {fileID: 21300000, guid: e247422111c39ce4e8ffc6c03f81cd8e, type: 3}
   currentHealth: 36
   maxHealth: 320
   attackStat: 12
   defenseStat: 8
+  itemUses: 0
 --- !u!1 &895030091
 GameObject:
   m_ObjectHideFlags: 0
@@ -11369,19 +11422,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb9948f3ed64e4090b411a5f1118f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBaseStats: {fileID: 11400000, guid: 7edc8a1e6cae12c48afc8df9a0b09e63, type: 2}
-  enemyName: Skelebob
+  characterBase: {fileID: 11400000, guid: 7edc8a1e6cae12c48afc8df9a0b09e63, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
   baseMaxHealth: 0
   baseAttack: 0
   baseDefense: 0
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  enemyIcon: {fileID: 21300000, guid: 0a400113755b5bb44b745c9c6d3b1902, type: 3}
   currentHealth: 30
   maxHealth: 250
   attackStat: 16
   defenseStat: 12
+  itemUses: 0
 --- !u!1 &934135869
 GameObject:
   m_ObjectHideFlags: 0
@@ -12565,19 +12619,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1c5a13b9714735a81edf80fe0b9fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBaseStats: {fileID: 11400000, guid: f584d16d952155246961e041b9e83554, type: 2}
-  enemyName: Creamy Lisa
+  characterBase: {fileID: 11400000, guid: f584d16d952155246961e041b9e83554, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
   baseMaxHealth: 0
   baseAttack: 0
   baseDefense: 0
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  enemyIcon: {fileID: 21300000, guid: 776f2974b77074a48be237693f9ad920, type: 3}
   currentHealth: 0
   maxHealth: 350
   attackStat: 15
   defenseStat: 20
+  itemUses: 0
 --- !u!1 &1036790088
 GameObject:
   m_ObjectHideFlags: 0
@@ -14550,7 +14605,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83fb6a0c31df41d1933d131b17e72d47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Imp and also a Cat
+  characterBase: {fileID: 11400000, guid: 42bd3c0fc5f44e047bf29cac6410b507, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
+  baseMaxHealth: 0
+  baseAttack: 0
+  baseDefense: 0
+  bonusMaxHealth: 0
+  bonusAttack: 0
+  bonusDefense: 0
   currentHealth: 0
   maxHealth: 320
   attackStat: 12
@@ -17932,7 +17995,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 640c182c46d1456a9869eda2ef7754d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Lemon Slime
+  characterBase: {fileID: 11400000, guid: 5f28eda51106e2f4e8827a6e50a28983, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
+  baseMaxHealth: 0
+  baseAttack: 0
+  baseDefense: 0
+  bonusMaxHealth: 0
+  bonusAttack: 0
+  bonusDefense: 0
   currentHealth: 0
   maxHealth: 50
   attackStat: 2
@@ -18312,19 +18383,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37cee531a0bb4825b626aa6b8636c12e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBaseStats: {fileID: 11400000, guid: 6b9e06c07bfd52544a82e72998c1ebd7, type: 2}
-  enemyName: Rotten Chicken Leg
+  characterBase: {fileID: 11400000, guid: 6b9e06c07bfd52544a82e72998c1ebd7, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
   baseMaxHealth: 0
   baseAttack: 0
   baseDefense: 0
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  enemyIcon: {fileID: 21300000, guid: 24a86de5110db4449a21666f2ef786e6, type: 3}
   currentHealth: 0
   maxHealth: 75
   attackStat: 5
   defenseStat: 10
+  itemUses: 0
 --- !u!1 &1601774584
 GameObject:
   m_ObjectHideFlags: 0
@@ -19431,7 +19503,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318bd321dd2e4157bf45251dfaec6868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Batface
+  characterBase: {fileID: 11400000, guid: a3203159f1a96d040a6be7bf6b846f0e, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
+  baseMaxHealth: 0
+  baseAttack: 0
+  baseDefense: 0
+  bonusMaxHealth: 0
+  bonusAttack: 0
+  bonusDefense: 0
   currentHealth: 0
   maxHealth: 180
   attackStat: 15
@@ -21100,7 +21180,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6f5cb15eb74a43a2f898af7830796b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Gamblambler
+  characterBase: {fileID: 11400000, guid: 1c6d32a2579dd9f46848e252948d7c41, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
+  baseMaxHealth: 0
+  baseAttack: 0
+  baseDefense: 0
+  bonusMaxHealth: 0
+  bonusAttack: 0
+  bonusDefense: 0
   currentHealth: 0
   maxHealth: 388
   attackStat: 17

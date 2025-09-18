@@ -10,12 +10,12 @@ namespace Enemies
         {
             var damageOut = (attackStat + Random.Range(-3, 3)) * (100 - PlayerManager.instance.player.defenseStat) / 100;
             PlayerManager.instance.PlayerTakeDamage(damageOut);
-            LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
+            LogManager.instance.InstantiateDamageLog(characterName, PlayerManager.instance.player.characterName, damageOut);
             var atkStat = attackStat;
             var defStat = defenseStat;
             attackStat = defStat;
             defenseStat = atkStat;
-            LogManager.instance.InstantiateTextLog($"{enemyName} swapped their stats!");
+            LogManager.instance.InstantiateTextLog($"{characterName} swapped their stats!");
             EnemyInfoPanel.instance.UpdateEnemyInfo();
         }
 
@@ -23,12 +23,12 @@ namespace Enemies
         {
             var damageOut = (defenseStat + Random.Range(-3, 3)) * (100 - PlayerManager.instance.player.attackStat) / 100;
             PlayerManager.instance.PlayerTakeDamage(damageOut);
-            LogManager.instance.InstantiateDamageLog(enemyName, PlayerManager.instance.player.playerName, damageOut);
+            LogManager.instance.InstantiateDamageLog(characterName, PlayerManager.instance.player.characterName, damageOut);
             var atkStat = attackStat;
             var defStat = defenseStat;
             defenseStat = atkStat;
             attackStat = defStat;
-            LogManager.instance.InstantiateTextLog($"{enemyName} swapped their stats!");
+            LogManager.instance.InstantiateTextLog($"{characterName} swapped their stats!");
             EnemyInfoPanel.instance.UpdateEnemyInfo();
         }
     }
