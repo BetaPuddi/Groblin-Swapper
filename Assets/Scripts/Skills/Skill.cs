@@ -1,19 +1,21 @@
+using System;
+using Character;
 using UnityEngine;
 
 namespace Skills
 {
-    public class Skill : MonoBehaviour
+    public abstract class Skill : MonoBehaviour
     {
         public string skillName;
+        public CharacterBase selfTarget;
+        public CharacterBase opponentTarget;
 
-        public virtual void UseSkill();
+        public abstract void UseSkill();
 
-        public string GetUser()
+        public virtual void SetTarget(CharacterBase self, CharacterBase opponent)
         {
-            if ()
-            {
-
-            }
+            selfTarget = self;
+            opponentTarget = opponent;
         }
     }
 }

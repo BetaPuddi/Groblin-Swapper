@@ -1,3 +1,4 @@
+using Character;
 using Enums;
 using Managers;
 using UI;
@@ -6,52 +7,11 @@ using Random = UnityEngine.Random;
 
 namespace Enemies
 {
-    public class Enemy : MonoBehaviour
+    public class Enemy : CharacterBase
     {
-        public EnemyBaseStats enemyBaseStats;
-        public string enemyName;
-        public float baseMaxHealth;
-        public float baseAttack;
-        public float baseDefense;
-
-        public float bonusMaxHealth;
-        public float bonusAttack;
-        public float bonusDefense;
-
-        public Sprite enemyIcon;
-        public float currentHealth;
-        public float maxHealth;
-        public float attackStat;
-        public float defenseStat;
-
-        private void Start()
-        {
-            if (GameManager.instance._gameState != EGameStates.MainMenu)
-            {
-                Reset();
-            }
-            SetBaseStats();
-            UpdateTotalStats();
-            currentHealth = maxHealth;
-        }
-
-        public void SetBaseStats()
-        {
-            baseMaxHealth = enemyBaseStats.maxHealth;
-            baseAttack = enemyBaseStats.attack;
-            baseDefense = enemyBaseStats.defense;
-        }
-
-        public void UpdateTotalStats()
-        {
-            maxHealth = baseMaxHealth + bonusMaxHealth;
-            attackStat = baseAttack + bonusAttack;
-            defenseStat = baseDefense + bonusDefense;
-        }
-
         public void EnemyIntroduction()
         {
-            LogManager.instance.InstantiateTextLog($"Enemy {enemyName} appears!");
+            LogManager.instance.InstantiateTextLog($"Enemy {characterName} appears!");
         }
 
         public virtual void Attack()
@@ -75,9 +35,17 @@ namespace Enemies
             currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage, 0, Mathf.Infinity));
             if (currentHealth <= 0)
             {
-                EnemyDeath();
+                Death();
             }
             EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
+        }
+
+        public override void Death()
+        {
+            print("Enemy dead");
+            Reset();
+            LogManager.instance.InstantiateTextLog($"{characterName} is defeated!");
+            GameManager.instance.UpdateGameState(3);
         }
 
         public virtual void Heal(float heal)
@@ -90,18 +58,10 @@ namespace Enemies
             EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
         }
 
-        public void Reset()
+        public override void Reset()
         {
             currentHealth = maxHealth;
             EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
-        }
-
-        public void EnemyDeath()
-        {
-            print("Enemy dead");
-            Reset();
-            LogManager.instance.InstantiateTextLog($"{enemyName} is defeated!");
-            GameManager.instance.UpdateGameState(3);
         }
 
         public virtual void EnemyTakeTurn()
@@ -145,7 +105,7 @@ namespace Enemies
 
             if (currentHealth <= 0)
             {
-                EnemyDeath();
+                Death();
             }
             UpdateTotalStats();
             EnemyInfoPanel.instance.UpdateEnemyInfo();

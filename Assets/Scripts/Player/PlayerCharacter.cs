@@ -1,30 +1,12 @@
-using System;
-using Enums;
+using Character;
 using Managers;
 using UI;
 using UnityEngine;
 
-namespace Character
+namespace Player
 {
-    public class Player : MonoBehaviour
+    public class PlayerCharacter : CharacterBase
     {
-        public string playerName;
-        public int currentHealth;
-        public int maxHealth;
-        public float attackStat;
-        public float defenseStat;
-        public int itemUses;
-
-        private void Awake()
-        {
-            currentHealth = maxHealth;
-        }
-
-        private void Start()
-        {
-                Reset();
-        }
-
         public virtual void Attack()
         {
             print("Player attack");
@@ -45,10 +27,17 @@ namespace Character
             currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage, 0, Mathf.Infinity));
             if (currentHealth <= 0)
             {
-                GameOver();
+                Death();
             }
 
             PlayerInfoPanel.instance.UpdatePlayerInfo();
+        }
+
+        public override void Death()
+        {
+            print("Player dead");
+            GameManager.instance.UpdateGameState(4);
+            Reset();
         }
 
         public virtual void Heal(float heal)
@@ -62,14 +51,7 @@ namespace Character
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
-        public void GameOver()
-        {
-            print("Player dead");
-            GameManager.instance.UpdateGameState(4);
-            Reset();
-        }
-
-        public void Reset()
+        public override void Reset()
         {
             currentHealth = maxHealth;
             PlayerInfoPanel.instance.UpdatePlayerInfo();

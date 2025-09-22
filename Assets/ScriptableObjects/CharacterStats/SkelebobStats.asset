@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6fffa4c8166eb147aba5a56bbaa3db8, type: 3}
   m_Name: SkelebobStats
   m_EditorClassIdentifier: 
-  enemyName: Skelebob
+  icon: {fileID: 21300000, guid: 0a400113755b5bb44b745c9c6d3b1902, type: 3}
+  characterName: Skelebob
   maxHealth: 250
   attack: 16
   defense: 12
