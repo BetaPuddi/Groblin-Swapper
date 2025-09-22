@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using TMPro;
 using Managers;
+using Player;
 
 namespace UI
 {
@@ -9,7 +10,7 @@ namespace UI
     {
         public static PlayerInfoPanel instance;
 
-        public Player.PlayerCharacter playerCharacterRef;
+        public PlayerCharacter playerCharacterRef;
         public TextMeshProUGUI playerNameText;
         public TextMeshProUGUI playerHealthText;
         public TextMeshProUGUI playerATKText;

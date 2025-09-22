@@ -35,9 +35,17 @@ namespace Enemies
             currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage, 0, Mathf.Infinity));
             if (currentHealth <= 0)
             {
-                EnemyDeath();
+                Death();
             }
             EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
+        }
+
+        public override void Death()
+        {
+            print("Enemy dead");
+            Reset();
+            LogManager.instance.InstantiateTextLog($"{characterName} is defeated!");
+            GameManager.instance.UpdateGameState(3);
         }
 
         public virtual void Heal(float heal)
@@ -54,14 +62,6 @@ namespace Enemies
         {
             currentHealth = maxHealth;
             EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
-        }
-
-        public void EnemyDeath()
-        {
-            print("Enemy dead");
-            Reset();
-            LogManager.instance.InstantiateTextLog($"{characterName} is defeated!");
-            GameManager.instance.UpdateGameState(3);
         }
 
         public virtual void EnemyTakeTurn()
@@ -105,7 +105,7 @@ namespace Enemies
 
             if (currentHealth <= 0)
             {
-                EnemyDeath();
+                Death();
             }
             UpdateTotalStats();
             EnemyInfoPanel.instance.UpdateEnemyInfo();

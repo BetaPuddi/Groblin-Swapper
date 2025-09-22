@@ -7882,6 +7882,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &736915734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 736915735}
+  - component: {fileID: 736915736}
+  m_Layer: 0
+  m_Name: TEST_SKILL_01
+  m_TagString: Skill
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &736915735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736915734}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1205997110}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &736915736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736915734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ab6746602b4e0d9fbadc355c6330ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: 
+  selfTarget: {fileID: 0}
+  opponentTarget: {fileID: 0}
 --- !u!1 &752519011
 GameObject:
   m_ObjectHideFlags: 0
@@ -12296,7 +12343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553f0785a7eb1154f80b9c3f2fc2065d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRef: {fileID: 0}
+  playerCharacterRef: {fileID: 0}
   playerNameText: {fileID: 1520055071}
   playerHealthText: {fileID: 342758860}
   playerATKText: {fileID: 2128615724}
@@ -14704,9 +14751,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1205997110}
+  - component: {fileID: 1205997111}
   m_Layer: 0
   m_Name: E_TESTENEMY
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14723,9 +14771,36 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 736915735}
   m_Father: {fileID: 905203285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1205997111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205997109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9725b6748ce677489d1086a9a5fcdfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterBase: {fileID: 11400000, guid: 53a6666986ea3a44e9fa9ea893c7150e, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
+  baseMaxHealth: 0
+  baseAttack: 0
+  baseDefense: 0
+  bonusMaxHealth: 0
+  bonusAttack: 0
+  bonusDefense: 0
+  currentHealth: 0
+  maxHealth: 0
+  attackStat: 0
+  defenseStat: 0
+  itemUses: 0
 --- !u!1 &1208540975
 GameObject:
   m_ObjectHideFlags: 0
@@ -17384,8 +17459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236f11eaf395467da92b9d283acb1abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  defaultPlayer: {fileID: 577035698}
+  playerCharacter: {fileID: 0}
+  defaultPlayerCharacter: {fileID: 577035698}
   currentItem: {fileID: 1834600985}
 --- !u!1 &1495854739
 GameObject:

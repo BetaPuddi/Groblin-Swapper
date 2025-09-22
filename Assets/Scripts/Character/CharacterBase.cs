@@ -1,12 +1,13 @@
 using Enums;
 using Managers;
 using ScriptableObjects;
+using UI;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace Character
 {
-    public class CharacterBase : MonoBehaviour
+    public abstract class CharacterBase : MonoBehaviour, IDamageable
     {
         [FormerlySerializedAs("baseStats")] public CharacterBaseStats characterBase;
 
@@ -69,5 +70,17 @@ namespace Character
             currentHealth = maxHealth;
             //EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
         }
+
+        public void TakeDamage(float damageIn)
+        {
+            currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damageIn, 0, Mathf.Infinity));
+            if (currentHealth <= 0)
+            {
+                Death();
+            }
+            //EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
+        }
+
+        public abstract void Death();
     }
 }

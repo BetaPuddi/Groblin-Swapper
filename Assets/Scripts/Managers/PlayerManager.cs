@@ -142,7 +142,7 @@ namespace Managers
 
             if (playerCharacter.currentHealth <= 0)
             {
-                playerCharacter.GameOver();
+                playerCharacter.Death();
             }
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }

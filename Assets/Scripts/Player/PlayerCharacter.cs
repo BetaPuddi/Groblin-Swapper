@@ -27,10 +27,17 @@ namespace Player
             currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage, 0, Mathf.Infinity));
             if (currentHealth <= 0)
             {
-                GameOver();
+                Death();
             }
 
             PlayerInfoPanel.instance.UpdatePlayerInfo();
+        }
+
+        public override void Death()
+        {
+            print("Player dead");
+            GameManager.instance.UpdateGameState(4);
+            Reset();
         }
 
         public virtual void Heal(float heal)
@@ -42,13 +49,6 @@ namespace Player
             }
 
             PlayerInfoPanel.instance.UpdatePlayerInfo();
-        }
-
-        public void GameOver()
-        {
-            print("Player dead");
-            GameManager.instance.UpdateGameState(4);
-            Reset();
         }
 
         public override void Reset()

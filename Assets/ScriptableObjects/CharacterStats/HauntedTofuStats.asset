@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HauntedTofuStats
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: d6006dd9fe34e444f8bcc7b322958664, type: 3}
-  enemyName: Haunted Tofu
+  characterName: Haunted Tofu
   maxHealth: 300
   attack: 6
   defense: 20
