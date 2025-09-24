@@ -1,6 +1,9 @@
+using System;
+using System.Collections.Generic;
 using Enums;
 using Managers;
 using ScriptableObjects;
+using Skills;
 using UI;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -14,19 +17,27 @@ namespace Character
         public Sprite characterSprite;
         public string characterName;
 
+        [Header("Base Stats")]
         public float baseMaxHealth;
         public float baseAttack;
         public float baseDefense;
 
+        [Header("Bonus Stats")]
         public float bonusMaxHealth;
         public float bonusAttack;
         public float bonusDefense;
 
-        public float currentHealth;
+        [Header("Total Stats")]
         public float maxHealth;
         public float attackStat;
         public float defenseStat;
+
+        [Header("Current Resources")]
+        public float currentHealth;
         public int itemUses;
+
+        public SkillSet skills;
+        public List<Skill> currentSkills;
 
         private void Start()
         {
@@ -38,6 +49,7 @@ namespace Character
             SetSprite();
             SetBaseStats();
             UpdateTotalStats();
+            ReplaceSkillset();
             currentHealth = maxHealth;
         }
 
@@ -65,6 +77,11 @@ namespace Character
             defenseStat = baseDefense + bonusDefense;
         }
 
+        public void ReplaceSkillset()
+        {
+            currentSkills = skills.skillList;
+        }
+
         public virtual void Reset()
         {
             currentHealth = maxHealth;
@@ -78,8 +95,10 @@ namespace Character
             {
                 Death();
             }
-            //EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
+            UpdateCharacterUI();
         }
+
+        public abstract void UpdateCharacterUI();
 
         public abstract void Death();
     }

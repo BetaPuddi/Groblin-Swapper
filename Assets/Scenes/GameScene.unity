@@ -2022,11 +2022,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 0
   maxHealth: 350
   attackStat: 15
   defenseStat: 20
+  currentHealth: 0
   itemUses: 2
+  skills: []
 --- !u!1 &174873364
 GameObject:
   m_ObjectHideFlags: 0
@@ -2237,11 +2238,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 0
   maxHealth: 0
   attackStat: 0
   defenseStat: 0
+  currentHealth: 0
   itemUses: 0
+  skills: []
 --- !u!1 &198536685
 GameObject:
   m_ObjectHideFlags: 0
@@ -3247,11 +3249,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 0
   maxHealth: 250
   attackStat: 16
   defenseStat: 12
+  currentHealth: 0
   itemUses: 2
+  skills: []
 --- !u!1 &305920797
 GameObject:
   m_ObjectHideFlags: 0
@@ -3923,11 +3926,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 0
   maxHealth: 388
   attackStat: 17
   defenseStat: 17
+  currentHealth: 0
   itemUses: 0
+  skills: []
 --- !u!1 &362698647
 GameObject:
   m_ObjectHideFlags: 0
@@ -4933,11 +4937,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 18
   maxHealth: 180
   attackStat: 15
   defenseStat: 6
+  currentHealth: 18
   itemUses: 0
+  skills: []
 --- !u!1 &443641887
 GameObject:
   m_ObjectHideFlags: 0
@@ -5929,11 +5934,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 0
   maxHealth: 300
   attackStat: 6
   defenseStat: 20
+  currentHealth: 0
   itemUses: 2
+  skills: []
 --- !u!1 &577035695
 GameObject:
   m_ObjectHideFlags: 0
@@ -5987,11 +5993,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 30
   maxHealth: 250
   attackStat: 18
   defenseStat: 6
+  currentHealth: 30
   itemUses: 2
+  skills: []
 --- !u!1 &584139027
 GameObject:
   m_ObjectHideFlags: 0
@@ -7242,11 +7249,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 15
   maxHealth: 50
   attackStat: 2
   defenseStat: 20
+  currentHealth: 15
   itemUses: 0
+  skills: []
 --- !u!1 &696553488
 GameObject:
   m_ObjectHideFlags: 0
@@ -7927,7 +7935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: 
-  selfTarget: {fileID: 0}
+  user: {fileID: 0}
   opponentTarget: {fileID: 0}
 --- !u!1 &752519011
 GameObject:
@@ -8352,11 +8360,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 40
   maxHealth: 300
   attackStat: 6
   defenseStat: 20
+  currentHealth: 40
   itemUses: 0
+  skills: []
 --- !u!1 &773487508
 GameObject:
   m_ObjectHideFlags: 0
@@ -8410,11 +8419,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 0
   maxHealth: 75
   attackStat: 5
   defenseStat: 10
+  currentHealth: 0
   itemUses: 2
+  skills: []
 --- !u!1 &777279123
 GameObject:
   m_ObjectHideFlags: 0
@@ -10850,11 +10860,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 36
   maxHealth: 320
   attackStat: 12
   defenseStat: 8
+  currentHealth: 36
   itemUses: 0
+  skills: []
 --- !u!1 &895030091
 GameObject:
   m_ObjectHideFlags: 0
@@ -11478,11 +11489,13 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 30
   maxHealth: 250
   attackStat: 16
   defenseStat: 12
+  currentHealth: 30
   itemUses: 0
+  skills:
+  - {fileID: 2455731764645345369, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
 --- !u!1 &934135869
 GameObject:
   m_ObjectHideFlags: 0
@@ -12675,11 +12688,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 0
   maxHealth: 350
   attackStat: 15
   defenseStat: 20
+  currentHealth: 0
   itemUses: 0
+  skills: []
 --- !u!1 &1036790088
 GameObject:
   m_ObjectHideFlags: 0
@@ -14122,6 +14136,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129514648}
   m_CullTransparentMesh: 1
+--- !u!1 &1136249094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1136249095}
+  m_Layer: 0
+  m_Name: Skills
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1136249095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136249094}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 375.46054, y: 339.52383, z: -6.999011}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1905840640}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1154991787
 GameObject:
   m_ObjectHideFlags: 0
@@ -14661,11 +14707,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 0
   maxHealth: 320
   attackStat: 12
   defenseStat: 8
+  currentHealth: 0
   itemUses: 2
+  skills: []
 --- !u!1 &1204345271
 GameObject:
   m_ObjectHideFlags: 0
@@ -14796,11 +14843,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 0
   maxHealth: 0
   attackStat: 0
   defenseStat: 0
+  currentHealth: 0
   itemUses: 0
+  skills: []
 --- !u!1 &1208540975
 GameObject:
   m_ObjectHideFlags: 0
@@ -18079,11 +18127,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 0
   maxHealth: 50
   attackStat: 2
   defenseStat: 13
+  currentHealth: 0
   itemUses: 2
+  skills: []
 --- !u!4 &1521300172
 Transform:
   m_ObjectHideFlags: 0
@@ -18467,11 +18516,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 0
   maxHealth: 75
   attackStat: 5
   defenseStat: 10
+  currentHealth: 0
   itemUses: 0
+  skills: []
 --- !u!1 &1601774584
 GameObject:
   m_ObjectHideFlags: 0
@@ -19587,11 +19637,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 0
   maxHealth: 180
   attackStat: 15
   defenseStat: 6
+  currentHealth: 0
   itemUses: 2
+  skills: []
 --- !u!1 &1785886384
 GameObject:
   m_ObjectHideFlags: 0
@@ -20379,6 +20430,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875085267}
   m_CullTransparentMesh: 1
+--- !u!4 &1905840640 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 594710197829489942, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
+  m_PrefabInstance: {fileID: 2093785032862620105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1916128777
 GameObject:
   m_ObjectHideFlags: 0
@@ -21264,11 +21320,12 @@ MonoBehaviour:
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefense: 0
-  currentHealth: 0
   maxHealth: 388
   attackStat: 17
   defenseStat: 17
+  currentHealth: 0
   itemUses: 2
+  skills: []
 --- !u!1 &1966593356
 GameObject:
   m_ObjectHideFlags: 0
@@ -23157,6 +23214,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2128615722}
   m_CullTransparentMesh: 1
+--- !u!1001 &2093785032862620105
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1136249095}
+    m_Modifications:
+    - target: {fileID: 594710197829489942, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594710197829489942, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594710197829489942, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594710197829489942, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 594710197829489942, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594710197829489942, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594710197829489942, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594710197829489942, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594710197829489942, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594710197829489942, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204320366556650038, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
+      propertyPath: m_Name
+      value: BoneToss
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
 --- !u!1001 &2123768092511688713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23287,3 +23401,4 @@ SceneRoots:
   - {fileID: 1495854740}
   - {fileID: 371949765}
   - {fileID: 2029357786}
+  - {fileID: 1136249095}
