@@ -50,6 +50,7 @@ namespace Character
             SetBaseStats();
             UpdateTotalStats();
             ReplaceSkillset();
+            Reset();
             currentHealth = maxHealth;
         }
 

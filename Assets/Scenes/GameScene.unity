@@ -1985,7 +1985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &159695062
 Transform:
   m_ObjectHideFlags: 0
@@ -2027,7 +2027,8 @@ MonoBehaviour:
   defenseStat: 20
   currentHealth: 0
   itemUses: 2
-  skills: []
+  skills: {fileID: 0}
+  currentSkills: []
 --- !u!1 &174873364
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,7 +2202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &187072859
 Transform:
   m_ObjectHideFlags: 0
@@ -2243,7 +2244,8 @@ MonoBehaviour:
   defenseStat: 0
   currentHealth: 0
   itemUses: 0
-  skills: []
+  skills: {fileID: 0}
+  currentSkills: []
 --- !u!1 &198536685
 GameObject:
   m_ObjectHideFlags: 0
@@ -3212,7 +3214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &303250523
 Transform:
   m_ObjectHideFlags: 0
@@ -3254,7 +3256,8 @@ MonoBehaviour:
   defenseStat: 12
   currentHealth: 0
   itemUses: 2
-  skills: []
+  skills: {fileID: 0}
+  currentSkills: []
 --- !u!1 &305920797
 GameObject:
   m_ObjectHideFlags: 0
@@ -3931,7 +3934,8 @@ MonoBehaviour:
   defenseStat: 17
   currentHealth: 0
   itemUses: 0
-  skills: []
+  skills: {fileID: 11400000, guid: b5ddae7b3ee9b4f49a447226bfcebb7e, type: 2}
+  currentSkills: []
 --- !u!1 &362698647
 GameObject:
   m_ObjectHideFlags: 0
@@ -4942,7 +4946,8 @@ MonoBehaviour:
   defenseStat: 6
   currentHealth: 18
   itemUses: 0
-  skills: []
+  skills: {fileID: 11400000, guid: a0e28622be418d64b93650c3d49b4d40, type: 2}
+  currentSkills: []
 --- !u!1 &443641887
 GameObject:
   m_ObjectHideFlags: 0
@@ -5897,7 +5902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &567815738
 Transform:
   m_ObjectHideFlags: 0
@@ -5939,7 +5944,8 @@ MonoBehaviour:
   defenseStat: 20
   currentHealth: 0
   itemUses: 2
-  skills: []
+  skills: {fileID: 0}
+  currentSkills: []
 --- !u!1 &577035695
 GameObject:
   m_ObjectHideFlags: 0
@@ -5998,7 +6004,8 @@ MonoBehaviour:
   defenseStat: 6
   currentHealth: 30
   itemUses: 2
-  skills: []
+  skills: {fileID: 0}
+  currentSkills: []
 --- !u!1 &584139027
 GameObject:
   m_ObjectHideFlags: 0
@@ -7254,7 +7261,8 @@ MonoBehaviour:
   defenseStat: 20
   currentHealth: 15
   itemUses: 0
-  skills: []
+  skills: {fileID: 11400000, guid: 41f43280bf7e0c94d9c778422d8cb406, type: 2}
+  currentSkills: []
 --- !u!1 &696553488
 GameObject:
   m_ObjectHideFlags: 0
@@ -8365,7 +8373,8 @@ MonoBehaviour:
   defenseStat: 20
   currentHealth: 40
   itemUses: 0
-  skills: []
+  skills: {fileID: 11400000, guid: 6805b82ed6b611a4f9d848b41eeeafed, type: 2}
+  currentSkills: []
 --- !u!1 &773487508
 GameObject:
   m_ObjectHideFlags: 0
@@ -8382,7 +8391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &773487509
 Transform:
   m_ObjectHideFlags: 0
@@ -8424,7 +8433,8 @@ MonoBehaviour:
   defenseStat: 10
   currentHealth: 0
   itemUses: 2
-  skills: []
+  skills: {fileID: 0}
+  currentSkills: []
 --- !u!1 &777279123
 GameObject:
   m_ObjectHideFlags: 0
@@ -10865,7 +10875,8 @@ MonoBehaviour:
   defenseStat: 8
   currentHealth: 36
   itemUses: 0
-  skills: []
+  skills: {fileID: 11400000, guid: ae253dbae33d72f469d2b98b21f5d979, type: 2}
+  currentSkills: []
 --- !u!1 &895030091
 GameObject:
   m_ObjectHideFlags: 0
@@ -11494,8 +11505,8 @@ MonoBehaviour:
   defenseStat: 12
   currentHealth: 30
   itemUses: 0
-  skills:
-  - {fileID: 2455731764645345369, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
+  skills: {fileID: 11400000, guid: 5e7fe7560f7a97545a7e724fe1381ec6, type: 2}
+  currentSkills: []
 --- !u!1 &934135869
 GameObject:
   m_ObjectHideFlags: 0
@@ -12693,7 +12704,8 @@ MonoBehaviour:
   defenseStat: 20
   currentHealth: 0
   itemUses: 0
-  skills: []
+  skills: {fileID: 11400000, guid: ecf957ef321a6474dadce123850530fc, type: 2}
+  currentSkills: []
 --- !u!1 &1036790088
 GameObject:
   m_ObjectHideFlags: 0
@@ -14670,7 +14682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1203208788
 Transform:
   m_ObjectHideFlags: 0
@@ -14712,7 +14724,8 @@ MonoBehaviour:
   defenseStat: 8
   currentHealth: 0
   itemUses: 2
-  skills: []
+  skills: {fileID: 0}
+  currentSkills: []
 --- !u!1 &1204345271
 GameObject:
   m_ObjectHideFlags: 0
@@ -14805,7 +14818,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1205997110
 Transform:
   m_ObjectHideFlags: 0
@@ -14848,7 +14861,8 @@ MonoBehaviour:
   defenseStat: 0
   currentHealth: 0
   itemUses: 0
-  skills: []
+  skills: {fileID: 11400000, guid: b534f9efb83311941a7fdcb9e8edde1e, type: 2}
+  currentSkills: []
 --- !u!1 &1208540975
 GameObject:
   m_ObjectHideFlags: 0
@@ -14996,7 +15010,7 @@ GameObject:
   - component: {fileID: 1232963287}
   - component: {fileID: 1232963288}
   m_Layer: 0
-  m_Name: CharacterSwapper
+  m_Name: StatSwapper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16282,6 +16296,7 @@ Transform:
   m_Children:
   - {fileID: 1232963287}
   - {fileID: 862938010}
+  - {fileID: 2043690509}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1381078140
@@ -18105,7 +18120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1521300171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18132,7 +18147,8 @@ MonoBehaviour:
   defenseStat: 13
   currentHealth: 0
   itemUses: 2
-  skills: []
+  skills: {fileID: 0}
+  currentSkills: []
 --- !u!4 &1521300172
 Transform:
   m_ObjectHideFlags: 0
@@ -18521,7 +18537,8 @@ MonoBehaviour:
   defenseStat: 10
   currentHealth: 0
   itemUses: 0
-  skills: []
+  skills: {fileID: 11400000, guid: def7d9754c46ce2468c2824cde4b2add, type: 2}
+  currentSkills: []
 --- !u!1 &1601774584
 GameObject:
   m_ObjectHideFlags: 0
@@ -19600,7 +19617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1766694459
 Transform:
   m_ObjectHideFlags: 0
@@ -19642,7 +19659,8 @@ MonoBehaviour:
   defenseStat: 6
   currentHealth: 0
   itemUses: 2
-  skills: []
+  skills: {fileID: 0}
+  currentSkills: []
 --- !u!1 &1785886384
 GameObject:
   m_ObjectHideFlags: 0
@@ -21283,7 +21301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1958728462
 Transform:
   m_ObjectHideFlags: 0
@@ -21325,7 +21343,8 @@ MonoBehaviour:
   defenseStat: 17
   currentHealth: 0
   itemUses: 2
-  skills: []
+  skills: {fileID: 0}
+  currentSkills: []
 --- !u!1 &1966593356
 GameObject:
   m_ObjectHideFlags: 0
@@ -22870,6 +22889,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043379110}
   m_CullTransparentMesh: 1
+--- !u!1 &2043690508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2043690509}
+  - component: {fileID: 2043690510}
+  m_Layer: 0
+  m_Name: SkillSetSwapper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2043690509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043690508}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1372264868}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2043690510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043690508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28449ac4b35d41cc8b5e44b279279f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swapTargets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  thingToSwap: {fileID: 0}
+  npcName: Skill Swapper
+  icon: {fileID: 7482667652216324306, guid: d121908d1e929fe41953b378b144a91a, type: 3}
 --- !u!1 &2100206352
 GameObject:
   m_ObjectHideFlags: 0
@@ -23388,15 +23464,15 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1623391945}
   - {fileID: 1924975776}
-  - {fileID: 905203285}
-  - {fileID: 2023888338}
   - {fileID: 720616615}
+  - {fileID: 2023888338}
   - {fileID: 1355730298}
+  - {fileID: 905203285}
   - {fileID: 729675850}
+  - {fileID: 1372264868}
   - {fileID: 1468652580}
   - {fileID: 1613635659}
   - {fileID: 753336857}
-  - {fileID: 1372264868}
   - {fileID: 2036208301}
   - {fileID: 1495854740}
   - {fileID: 371949765}
