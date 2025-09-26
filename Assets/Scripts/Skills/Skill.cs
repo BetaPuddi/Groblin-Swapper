@@ -7,14 +7,14 @@ namespace Skills
     public abstract class Skill : MonoBehaviour
     {
         public string skillName;
-        public CharacterBase selfTarget;
+        public CharacterBase user;
         public CharacterBase opponentTarget;
 
         public abstract void UseSkill();
 
         public virtual void SetTarget(CharacterBase self, CharacterBase opponent)
         {
-            selfTarget = self;
+            user = self;
             opponentTarget = opponent;
         }
     }

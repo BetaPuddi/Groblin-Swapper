@@ -1,9 +1,12 @@
 using System;
+using System.Collections.Generic;
 using Enums;
 using Items;
 using UI;
 using UnityEngine;
 using Player;
+using ScriptableObjects;
+using Skills;
 using UnityEngine.Serialization;
 
 namespace Managers
@@ -45,15 +48,23 @@ namespace Managers
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
-        public void SwapPlayer(Player.PlayerCharacter newPlayerCharacter)
+        public void SwapPlayerStats(CharacterBaseStats newPlayerStats)
         {
             if (GameManager.instance._gameState == EGameStates.NPC)
             {
-                playerCharacter = newPlayerCharacter;
-                UpdateMainPlayer();
+                playerCharacter.characterBase = newPlayerStats;
+                playerCharacter.SetBaseStats();
+                playerCharacter.UpdateTotalStats();
+                //UpdateMainPlayer();
                 PlayerInfoPanel.instance.UpdatePlayerInfo();
                 GameManager.instance.UpdateGameState(3);
             }
+        }
+
+        public void SwapPlayerSkillSet(List<Skill> newPlayerSkillSet)
+        {
+            playerCharacter.currentSkills = newPlayerSkillSet;
+            GameManager.instance.UpdateGameState(3);
         }
 
         public void SwapItem(Item newItem)

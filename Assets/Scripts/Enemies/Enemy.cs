@@ -30,13 +30,18 @@ namespace Enemies
             print("Enemy skill 02");
         }
 
-        public virtual void TakeDamage(float damage)
+        // public void TakeDamage(float damage)
+        // {
+        //     currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage, 0, Mathf.Infinity));
+        //     if (currentHealth <= 0)
+        //     {
+        //         Death();
+        //     }
+        //     UpdateCharacterUI();
+        // }
+
+        public override void UpdateCharacterUI()
         {
-            currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage, 0, Mathf.Infinity));
-            if (currentHealth <= 0)
-            {
-                Death();
-            }
             EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
         }
 
@@ -55,30 +60,20 @@ namespace Enemies
             {
                 currentHealth = maxHealth;
             }
-            EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
+            UpdateCharacterUI();
         }
 
         public override void Reset()
         {
             currentHealth = maxHealth;
-            EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
+            UpdateCharacterUI();
         }
 
         public virtual void EnemyTakeTurn()
         {
-            var actionRoll = Random.Range(0, 2);
-            switch (actionRoll)
-            {
-                case 0:
-                    Attack();
-                    break;
-                case 1:
-                    Skill_01();
-                    break;
-                // case 2:
-                //     Skill_02();
-                //     break;
-            }
+            var actionRoll = Random.Range(0, currentSkills.Count);
+            currentSkills[actionRoll].SetTarget(this, PlayerManager.instance.playerCharacter);
+            currentSkills[actionRoll].UseSkill();
         }
 
         public void ChangeDefense(int amount)

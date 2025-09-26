@@ -22,14 +22,19 @@ namespace Player
 
         }
 
-        public virtual void TakeDamage(float damage)
-        {
-            currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage, 0, Mathf.Infinity));
-            if (currentHealth <= 0)
-            {
-                Death();
-            }
+        // public virtual void TakeDamage(float damage)
+        // {
+        //     currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage, 0, Mathf.Infinity));
+        //     if (currentHealth <= 0)
+        //     {
+        //         Death();
+        //     }
+        //
+        //     UpdateCharacterUI();
+        // }
 
+        public override void UpdateCharacterUI()
+        {
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
@@ -48,13 +53,13 @@ namespace Player
                 currentHealth = maxHealth;
             }
 
-            PlayerInfoPanel.instance.UpdatePlayerInfo();
+            UpdateCharacterUI();
         }
 
         public override void Reset()
         {
             currentHealth = maxHealth;
-            PlayerInfoPanel.instance.UpdatePlayerInfo();
+            UpdateCharacterUI();
         }
     }
 }

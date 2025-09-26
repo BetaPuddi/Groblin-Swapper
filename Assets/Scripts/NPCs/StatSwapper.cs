@@ -1,23 +1,23 @@
 using Enums;
 using Managers;
+using Player;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace NPCs
 {
-    public class CharacterSwapper : NPC
+    public class StatSwapper : NPC
     {
         public override void Swap()
         {
             if (GameManager.instance._gameState == EGameStates.NPC)
             {
-                var player = thingToSwap.GetComponent<Player.PlayerCharacter>();
-                PlayerManager.instance.SwapPlayer(player);
+                var statsToSwap = thingToSwap.GetComponent<PlayerCharacter>().characterBase;
+                PlayerManager.instance.SwapPlayerStats(statsToSwap);
                 GameManager.instance._gameState = EGameStates.Advance;
                 var text = "You accept the swap.";
                 LogManager.instance.InstantiateTextLog(text);
             }
-
         }
 
         public override void Interact()
@@ -38,7 +38,7 @@ namespace NPCs
         public override void Introduction()
         {
             var text =
-                $"{npcName} appears and offers to swap your form with {thingToSwap.GetComponent<Player.PlayerCharacter>().characterName}!";
+                $"{npcName} appears and offers to swap your stats with {thingToSwap.GetComponent<PlayerCharacter>().characterName}!";
             LogManager.instance.InstantiateTextLog(text);
         }
     }

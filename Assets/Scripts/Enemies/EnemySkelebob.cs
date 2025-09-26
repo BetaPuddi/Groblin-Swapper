@@ -1,4 +1,5 @@
 using Managers;
+using Skills;
 using UnityEngine;
 
 namespace Enemies
@@ -7,10 +8,10 @@ namespace Enemies
     {
         public override void Attack()
         {
-            print("Skeleton Attack");
-            var damageOut = 2 + Mathf.Clamp(attackStat * (100f - PlayerManager.instance.playerCharacter.defenseStat) / 100, 0, Mathf.Infinity);
-            PlayerManager.instance.PlayerTakeDamage(damageOut);
-            LogManager.instance.InstantiateDamageLog(characterName, PlayerManager.instance.playerCharacter.characterName, damageOut);
+            // print("Skeleton Attack");
+            // var damageOut = 2 + Mathf.Clamp(attackStat * (100f - PlayerManager.instance.playerCharacter.defenseStat) / 100, 0, Mathf.Infinity);
+            // PlayerManager.instance.PlayerTakeDamage(damageOut);
+            // LogManager.instance.InstantiateDamageLog(characterName, PlayerManager.instance.playerCharacter.characterName, damageOut);
         }
 
         public override void Skill_01()
