@@ -1,39 +1,17 @@
-using System;
+using Character;
 using Enums;
 using Managers;
 using UI;
 using UnityEngine;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace Enemies
 {
-    public class Enemy : MonoBehaviour
+    public class Enemy : CharacterBase
     {
-        public string enemyName;
-        public int currentHealth;
-        public int maxHealth;
-        public float attackStat;
-        public float defenseStat;
-        public Sprite enemyIcon;
-
-        private void Awake()
-        {
-
-        }
-
-        private void Start()
-        {
-            if (GameManager.instance._gameState != EGameStates.MainMenu)
-            {
-                Reset();
-            }
-            currentHealth = maxHealth;
-        }
-
         public void EnemyIntroduction()
         {
-            LogManager.instance.InstantiateTextLog($"Enemy {enemyName} appears!");
+            LogManager.instance.InstantiateTextLog($"Enemy {characterName} appears!");
         }
 
         public virtual void Attack()
@@ -52,15 +30,27 @@ namespace Enemies
             print("Enemy skill 02");
         }
 
-        public virtual void TakeDamage(float damage)
-        {
-            currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage, 0, Mathf.Infinity));
-            if (currentHealth <= 0)
-            {
-                EnemyDeath();
-            }
+        // public void TakeDamage(float damage)
+        // {
+        //     currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage, 0, Mathf.Infinity));
+        //     if (currentHealth <= 0)
+        //     {
+        //         Death();
+        //     }
+        //     UpdateCharacterUI();
+        // }
 
+        public override void UpdateCharacterUI()
+        {
             EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
+        }
+
+        public override void Death()
+        {
+            print("Enemy dead");
+            Reset();
+            LogManager.instance.InstantiateTextLog($"{characterName} is defeated!");
+            GameManager.instance.UpdateGameState(3);
         }
 
         public virtual void Heal(float heal)
@@ -70,56 +60,39 @@ namespace Enemies
             {
                 currentHealth = maxHealth;
             }
-
-            EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
+            UpdateCharacterUI();
         }
 
-        public void Reset()
+        public override void Reset()
         {
             currentHealth = maxHealth;
-            EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
-        }
-
-        public void EnemyDeath()
-        {
-            print("Enemy dead");
-            Reset();
-            LogManager.instance.InstantiateTextLog($"{enemyName} is defeated!");
-            GameManager.instance.UpdateGameState(3);
+            UpdateCharacterUI();
         }
 
         public virtual void EnemyTakeTurn()
         {
-            var actionRoll = Random.Range(0, 2);
-            switch (actionRoll)
-            {
-                case 0:
-                    Attack();
-                    break;
-                case 1:
-                    Skill_01();
-                    break;
-                // case 2:
-                //     Skill_02();
-                //     break;
-            }
+            var actionRoll = Random.Range(0, currentSkills.Count);
+            currentSkills[actionRoll].SetTarget(this, PlayerManager.instance.playerCharacter);
+            currentSkills[actionRoll].UseSkill();
         }
 
         public void ChangeDefense(int amount)
         {
-            defenseStat += amount;
+            bonusDefense += amount;
+            UpdateTotalStats();
             EnemyInfoPanel.instance.UpdateEnemyInfo();
         }
 
         public void ChangeAttack(int amount)
         {
-            attackStat += amount;
+            bonusAttack += amount;
+            UpdateTotalStats();
             EnemyInfoPanel.instance.UpdateEnemyInfo();
         }
 
         public void ChangeMaxHealth(int amount)
         {
-            maxHealth += amount;
+            bonusMaxHealth += amount;
             if (currentHealth > maxHealth)
             {
                 maxHealth = currentHealth;
@@ -127,8 +100,9 @@ namespace Enemies
 
             if (currentHealth <= 0)
             {
-                EnemyDeath();
+                Death();
             }
+            UpdateTotalStats();
             EnemyInfoPanel.instance.UpdateEnemyInfo();
         }
     }

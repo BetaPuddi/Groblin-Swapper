@@ -1,9 +1,13 @@
 using System;
-using Character;
+using System.Collections.Generic;
 using Enums;
 using Items;
 using UI;
 using UnityEngine;
+using Player;
+using ScriptableObjects;
+using Skills;
+using UnityEngine.Serialization;
 
 namespace Managers
 {
@@ -11,8 +15,8 @@ namespace Managers
     {
         public static PlayerManager instance;
 
-        public Player player;
-        public Player defaultPlayer;
+        [FormerlySerializedAs("player")] public PlayerCharacter playerCharacter;
+        public PlayerCharacter defaultPlayerCharacter;
         public Item currentItem;
 
         public delegate void PlayerAttack();
@@ -44,15 +48,23 @@ namespace Managers
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
-        public void SwapPlayer(Player newPlayer)
+        public void SwapPlayerStats(CharacterBaseStats newPlayerStats)
         {
             if (GameManager.instance._gameState == EGameStates.NPC)
             {
-                player = newPlayer;
-                UpdateMainPlayer();
+                playerCharacter.characterBase = newPlayerStats;
+                playerCharacter.SetBaseStats();
+                playerCharacter.UpdateTotalStats();
+                //UpdateMainPlayer();
                 PlayerInfoPanel.instance.UpdatePlayerInfo();
                 GameManager.instance.UpdateGameState(3);
             }
+        }
+
+        public void SwapPlayerSkillSet(List<Skill> newPlayerSkillSet)
+        {
+            playerCharacter.currentSkills = newPlayerSkillSet;
+            GameManager.instance.UpdateGameState(3);
         }
 
         public void SwapItem(Item newItem)
@@ -60,7 +72,7 @@ namespace Managers
             if (GameManager.instance._gameState == EGameStates.NPC)
             {
                 currentItem = newItem;
-                player.itemUses = 2;
+                playerCharacter.itemUses = 2;
                 PlayerInfoPanel.instance.UpdatePlayerInfo();
                 GameManager.instance.UpdateGameState(3);
             }
@@ -68,10 +80,10 @@ namespace Managers
 
         public void UpdateMainPlayer()
         {
-            _playerAttack = player.Attack;
-            _playerUtility = player.UtilitySkill_01;
-            _takeDamage = player.TakeDamage;
-            _heal = player.Heal;
+            _playerAttack = playerCharacter.Attack;
+            _playerUtility = playerCharacter.UtilitySkill_01;
+            _takeDamage = playerCharacter.TakeDamage;
+            _heal = playerCharacter.Heal;
         }
 
         public void MainAttack()
@@ -94,12 +106,12 @@ namespace Managers
         {
             if (GameManager.instance._gameState == EGameStates.Combat)
             {
-                if (player.itemUses > 0)
+                if (playerCharacter.itemUses > 0)
                 {
                     print("Player skill 02");
                     LogManager.instance.InstantiateTextLog(currentItem.itemUseText);
                     currentItem.UseItem();
-                    player.itemUses--;
+                    playerCharacter.itemUses--;
                 }
                 else
                 {
@@ -121,34 +133,34 @@ namespace Managers
 
         public void ChangeDefense(int amount)
         {
-            player.defenseStat += amount;
+            playerCharacter.defenseStat += amount;
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
         public void ChangeAttack(int amount)
         {
-            player.attackStat += amount;
+            playerCharacter.attackStat += amount;
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
         public void ChangeMaxHealth(int amount)
         {
-            player.maxHealth += amount;
-            if (player.currentHealth > player.maxHealth)
+            playerCharacter.maxHealth += amount;
+            if (playerCharacter.currentHealth > playerCharacter.maxHealth)
             {
-                player.maxHealth = player.currentHealth;
+                playerCharacter.maxHealth = playerCharacter.currentHealth;
             }
 
-            if (player.currentHealth <= 0)
+            if (playerCharacter.currentHealth <= 0)
             {
-                player.GameOver();
+                playerCharacter.Death();
             }
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
         public void InitialisePlayer()
         {
-            player = defaultPlayer;
+            playerCharacter = defaultPlayerCharacter;
         }
     }
 }
