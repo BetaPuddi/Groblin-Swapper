@@ -22,16 +22,6 @@ namespace Player
 
         }
 
-        // public virtual void TakeDamage(float damage)
-        // {
-        //     currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage, 0, Mathf.Infinity));
-        //     if (currentHealth <= 0)
-        //     {
-        //         Death();
-        //     }
-        //
-        //     UpdateCharacterUI();
-        // }
 
         public override void UpdateCharacterUI()
         {

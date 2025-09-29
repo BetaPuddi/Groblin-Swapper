@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54d21f6ece3b46479f0c328f8c6007e0, type: 3}
-  m_Name: New TMP Color Gradient
+  m_Name: TitleColourGradient
   m_EditorClassIdentifier: 
   colorMode: 2
   topLeft: {r: 0.8867924, g: 0.49062183, b: 0.25516194, a: 1}

@@ -444,7 +444,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1468652581}
         m_TargetAssemblyTypeName: Managers.PlayerManager, Assembly-CSharp
-        m_MethodName: MainAttack
+        m_MethodName: PlayerSkill01
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2114,7 +2114,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1468652581}
         m_TargetAssemblyTypeName: Managers.PlayerManager, Assembly-CSharp
-        m_MethodName: MainUtility
+        m_MethodName: PlayerSkill02
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2331,7 +2331,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1468652581}
         m_TargetAssemblyTypeName: Managers.PlayerManager, Assembly-CSharp
-        m_MethodName: MainUtility
+        m_MethodName: PlayerSkill02
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5962,7 +5962,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &577035697
 Transform:
   m_ObjectHideFlags: 0
@@ -10609,7 +10609,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1468652581}
         m_TargetAssemblyTypeName: Managers.PlayerManager, Assembly-CSharp
-        m_MethodName: MainAttack
+        m_MethodName: PlayerSkill01
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13931,7 +13931,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1468652581}
         m_TargetAssemblyTypeName: Managers.PlayerManager, Assembly-CSharp
-        m_MethodName: MainAttack
+        m_MethodName: PlayerSkill01
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14999,6 +14999,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208540975}
   m_CullTransparentMesh: 1
+--- !u!1 &1226389272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1226389273}
+  - component: {fileID: 1226389274}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1226389273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226389272}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1613635659}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1226389274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226389272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9581c52cda0f4046818b2a6e6770e11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterBase: {fileID: 11400000, guid: 2259d69419aa6984abfd300304cd4cdc, type: 2}
+  characterSprite: {fileID: 0}
+  characterName: 
+  baseMaxHealth: 0
+  baseAttack: 0
+  baseDefense: 0
+  bonusMaxHealth: 0
+  bonusAttack: 0
+  bonusDefense: 0
+  maxHealth: 0
+  attackStat: 0
+  defenseStat: 0
+  currentHealth: 0
+  itemUses: 0
+  skills: {fileID: 11400000, guid: 53824ec20720b3440b626942da3f7af5, type: 2}
+  currentSkills: []
 --- !u!1 &1232963286
 GameObject:
   m_ObjectHideFlags: 0
@@ -17036,7 +17096,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1468652581}
         m_TargetAssemblyTypeName: Managers.PlayerManager, Assembly-CSharp
-        m_MethodName: MainAttack
+        m_MethodName: PlayerSkill01
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17523,7 +17583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacter: {fileID: 0}
-  defaultPlayerCharacter: {fileID: 577035698}
+  defaultPlayerCharacter: {fileID: 1226389274}
   currentItem: {fileID: 1834600985}
 --- !u!1 &1495854739
 GameObject:
@@ -18624,7 +18684,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1468652581}
         m_TargetAssemblyTypeName: Managers.PlayerManager, Assembly-CSharp
-        m_MethodName: MainUtility
+        m_MethodName: PlayerSkill02
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18725,6 +18785,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1226389273}
   - {fileID: 577035697}
   - {fileID: 303250523}
   - {fileID: 1766694459}
@@ -21089,7 +21150,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1468652581}
         m_TargetAssemblyTypeName: Managers.PlayerManager, Assembly-CSharp
-        m_MethodName: MainAttack
+        m_MethodName: PlayerSkill01
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21430,7 +21491,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1468652581}
         m_TargetAssemblyTypeName: Managers.PlayerManager, Assembly-CSharp
-        m_MethodName: MainUtility
+        m_MethodName: PlayerSkill02
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22213,7 +22274,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1468652581}
         m_TargetAssemblyTypeName: Managers.PlayerManager, Assembly-CSharp
-        m_MethodName: MainUtility
+        m_MethodName: PlayerSkill02
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

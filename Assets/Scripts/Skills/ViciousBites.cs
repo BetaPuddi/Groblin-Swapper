@@ -9,8 +9,8 @@ namespace Skills
         {
             print("Skeleton Skill 01");
             var damageOut = user.attackStat / 3;
-            PlayerManager.instance.PlayerTakeDamage(damageOut);
-            LogManager.instance.InstantiateDamageLog(user.characterName, PlayerManager.instance.playerCharacter.characterName, damageOut);
+            opponentTarget.TakeDamage(damageOut);
+            LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
         }
     }
 }
