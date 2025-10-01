@@ -7,18 +7,12 @@ namespace Player
     {
         public override void Attack()
         {
-            print("Groblin attack!");
-            var damageOut = attackStat - Random.Range(-3, 4);
-            LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
-            EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
+
         }
 
         public override void UtilitySkill_01()
         {
-            print("Groblin utility skill");
-            var healOut = defenseStat - Random.Range(-3, 4);
-            LogManager.instance.InstantiateHealLog(characterName, "itself", healOut);
-            PlayerManager.instance.PlayerHeal(healOut);
+
         }
 
         public override void ItemSkill_01()

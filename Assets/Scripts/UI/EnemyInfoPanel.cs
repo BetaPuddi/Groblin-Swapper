@@ -35,7 +35,7 @@ namespace UI
                 enemyNameText.text = EnemyManager.instance.targetEnemy.characterName;
                 enemyHealthText.text = EnemyManager.instance.targetEnemy.currentHealth.ToString();
                 enemyATKText.text = EnemyManager.instance.targetEnemy.attackStat.ToString();
-                enemyDEFText.text = EnemyManager.instance.targetEnemy.defenseStat.ToString();
+                enemyDEFText.text = EnemyManager.instance.targetEnemy.defenceStat.ToString();
                 icon.sprite = EnemyManager.instance.targetEnemy.characterSprite;
             }
             else

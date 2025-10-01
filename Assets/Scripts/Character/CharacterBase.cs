@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Enums;
+using Interfaces;
 using Managers;
 using ScriptableObjects;
 using Skills;
@@ -10,7 +11,7 @@ using UnityEngine.Serialization;
 
 namespace Character
 {
-    public abstract class CharacterBase : MonoBehaviour, IDamageable
+    public abstract class CharacterBase : MonoBehaviour, IDamageable, IHealable
     {
         [FormerlySerializedAs("baseStats")] public CharacterBaseStats characterBase;
 
@@ -20,17 +21,17 @@ namespace Character
         [Header("Base Stats")]
         public float baseMaxHealth;
         public float baseAttack;
-        public float baseDefense;
+        [FormerlySerializedAs("baseDefense")] public float baseDefence;
 
         [Header("Bonus Stats")]
         public float bonusMaxHealth;
         public float bonusAttack;
-        public float bonusDefense;
+        [FormerlySerializedAs("bonusDefense")] public float bonusDefence;
 
         [Header("Total Stats")]
         public float maxHealth;
         public float attackStat;
-        public float defenseStat;
+        [FormerlySerializedAs("defenseStat")] public float defenceStat;
 
         [Header("Current Resources")]
         public float currentHealth;
@@ -68,14 +69,14 @@ namespace Character
         {
             baseMaxHealth = characterBase.maxHealth;
             baseAttack = characterBase.attack;
-            baseDefense = characterBase.defense;
+            baseDefence = characterBase.defence;
         }
 
         public void UpdateTotalStats()
         {
             maxHealth = baseMaxHealth + bonusMaxHealth;
             attackStat = baseAttack + bonusAttack;
-            defenseStat = baseDefense + bonusDefense;
+            defenceStat = baseDefence + bonusDefence;
         }
 
         public void ReplaceSkillset()
@@ -102,5 +103,36 @@ namespace Character
         public abstract void UpdateCharacterUI();
 
         public abstract void Death();
+
+        public void Heal(float healIn)
+        {
+            currentHealth += Mathf.RoundToInt(Mathf.Clamp(healIn, 0, Mathf.Infinity));
+            if (currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
+            UpdateCharacterUI();
+        }
+
+        public void AdjustBonusDefence(int amount)
+        {
+            bonusDefence += amount;
+            UpdateTotalStats();
+            UpdateCharacterUI();
+        }
+
+        public void AdjustBonusAttack(int amount)
+        {
+            bonusAttack += amount;
+            UpdateTotalStats();
+            UpdateCharacterUI();
+        }
+
+        public void AdjustBonusMaxHealth(int amount)
+        {
+            bonusMaxHealth += amount;
+            UpdateTotalStats();
+            UpdateCharacterUI();
+        }
     }
 }

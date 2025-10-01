@@ -35,17 +35,6 @@ namespace Player
             Reset();
         }
 
-        public virtual void Heal(float heal)
-        {
-            currentHealth += Mathf.RoundToInt(Mathf.Clamp(heal, 0, Mathf.Infinity));
-            if (currentHealth > maxHealth)
-            {
-                currentHealth = maxHealth;
-            }
-
-            UpdateCharacterUI();
-        }
-
         public override void Reset()
         {
             currentHealth = maxHealth;
