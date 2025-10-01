@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf61581ad36142f594ab7f813e0e3e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: Vicious Bites
   user: {fileID: 0}
   opponentTarget: {fileID: 0}
