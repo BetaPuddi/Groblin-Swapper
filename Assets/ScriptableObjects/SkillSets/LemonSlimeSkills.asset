@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef568f402ea34026a7bec1171a8b0021, type: 3}
   m_Name: LemonSlimeSkills
   m_EditorClassIdentifier: 
-  skillList: []
+  skillList:
+  - {fileID: 6342116612418657260, guid: eef169f71d3e5784192ec26ec12152f1, type: 3}
+  - {fileID: -4301991036710409497, guid: 7ca9553bf70117b4abe1a0995ad2f521, type: 3}

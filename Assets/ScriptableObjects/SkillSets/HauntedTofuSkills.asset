@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef568f402ea34026a7bec1171a8b0021, type: 3}
   m_Name: HauntedTofuSkills
   m_EditorClassIdentifier: 
-  skillList: []
+  skillList:
+  - {fileID: 5971201924635385684, guid: 3567c9faa88e86942ae7436d7455ab41, type: 3}
+  - {fileID: -5696484675090585179, guid: e809e4e0b3447d849b4bbc2ee5977adf, type: 3}

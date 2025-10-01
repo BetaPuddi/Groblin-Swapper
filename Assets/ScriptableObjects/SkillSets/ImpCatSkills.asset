@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef568f402ea34026a7bec1171a8b0021, type: 3}
   m_Name: ImpCatSkills
   m_EditorClassIdentifier: 
-  skillList: []
+  skillList:
+  - {fileID: -8137817638618895375, guid: 833e465f16481204cbb09cac83baad50, type: 3}
+  - {fileID: -2155681714212968990, guid: c58454f1b98179b49bf210d790ab26ce, type: 3}

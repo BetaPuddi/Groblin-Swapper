@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef568f402ea34026a7bec1171a8b0021, type: 3}
   m_Name: RottenChickenLegSkills
   m_EditorClassIdentifier: 
-  skillList: []
+  skillList:
+  - {fileID: 5859607537423016458, guid: 234d66edf787f8349be0383dc7d2f2b4, type: 3}
+  - {fileID: 398575390987398275, guid: cad70f05950011e4cbea2be432957bc7, type: 3}

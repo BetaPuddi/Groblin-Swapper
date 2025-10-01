@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef568f402ea34026a7bec1171a8b0021, type: 3}
   m_Name: GroblinSkills
   m_EditorClassIdentifier: 
-  skillList: []
+  skillList:
+  - {fileID: -4345416754817781123, guid: b299f865879c8de4ebdf7ec3f5b4a3ea, type: 3}
+  - {fileID: 8313954560037514476, guid: ff7115eb18b31844da55f805f959aea3, type: 3}

@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef568f402ea34026a7bec1171a8b0021, type: 3}
   m_Name: BatfaceSkills
   m_EditorClassIdentifier: 
-  skillList: []
+  skillList:
+  - {fileID: 2893706508082287271, guid: 1d4688affb5a966448415ef65f0851aa, type: 3}
+  - {fileID: 4861461104169325504, guid: 9c0975fdc8c64bb45a4d62e297aa8314, type: 3}
