@@ -12,12 +12,12 @@ namespace Player
             switch (targetRoll)
             {
                 case 0:
-                    damageOut *= (100 - defenseStat) / 100;
+                    damageOut *= (100 - defenceStat) / 100;
                     LogManager.instance.InstantiateDamageLog(characterName, "itself", damageOut);
                     TakeDamage(damageOut);
                     break;
                 case 1:
-                    damageOut *= (100 - EnemyManager.instance.targetEnemy.defenseStat) / 100;
+                    damageOut *= (100 - EnemyManager.instance.targetEnemy.defenceStat) / 100;
                     LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
                     EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
                     break;
@@ -26,7 +26,7 @@ namespace Player
 
         public override void UtilitySkill_01()
         {
-            var healOut = defenseStat + EnemyManager.instance.targetEnemy.defenseStat;
+            var healOut = defenceStat + EnemyManager.instance.targetEnemy.defenceStat;
             var targetRoll = Random.Range(0, 2);
             switch (targetRoll)
             {

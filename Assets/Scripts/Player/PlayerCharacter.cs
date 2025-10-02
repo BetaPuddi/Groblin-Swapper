@@ -22,16 +22,6 @@ namespace Player
 
         }
 
-        // public virtual void TakeDamage(float damage)
-        // {
-        //     currentHealth -= Mathf.RoundToInt(Mathf.Clamp(damage, 0, Mathf.Infinity));
-        //     if (currentHealth <= 0)
-        //     {
-        //         Death();
-        //     }
-        //
-        //     UpdateCharacterUI();
-        // }
 
         public override void UpdateCharacterUI()
         {
@@ -43,17 +33,6 @@ namespace Player
             print("Player dead");
             GameManager.instance.UpdateGameState(4);
             Reset();
-        }
-
-        public virtual void Heal(float heal)
-        {
-            currentHealth += Mathf.RoundToInt(Mathf.Clamp(heal, 0, Mathf.Infinity));
-            if (currentHealth > maxHealth)
-            {
-                currentHealth = maxHealth;
-            }
-
-            UpdateCharacterUI();
         }
 
         public override void Reset()

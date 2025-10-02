@@ -53,16 +53,6 @@ namespace Enemies
             GameManager.instance.UpdateGameState(3);
         }
 
-        public virtual void Heal(float heal)
-        {
-            currentHealth += Mathf.RoundToInt(heal);
-            if (currentHealth > maxHealth)
-            {
-                currentHealth = maxHealth;
-            }
-            UpdateCharacterUI();
-        }
-
         public override void Reset()
         {
             currentHealth = maxHealth;
@@ -78,7 +68,7 @@ namespace Enemies
 
         public void ChangeDefense(int amount)
         {
-            bonusDefense += amount;
+            bonusDefence += amount;
             UpdateTotalStats();
             EnemyInfoPanel.instance.UpdateEnemyInfo();
         }

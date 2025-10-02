@@ -16,10 +16,10 @@ namespace Enemies
 
         public override void Skill_01()
         {
-            print("Skeleton Skill 01");
-            var damageOut = attackStat / 3;
-            PlayerManager.instance.PlayerTakeDamage(damageOut);
-            LogManager.instance.InstantiateDamageLog(characterName, PlayerManager.instance.playerCharacter.characterName, damageOut);
+            // print("Skeleton Skill 01");
+            // var damageOut = attackStat / 3;
+            // PlayerManager.instance.PlayerTakeDamage(damageOut);
+            // LogManager.instance.InstantiateDamageLog(characterName, PlayerManager.instance.playerCharacter.characterName, damageOut);
         }
 
         public override void Skill_02()

@@ -19,16 +19,6 @@ namespace Managers
         public PlayerCharacter defaultPlayerCharacter;
         public Item currentItem;
 
-        public delegate void PlayerAttack();
-        public delegate void PlayerUtility();
-        public delegate void TakeDamage(float damage);
-        public delegate void Heal(float heal);
-
-        private PlayerAttack _playerAttack;
-        private PlayerUtility _playerUtility;
-        private TakeDamage _takeDamage;
-        private Heal _heal;
-
         private void Awake()
         {
             if (instance == null)
@@ -40,7 +30,7 @@ namespace Managers
 
         private void OnEnable()
         {
-            UpdateMainPlayer();
+            //UpdateMainPlayer();
         }
 
         private void Start()
@@ -80,25 +70,24 @@ namespace Managers
 
         public void UpdateMainPlayer()
         {
-            _playerAttack = playerCharacter.Attack;
-            _playerUtility = playerCharacter.UtilitySkill_01;
-            _takeDamage = playerCharacter.TakeDamage;
-            _heal = playerCharacter.Heal;
+
         }
 
-        public void MainAttack()
+        public void PlayerSkill01()
         {
             if (GameManager.instance._gameState == EGameStates.Combat)
             {
-                _playerAttack();
+                playerCharacter.currentSkills[0].SetTarget(playerCharacter, EnemyManager.instance.targetEnemy);
+                playerCharacter.currentSkills[0].UseSkill();
             }
         }
 
-        public void MainUtility()
+        public void PlayerSkill02()
         {
             if (GameManager.instance._gameState == EGameStates.Combat)
             {
-                _playerUtility();
+                playerCharacter.currentSkills[1].SetTarget(playerCharacter, EnemyManager.instance.targetEnemy);
+                playerCharacter.currentSkills[1].UseSkill();
             }
         }
 
@@ -123,17 +112,17 @@ namespace Managers
 
         public void PlayerTakeDamage(float damage)
         {
-            _takeDamage(Mathf.RoundToInt(damage));
+            playerCharacter.TakeDamage(Mathf.RoundToInt(damage));
         }
 
         public void PlayerHeal(float heal)
         {
-            _heal(Mathf.RoundToInt(heal));
+            playerCharacter.Heal(Mathf.RoundToInt(heal));
         }
 
         public void ChangeDefense(int amount)
         {
-            playerCharacter.defenseStat += amount;
+            playerCharacter.defenceStat += amount;
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
@@ -160,7 +149,8 @@ namespace Managers
 
         public void InitialisePlayer()
         {
-            playerCharacter = defaultPlayerCharacter;
+            playerCharacter = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCharacter>();
+            playerCharacter.currentSkills = new List<Skill>(playerCharacter.skills.skillList);
         }
     }
 }

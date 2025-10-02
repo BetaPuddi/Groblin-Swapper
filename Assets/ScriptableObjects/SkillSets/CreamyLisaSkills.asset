@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef568f402ea34026a7bec1171a8b0021, type: 3}
   m_Name: CreamyLisaSkills
   m_EditorClassIdentifier: 
-  skillList: []
+  skillList:
+  - {fileID: -7642423754157284142, guid: 5924007eac2297a48954e09bdee9b59b, type: 3}
+  - {fileID: -6973882019271427571, guid: 9e1a3f93c7f2d1f44a4390fd3ecaeea7, type: 3}

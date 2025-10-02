@@ -1,0 +1,19 @@
+using Managers;
+using UnityEngine;
+
+namespace Skills
+{
+    public class VampiricNibble : Skill
+    {
+        public override void UseSkill()
+        {
+            print("Bat Skill 01");
+            var damageOut = user.attackStat * 0.5f;
+            opponentTarget.TakeDamage(damageOut);
+            LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
+            var skillHeal = (user.defenceStat * 0.2f) + (user.currentHealth * 0.02f);
+            user.Heal(skillHeal);
+            LogManager.instance.InstantiateHealLog(user.characterName, "itself", skillHeal);
+        }
+    }
+}
