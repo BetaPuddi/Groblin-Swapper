@@ -6,12 +6,12 @@ namespace Enemies
 {
     public class EnemyHauntedTofu : Enemy
     {
-        public override void Attack()
+        public virtual void Attack()
         {
 
         }
 
-        public override void Skill_01()
+        public virtual void Skill_01()
         {
 
         }

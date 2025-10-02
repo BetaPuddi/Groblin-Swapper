@@ -6,7 +6,7 @@ namespace Enemies
 {
     public class EnemySkelebob : Enemy
     {
-        public override void Attack()
+        public virtual void Attack()
         {
             // print("Skeleton Attack");
             // var damageOut = 2 + Mathf.Clamp(attackStat * (100f - PlayerManager.instance.playerCharacter.defenseStat) / 100, 0, Mathf.Infinity);
@@ -14,7 +14,7 @@ namespace Enemies
             // LogManager.instance.InstantiateDamageLog(characterName, PlayerManager.instance.playerCharacter.characterName, damageOut);
         }
 
-        public override void Skill_01()
+        public virtual void Skill_01()
         {
             // print("Skeleton Skill 01");
             // var damageOut = attackStat / 3;
@@ -22,7 +22,7 @@ namespace Enemies
             // LogManager.instance.InstantiateDamageLog(characterName, PlayerManager.instance.playerCharacter.characterName, damageOut);
         }
 
-        public override void Skill_02()
+        public virtual void Skill_02()
         {
             print("Skeleton Skill 02");
         }
