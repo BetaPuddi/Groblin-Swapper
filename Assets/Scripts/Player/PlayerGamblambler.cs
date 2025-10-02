@@ -5,7 +5,7 @@ namespace Player
 {
     public class PlayerGamblambler : PlayerCharacter
     {
-        public override void Attack()
+        public virtual void Attack()
         {
             var damageOut = attackStat + EnemyManager.instance.targetEnemy.attackStat;
             var targetRoll = Random.Range(0, 2);
@@ -24,7 +24,7 @@ namespace Player
             }
         }
 
-        public override void UtilitySkill_01()
+        public virtual void UtilitySkill_01()
         {
             var healOut = defenceStat + EnemyManager.instance.targetEnemy.defenceStat;
             var targetRoll = Random.Range(0, 2);

@@ -6,7 +6,7 @@ namespace Player
 {
     public class PlayerImpCat : PlayerCharacter
     {
-        public override void Attack()
+        public virtual void Attack()
         {
             var damageOut = (attackStat + Random.Range(-3, 3)) * (100 - EnemyManager.instance.targetEnemy.defenceStat) / 100;
             LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
@@ -19,7 +19,7 @@ namespace Player
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
-        public override void UtilitySkill_01()
+        public virtual void UtilitySkill_01()
         {
             var damageOut = (defenceStat + Random.Range(-3, 3)) * (100 - EnemyManager.instance.targetEnemy.attackStat) / 100;
             LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);

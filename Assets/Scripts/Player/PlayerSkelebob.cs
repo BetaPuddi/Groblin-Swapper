@@ -5,14 +5,14 @@ namespace Player
 {
     public class PlayerSkelebob : PlayerCharacter
     {
-        public override void Attack()
+        public virtual void Attack()
         {
             var damageOut = 2 + Mathf.Clamp(attackStat * (100 - EnemyManager.instance.targetEnemy.defenceStat) / 100, 0, Mathf.Infinity);
             LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
         }
 
-        public override void UtilitySkill_01()
+        public virtual void UtilitySkill_01()
         {
             var damageOut = attackStat / 3;
             LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
