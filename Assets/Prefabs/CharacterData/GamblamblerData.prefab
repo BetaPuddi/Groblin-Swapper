@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7267087005879478912, guid: 2bbce6c5a1f90fa4f971902529519628, type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 21300000, guid: e3040541947130c4fba4b0ad98c4ab71, type: 3}
+    - target: {fileID: 7267087005879478912, guid: 2bbce6c5a1f90fa4f971902529519628, type: 3}
       propertyPath: stats
       value: 
       objectReference: {fileID: 11400000, guid: 1c6d32a2579dd9f46848e252948d7c41, type: 2}

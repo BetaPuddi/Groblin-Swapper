@@ -9,13 +9,9 @@ namespace Enemies
 {
     public class Enemy : CharacterBase
     {
-        public void EnemyIntroduction()
-        {
-            LogManager.instance.InstantiateTextLog($"Enemy {characterName} appears!");
-        }
-
         public override void UpdateCharacterUI()
         {
+            EnemyInfoPanel.instance.UpdateEnemyInfo();
             EnemyInfoPanel.instance.UpdateEnemyHealth(currentHealth);
         }
 

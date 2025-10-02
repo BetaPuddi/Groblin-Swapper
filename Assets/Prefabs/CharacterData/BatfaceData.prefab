@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7267087005879478912, guid: 2bbce6c5a1f90fa4f971902529519628, type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 21300000, guid: bb2b0d53ad2367f41950f14c0bdfb277, type: 3}
+    - target: {fileID: 7267087005879478912, guid: 2bbce6c5a1f90fa4f971902529519628, type: 3}
       propertyPath: stats
       value: 
       objectReference: {fileID: 11400000, guid: a3203159f1a96d040a6be7bf6b846f0e, type: 2}
@@ -58,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9044243191591809359, guid: 2bbce6c5a1f90fa4f971902529519628, type: 3}
       propertyPath: m_Name
-      value: Batface
+      value: BatfaceData
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

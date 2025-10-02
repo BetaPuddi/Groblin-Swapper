@@ -46,6 +46,11 @@ namespace Character
             {
                 Reset();
             }
+            Initialise();
+        }
+
+        public void Initialise()
+        {
             SetName();
             SetSprite();
             SetBaseStats();
