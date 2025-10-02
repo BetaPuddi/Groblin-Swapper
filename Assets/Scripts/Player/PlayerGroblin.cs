@@ -5,17 +5,17 @@ namespace Player
 {
     public class PlayerGroblin : PlayerCharacter
     {
-        public override void Attack()
+        public virtual void Attack()
         {
 
         }
 
-        public override void UtilitySkill_01()
+        public virtual void UtilitySkill_01()
         {
 
         }
 
-        public override void ItemSkill_01()
+        public virtual void ItemSkill_01()
         {
             if (itemUses > 0)
             {

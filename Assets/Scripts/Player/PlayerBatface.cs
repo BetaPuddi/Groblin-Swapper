@@ -4,13 +4,13 @@ namespace Player
 {
     public class PlayerBatface : PlayerCharacter
     {
-        public override void Attack()
+        public virtual void Attack()
         {
             LogManager.instance.InstantiateDamageLog("You", EnemyManager.instance.targetEnemy.characterName, attackStat);
             EnemyManager.instance.targetEnemy.TakeDamage(attackStat);
         }
 
-        public override void UtilitySkill_01()
+        public virtual void UtilitySkill_01()
         {
             var damageOut = attackStat * 0.5f;
             var skillHeal = (defenceStat * 0.2f) + (currentHealth * 0.02f);

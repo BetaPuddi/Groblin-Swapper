@@ -4,7 +4,7 @@ namespace Player
 {
     public class PlayerCreamyLisa : PlayerCharacter
     {
-        public override void Attack()
+        public virtual void Attack()
         {
             var damageOut = currentHealth * 0.2f;
             LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
@@ -13,7 +13,7 @@ namespace Player
             TakeDamage(damageOut);
         }
 
-        public override void UtilitySkill_01()
+        public virtual void UtilitySkill_01()
         {
             float damageOut;
             if (currentHealth < maxHealth * 0.2f)

@@ -16,7 +16,6 @@ namespace Managers
         public static PlayerManager instance;
 
         [FormerlySerializedAs("player")] public PlayerCharacter playerCharacter;
-        public PlayerCharacter defaultPlayerCharacter;
         public Item currentItem;
 
         private void Awake()
@@ -26,11 +25,6 @@ namespace Managers
                 instance = this;
             }
             InitialisePlayer();
-        }
-
-        private void OnEnable()
-        {
-            //UpdateMainPlayer();
         }
 
         private void Start()
@@ -66,11 +60,6 @@ namespace Managers
                 PlayerInfoPanel.instance.UpdatePlayerInfo();
                 GameManager.instance.UpdateGameState(3);
             }
-        }
-
-        public void UpdateMainPlayer()
-        {
-
         }
 
         public void PlayerSkill01()

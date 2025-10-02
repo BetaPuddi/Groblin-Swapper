@@ -2018,13 +2018,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 350
   attackStat: 15
-  defenseStat: 20
+  defenceStat: 20
   currentHealth: 0
   itemUses: 2
   skills: {fileID: 0}
@@ -2235,13 +2235,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 0
   attackStat: 0
-  defenseStat: 0
+  defenceStat: 0
   currentHealth: 0
   itemUses: 0
   skills: {fileID: 0}
@@ -3247,13 +3247,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 250
   attackStat: 16
-  defenseStat: 12
+  defenceStat: 12
   currentHealth: 0
   itemUses: 2
   skills: {fileID: 0}
@@ -3925,13 +3925,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 388
   attackStat: 17
-  defenseStat: 17
+  defenceStat: 17
   currentHealth: 0
   itemUses: 0
   skills: {fileID: 11400000, guid: b5ddae7b3ee9b4f49a447226bfcebb7e, type: 2}
@@ -4937,13 +4937,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 180
   attackStat: 15
-  defenseStat: 6
+  defenceStat: 6
   currentHealth: 18
   itemUses: 0
   skills: {fileID: 11400000, guid: a0e28622be418d64b93650c3d49b4d40, type: 2}
@@ -5935,13 +5935,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 300
   attackStat: 6
-  defenseStat: 20
+  defenceStat: 20
   currentHealth: 0
   itemUses: 2
   skills: {fileID: 0}
@@ -5995,16 +5995,16 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 250
   attackStat: 18
-  defenseStat: 6
+  defenceStat: 6
   currentHealth: 30
   itemUses: 2
-  skills: {fileID: 0}
+  skills: {fileID: 11400000, guid: 53824ec20720b3440b626942da3f7af5, type: 2}
   currentSkills: []
 --- !u!1 &584139027
 GameObject:
@@ -7252,13 +7252,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 50
   attackStat: 2
-  defenseStat: 20
+  defenceStat: 20
   currentHealth: 15
   itemUses: 0
   skills: {fileID: 11400000, guid: 41f43280bf7e0c94d9c778422d8cb406, type: 2}
@@ -8364,13 +8364,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 300
   attackStat: 6
-  defenseStat: 20
+  defenceStat: 20
   currentHealth: 40
   itemUses: 0
   skills: {fileID: 11400000, guid: 6805b82ed6b611a4f9d848b41eeeafed, type: 2}
@@ -8424,13 +8424,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 75
   attackStat: 5
-  defenseStat: 10
+  defenceStat: 10
   currentHealth: 0
   itemUses: 2
   skills: {fileID: 0}
@@ -10866,13 +10866,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 320
   attackStat: 12
-  defenseStat: 8
+  defenceStat: 8
   currentHealth: 36
   itemUses: 0
   skills: {fileID: 11400000, guid: ae253dbae33d72f469d2b98b21f5d979, type: 2}
@@ -11496,13 +11496,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 250
   attackStat: 16
-  defenseStat: 12
+  defenceStat: 12
   currentHealth: 30
   itemUses: 0
   skills: {fileID: 11400000, guid: 5e7fe7560f7a97545a7e724fe1381ec6, type: 2}
@@ -12695,13 +12695,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 350
   attackStat: 15
-  defenseStat: 20
+  defenceStat: 20
   currentHealth: 0
   itemUses: 0
   skills: {fileID: 11400000, guid: ecf957ef321a6474dadce123850530fc, type: 2}
@@ -14683,13 +14683,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 320
   attackStat: 12
-  defenseStat: 8
+  defenceStat: 8
   currentHealth: 0
   itemUses: 2
   skills: {fileID: 0}
@@ -14820,13 +14820,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 0
   attackStat: 0
-  defenseStat: 0
+  defenceStat: 0
   currentHealth: 0
   itemUses: 0
   skills: {fileID: 11400000, guid: b534f9efb83311941a7fdcb9e8edde1e, type: 2}
@@ -14979,7 +14979,7 @@ GameObject:
   - component: {fileID: 1226389274}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15016,16 +15016,16 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 0
   attackStat: 0
-  defenseStat: 0
+  defenceStat: 0
   currentHealth: 0
-  itemUses: 0
-  skills: {fileID: 11400000, guid: 5e7fe7560f7a97545a7e724fe1381ec6, type: 2}
+  itemUses: 2
+  skills: {fileID: 11400000, guid: 53824ec20720b3440b626942da3f7af5, type: 2}
   currentSkills: []
 --- !u!1 &1232963286
 GameObject:
@@ -18166,13 +18166,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 50
   attackStat: 2
-  defenseStat: 13
+  defenceStat: 13
   currentHealth: 0
   itemUses: 2
   skills: {fileID: 0}
@@ -18556,13 +18556,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 75
   attackStat: 5
-  defenseStat: 10
+  defenceStat: 10
   currentHealth: 0
   itemUses: 0
   skills: {fileID: 11400000, guid: def7d9754c46ce2468c2824cde4b2add, type: 2}
@@ -19679,13 +19679,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 180
   attackStat: 15
-  defenseStat: 6
+  defenceStat: 6
   currentHealth: 0
   itemUses: 2
   skills: {fileID: 0}
@@ -21358,13 +21358,13 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseAttack: 0
-  baseDefense: 0
+  baseDefence: 0
   bonusMaxHealth: 0
   bonusAttack: 0
-  bonusDefense: 0
+  bonusDefence: 0
   maxHealth: 388
   attackStat: 17
-  defenseStat: 17
+  defenceStat: 17
   currentHealth: 0
   itemUses: 2
   skills: {fileID: 0}
