@@ -30,7 +30,7 @@ namespace Managers
 
         private void OnEnable()
         {
-            UpdateMainPlayer();
+            //UpdateMainPlayer();
         }
 
         private void Start()
@@ -78,8 +78,6 @@ namespace Managers
             if (GameManager.instance._gameState == EGameStates.Combat)
             {
                 playerCharacter.currentSkills[0].SetTarget(playerCharacter, EnemyManager.instance.targetEnemy);
-                print(playerCharacter.currentSkills[0].opponentTarget.characterName + "op");
-                print(playerCharacter.currentSkills[0].user.characterName + "self");
                 playerCharacter.currentSkills[0].UseSkill();
             }
         }
@@ -119,7 +117,7 @@ namespace Managers
 
         public void PlayerHeal(float heal)
         {
-            playerCharacter.TakeDamage(Mathf.RoundToInt(heal));
+            playerCharacter.Heal(Mathf.RoundToInt(heal));
         }
 
         public void ChangeDefense(int amount)
@@ -151,8 +149,8 @@ namespace Managers
 
         public void InitialisePlayer()
         {
-            playerCharacter = defaultPlayerCharacter;
-            playerCharacter.currentSkills = new(playerCharacter.skills.skillList);
+            playerCharacter = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCharacter>();
+            playerCharacter.currentSkills = new List<Skill>(playerCharacter.skills.skillList);
         }
     }
 }
