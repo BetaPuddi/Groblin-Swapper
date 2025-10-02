@@ -22,7 +22,7 @@ namespace Managers
             var newLogPrefab = Instantiate(logPrefab, logPanel.transform);
             var newLogEntry = newLogPrefab.GetComponent<LogEntry>();
             newLogEntry.SetLogText(logText);
-            newLogEntry.logBackground.color = Color.cyan;
+            newLogEntry.logBackground.color = Color.grey;
             newLogEntry.logBackground.color = new Color(newLogEntry.logBackground.color.r, newLogEntry.logBackground.color.g,  newLogEntry.logBackground.color.b, 0.1215686f);
         }
 
@@ -44,6 +44,17 @@ namespace Managers
             newLogEntry.SetLogText(text);
             newLogEntry.logBackground.color = Color.green;
             newLogEntry.logBackground.color = new Color(newLogEntry.logBackground.color.r, newLogEntry.logBackground.color.g,  newLogEntry.logBackground.color.b, 0.1215686f);
+        }
+
+        public void InstantiateActionLog(string user, string action)
+        {
+            var newLogPrefab = Instantiate(logPrefab, logPanel.transform);
+            var newLogEntry = newLogPrefab.GetComponent<LogEntry>();
+            var text = $"{user} uses {action}!";
+            newLogEntry.SetLogText(text);
+            newLogEntry.logBackground.color = Color.cyan;
+            newLogEntry.logBackground.color = new Color(newLogEntry.logBackground.color.r,
+                newLogEntry.logBackground.color.g, newLogEntry.logBackground.color.b, 0.1215686f);
         }
     }
 }

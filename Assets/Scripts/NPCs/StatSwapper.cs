@@ -1,3 +1,4 @@
+using Character;
 using Enums;
 using Managers;
 using Player;
@@ -12,7 +13,7 @@ namespace NPCs
         {
             if (GameManager.instance._gameState == EGameStates.NPC)
             {
-                var statsToSwap = thingToSwap.GetComponent<PlayerCharacter>().characterBase;
+                var statsToSwap = thingToSwap.GetComponent<CharacterDataHolder>().stats;
                 PlayerManager.instance.SwapPlayerStats(statsToSwap);
                 GameManager.instance._gameState = EGameStates.Advance;
                 var text = "You accept the swap.";
@@ -38,7 +39,7 @@ namespace NPCs
         public override void Introduction()
         {
             var text =
-                $"{npcName} appears and offers to swap your stats with {thingToSwap.GetComponent<PlayerCharacter>().characterName}!";
+                $"{npcName} appears and offers to swap your stats with {thingToSwap.GetComponent<CharacterDataHolder>().stats.characterName}!";
             LogManager.instance.InstantiateTextLog(text);
         }
     }

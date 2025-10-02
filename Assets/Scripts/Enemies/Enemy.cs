@@ -37,6 +37,7 @@ namespace Enemies
         {
             var actionRoll = Random.Range(0, currentSkills.Count);
             currentSkills[actionRoll].SetTarget(this, PlayerManager.instance.playerCharacter);
+            AnnounceAction(currentSkills[actionRoll].skillName);
             currentSkills[actionRoll].UseSkill();
         }
     }

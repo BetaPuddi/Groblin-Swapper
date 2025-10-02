@@ -134,5 +134,10 @@ namespace Character
             UpdateTotalStats();
             UpdateCharacterUI();
         }
+
+        public void AnnounceAction(string action)
+        {
+            LogManager.instance.InstantiateActionLog(characterName, action);
+        }
     }
 }

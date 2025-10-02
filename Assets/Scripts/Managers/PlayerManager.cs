@@ -67,6 +67,7 @@ namespace Managers
             if (GameManager.instance._gameState == EGameStates.Combat)
             {
                 playerCharacter.currentSkills[0].SetTarget(playerCharacter, EnemyManager.instance.targetEnemy);
+                playerCharacter.AnnounceAction(playerCharacter.currentSkills[0].skillName);
                 playerCharacter.currentSkills[0].UseSkill();
             }
         }
@@ -76,6 +77,7 @@ namespace Managers
             if (GameManager.instance._gameState == EGameStates.Combat)
             {
                 playerCharacter.currentSkills[1].SetTarget(playerCharacter, EnemyManager.instance.targetEnemy);
+                playerCharacter.AnnounceAction(playerCharacter.currentSkills[1].skillName);
                 playerCharacter.currentSkills[1].UseSkill();
             }
         }
@@ -87,6 +89,7 @@ namespace Managers
                 if (playerCharacter.itemUses > 0)
                 {
                     print("Player skill 02");
+                    playerCharacter.AnnounceAction(currentItem.itemName);
                     LogManager.instance.InstantiateTextLog(currentItem.itemUseText);
                     currentItem.UseItem();
                     playerCharacter.itemUses--;
