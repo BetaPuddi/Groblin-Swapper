@@ -84,6 +84,13 @@ namespace Character
             defenceStat = baseDefence + bonusDefence;
         }
 
+        public void ClearBonusStats()
+        {
+            bonusAttack = 0;
+            bonusDefence = 0;
+            bonusMaxHealth = 0;
+        }
+
         public void ReplaceSkillset()
         {
             currentSkills = skills.skillList;

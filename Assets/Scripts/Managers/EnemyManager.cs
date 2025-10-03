@@ -37,6 +37,7 @@ namespace Managers
 
         public void SetEnemyData()
         {
+            targetEnemy.ClearBonusStats();
             ImportEnemyStats(enemyData.stats);
             ImportEnemyAbilities(enemyData.skillSet);
             targetEnemy.UpdateTotalStats();
