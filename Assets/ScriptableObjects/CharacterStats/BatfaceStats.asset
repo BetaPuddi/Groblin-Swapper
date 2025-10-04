@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: BatfaceStats
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: bb2b0d53ad2367f41950f14c0bdfb277, type: 3}
-  enemyName: Batface
+  characterName: Batface
   maxHealth: 180
   attack: 15
-  defense: 6
+  defence: 6
+  maxItemUses: 3

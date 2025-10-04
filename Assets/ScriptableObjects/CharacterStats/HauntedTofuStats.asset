@@ -16,4 +16,5 @@ MonoBehaviour:
   characterName: Haunted Tofu
   maxHealth: 300
   attack: 6
-  defense: 20
+  defence: 20
+  maxItemUses: 1

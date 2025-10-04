@@ -7,9 +7,9 @@ namespace Items
     {
         public override void UseItem()
         {
-            PlayerManager.instance.ChangeMaxHealth(50);
+            PlayerManager.instance.playerCharacter.AdjustBonusMaxHealth(50);
             PlayerManager.instance.PlayerHeal(50);
-            PlayerManager.instance.ChangeDefense(5);
+            PlayerManager.instance.playerCharacter.AdjustBonusDefence(5);
         }
     }
 }

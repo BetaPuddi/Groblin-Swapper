@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: CreamyLisaStats
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 776f2974b77074a48be237693f9ad920, type: 3}
-  enemyName: Creamy Lisa
+  characterName: Creamy Lisa
   maxHealth: 350
   attack: 15
-  defense: 20
+  defence: 20
+  maxItemUses: 1

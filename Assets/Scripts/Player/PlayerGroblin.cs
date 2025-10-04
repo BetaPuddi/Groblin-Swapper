@@ -17,10 +17,10 @@ namespace Player
 
         public virtual void ItemSkill_01()
         {
-            if (itemUses > 0)
+            if (currentItemUses > 0)
             {
                 print("Groblin item skill");
-                itemUses--;
+                currentItemUses--;
 
             }
             else

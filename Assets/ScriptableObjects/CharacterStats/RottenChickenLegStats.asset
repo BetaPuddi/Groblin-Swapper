@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: RottenChickenLegStats
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 24a86de5110db4449a21666f2ef786e6, type: 3}
-  enemyName: Rotten Chicken Leg
+  characterName: Rotten Chicken Leg
   maxHealth: 75
   attack: 5
-  defense: 10
+  defence: 10
+  maxItemUses: 4

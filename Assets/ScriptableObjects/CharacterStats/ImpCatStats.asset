@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: ImpCatStats
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: e247422111c39ce4e8ffc6c03f81cd8e, type: 3}
-  enemyName: Imp and also a Cat
+  characterName: Imp and also a Cat
   maxHealth: 320
   attack: 12
-  defense: 8
+  defence: 8
+  maxItemUses: 1

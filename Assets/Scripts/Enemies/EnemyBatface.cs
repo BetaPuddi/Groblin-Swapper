@@ -5,17 +5,17 @@ namespace Enemies
 {
     public class EnemyBatface : Enemy
     {
-        public override void Attack()
+        public virtual void Attack()
         {
 
         }
 
-        public override void Skill_01()
+        public virtual void Skill_01()
         {
 
         }
 
-        public override void Skill_02()
+        public virtual void Skill_02()
         {
             print("Bat Skill 02");
         }
