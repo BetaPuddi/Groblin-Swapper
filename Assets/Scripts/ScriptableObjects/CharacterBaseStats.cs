@@ -11,5 +11,6 @@ namespace ScriptableObjects
         public float maxHealth;
         public float attack;
         [FormerlySerializedAs("defense")] public float defence;
+        public int maxItemUses;
     }
 }

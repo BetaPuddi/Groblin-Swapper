@@ -16,4 +16,5 @@ MonoBehaviour:
   characterName: Groblin
   maxHealth: 250
   attack: 18
-  defense: 6
+  defence: 6
+  maxItemUses: 2

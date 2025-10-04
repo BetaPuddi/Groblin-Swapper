@@ -16,4 +16,5 @@ MonoBehaviour:
   characterName: Skelebob
   maxHealth: 250
   attack: 16
-  defense: 12
+  defence: 12
+  maxItemUses: 2

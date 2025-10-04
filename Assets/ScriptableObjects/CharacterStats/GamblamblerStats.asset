@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GamblamblerStats
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: e3040541947130c4fba4b0ad98c4ab71, type: 3}
-  enemyName: Gamblambler
+  characterName: Gamblambler
   maxHealth: 388
   attack: 17
-  defense: 17
+  defence: 17
+  maxItemUses: 1

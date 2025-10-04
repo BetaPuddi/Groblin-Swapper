@@ -22,21 +22,25 @@ namespace Character
         public float baseMaxHealth;
         public float baseAttack;
         [FormerlySerializedAs("baseDefense")] public float baseDefence;
+        public int baseMaxItemUses;
 
         [Header("Bonus Stats")]
         public float bonusMaxHealth;
         public float bonusAttack;
         [FormerlySerializedAs("bonusDefense")] public float bonusDefence;
+        public int bonusMaxItemUses;
 
         [Header("Total Stats")]
         public float maxHealth;
         public float attackStat;
         [FormerlySerializedAs("defenseStat")] public float defenceStat;
+        public int maxItemUses;
 
         [Header("Current Resources")]
         public float currentHealth;
-        public int itemUses;
+        [FormerlySerializedAs("itemUses")] public int currentItemUses;
 
+        [Header("Skills")]
         public SkillSet skills;
         public List<Skill> currentSkills;
 
@@ -57,7 +61,9 @@ namespace Character
             UpdateTotalStats();
             ReplaceSkillset();
             Reset();
+            UpdateCharacterUI();
             currentHealth = maxHealth;
+            currentItemUses = maxItemUses;
         }
 
         private void SetSprite()
@@ -75,13 +81,20 @@ namespace Character
             baseMaxHealth = characterBase.maxHealth;
             baseAttack = characterBase.attack;
             baseDefence = characterBase.defence;
+            baseMaxItemUses = characterBase.maxItemUses;
         }
 
         public void UpdateTotalStats()
         {
             maxHealth = baseMaxHealth + bonusMaxHealth;
+            if (currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
             attackStat = baseAttack + bonusAttack;
             defenceStat = baseDefence + bonusDefence;
+            maxItemUses = baseMaxItemUses + bonusMaxItemUses;
+            UpdateCharacterUI();
         }
 
         public void ClearBonusStats()
@@ -89,6 +102,7 @@ namespace Character
             bonusAttack = 0;
             bonusDefence = 0;
             bonusMaxHealth = 0;
+            bonusMaxItemUses = 0;
         }
 
         public void ReplaceSkillset()
@@ -143,6 +157,17 @@ namespace Character
         public void AdjustBonusMaxHealth(int amount)
         {
             bonusMaxHealth += amount;
+            UpdateTotalStats();
+            UpdateCharacterUI();
+        }
+
+        public void AdjustBonusMaxItemUses(int amount)
+        {
+            bonusMaxItemUses += amount;
+            if (currentItemUses > maxItemUses)
+            {
+                currentItemUses = maxItemUses;
+            }
             UpdateTotalStats();
             UpdateCharacterUI();
         }

@@ -13333,14 +13333,17 @@ MonoBehaviour:
   baseMaxHealth: 0
   baseAttack: 0
   baseDefence: 0
+  baseMaxItemUses: 0
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefence: 0
+  bonusMaxItemUses: 0
   maxHealth: 0
   attackStat: 0
   defenceStat: 0
+  maxItemUses: 0
   currentHealth: 0
-  itemUses: 0
+  currentItemUses: 0
   skills: {fileID: 11400000, guid: b534f9efb83311941a7fdcb9e8edde1e, type: 2}
   currentSkills: []
 --- !u!1 &1154991787
@@ -14091,14 +14094,17 @@ MonoBehaviour:
   baseMaxHealth: 0
   baseAttack: 0
   baseDefence: 0
+  baseMaxItemUses: 0
   bonusMaxHealth: 0
   bonusAttack: 0
   bonusDefence: 0
+  bonusMaxItemUses: 0
   maxHealth: 0
   attackStat: 0
   defenceStat: 0
+  maxItemUses: 0
   currentHealth: 0
-  itemUses: 2
+  currentItemUses: 0
   skills: {fileID: 11400000, guid: 53824ec20720b3440b626942da3f7af5, type: 2}
   currentSkills: []
 --- !u!1 &1232963286

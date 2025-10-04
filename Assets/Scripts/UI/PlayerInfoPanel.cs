@@ -45,7 +45,7 @@ namespace UI
             playerHealthText.text = playerCharacterRef.currentHealth.ToString();
             playerATKText.text = playerCharacterRef.attackStat.ToString();
             playerDEFText.text = playerCharacterRef.defenceStat.ToString();
-            playerItemText.text = playerCharacterRef.itemUses.ToString();
+            playerItemText.text = playerCharacterRef.currentItemUses.ToString();
         }
 
         public void SetPlayerStats()

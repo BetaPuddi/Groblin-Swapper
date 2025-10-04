@@ -56,7 +56,7 @@ namespace Managers
             if (GameManager.instance._gameState == EGameStates.NPC)
             {
                 currentItem = newItem;
-                playerCharacter.itemUses = 2;
+                playerCharacter.currentItemUses = playerCharacter.maxItemUses;
                 PlayerInfoPanel.instance.UpdatePlayerInfo();
                 GameManager.instance.UpdateGameState(3);
             }
@@ -86,13 +86,13 @@ namespace Managers
         {
             if (GameManager.instance._gameState == EGameStates.Combat)
             {
-                if (playerCharacter.itemUses > 0)
+                if (playerCharacter.currentItemUses > 0)
                 {
                     print("Player skill 02");
                     playerCharacter.AnnounceAction(currentItem.itemName);
                     LogManager.instance.InstantiateTextLog(currentItem.itemUseText);
                     currentItem.UseItem();
-                    playerCharacter.itemUses--;
+                    playerCharacter.currentItemUses--;
                 }
                 else
                 {

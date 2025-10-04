@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: LemonSlimeStats
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: e263d621ac66bd642ad61a555a190540, type: 3}
-  enemyName: Lemon Slime
+  characterName: Lemon Slime
   maxHealth: 50
   attack: 2
-  defense: 20
+  defence: 20
+  maxItemUses: 4
