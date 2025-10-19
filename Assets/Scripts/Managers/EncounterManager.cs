@@ -43,7 +43,7 @@ namespace Encounters
                     //EnemyManager.instance.SpawnNewEnemy();
                     break;
                 case "npc":
-                    NPCManager.instance.SpawnNewNPC();
+                    //NPCManager.instance.SpawnNewNPC();
                     break;
                 case "advance":
                     break;

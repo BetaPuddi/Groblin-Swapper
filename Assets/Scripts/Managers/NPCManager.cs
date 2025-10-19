@@ -20,9 +20,9 @@ namespace Managers
             }
         }
 
-        public void SpawnNewNPC()
+        public void SpawnNewNPC(NPC selectedNPC)
         {
-            currentNpc = npcArray[Random.Range(0, npcArray.Length)];
+            currentNpc = selectedNPC;
             currentNpc.InitialiseNPC();
             NPCInfoPanel.instance.UpdateNPCInfo();
         }

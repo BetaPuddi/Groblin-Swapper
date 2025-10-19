@@ -13,7 +13,7 @@ namespace Managers
     public class EnemyManager : MonoBehaviour
     {
         public static EnemyManager instance;
-        
+
         public Enemy targetEnemy;
         public CharacterDataHolder enemyData;
 
