@@ -27,7 +27,8 @@ namespace Managers
         {
             ToggleMainMenu();
             LogManager.instance.InstantiateTextLog(introText);
-            GameManager.instance.UpdateGameState(0);
+            //GameManager.instance.UpdateGameState(0);
+            DungeonManager.instance.NewRoom();
         }
 
         public void ToggleMainMenu()

@@ -1,12 +1,13 @@
-using System;
-using UnityEngine;
 using Enums;
-using Random = UnityEngine.Random;
+using UnityEngine;
 
 namespace Encounters
 {
-    public class Encounter : MonoBehaviour
+    public abstract class Encounter : ScriptableObject
     {
+        public string encounterName;
+        public EEncounterTypes encounterType;
 
+        public abstract void StartEncounter();
     }
 }

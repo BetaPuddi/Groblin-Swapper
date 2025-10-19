@@ -1,6 +1,7 @@
 using System;
 using Enums;
 using Managers;
+using Rooms;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -14,9 +15,7 @@ namespace Encounters
         private string[] encounterType;
         public string currentEncounterType;
 
-        [SerializeField]
-        private int roomsCleared;
-        private int exitChanceModifier;
+        public Encounter currentEncounter;
 
         private void Awake()
         {
@@ -41,7 +40,7 @@ namespace Encounters
             switch(currentEncounterType)
             {
                 case "enemy":
-                    EnemyManager.instance.SpawnNewEnemy();
+                    //EnemyManager.instance.SpawnNewEnemy();
                     break;
                 case "npc":
                     NPCManager.instance.SpawnNewNPC();
@@ -55,39 +54,6 @@ namespace Encounters
 
                     break;
             }
-        }
-
-        public void Advance()
-        {
-            if (GameManager.instance._gameState == EGameStates.Advance && roomsCleared <=10)
-            {
-                LogManager.instance.InstantiateTextLog("You advance further into the dungeon.");
-                GameManager.instance.UpdateGameState(Random.Range(1, 3));
-                roomsCleared++;
-            }
-            else if (GameManager.instance._gameState == EGameStates.Advance && roomsCleared > 10)
-            {
-                if (RollForExit())
-                {
-                    GameManager.instance.UpdateGameState(6);
-                    LogManager.instance.InstantiateTextLog("You find the dungeon exit!");
-                    print("exit");
-                }
-                else
-                {
-                    exitChanceModifier++;
-                    LogManager.instance.InstantiateTextLog("You advance further into the dungeon.");
-                    GameManager.instance.UpdateGameState(Random.Range(1, 3));
-                    roomsCleared++;
-                }
-            }
-        }
-
-        private bool RollForExit()
-        {
-            var randomRoll = Random.Range(0, 100);
-            var exitChance = 10 + exitChanceModifier;
-            return randomRoll <= exitChance;
         }
 
         public void Exit()

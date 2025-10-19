@@ -1598,8 +1598,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2023888337}
-        m_TargetAssemblyTypeName: Encounters.EncounterManager, Assembly-CSharp
+      - m_Target: {fileID: 1489376147}
+        m_TargetAssemblyTypeName: Managers.DungeonManager, Assembly-CSharp
         m_MethodName: Advance
         m_Mode: 1
         m_Arguments:
@@ -16633,6 +16633,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCharacter: {fileID: 0}
   currentItem: {fileID: 1834600985}
+--- !u!1 &1489376146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1489376148}
+  - component: {fileID: 1489376147}
+  m_Layer: 0
+  m_Name: DungeonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1489376147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489376146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7ca0f35d814f79b4298352935c76c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listOfRooms:
+  - {fileID: 11400000, guid: 67b8db6bf6087ff4580876adb3ac5a59, type: 2}
+  currentRoom: {fileID: 0}
+  roomsCleared: 0
+--- !u!4 &1489376148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489376146}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 375.46054, y: 339.52383, z: -6.999011}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1495854739
 GameObject:
   m_ObjectHideFlags: 0
@@ -21384,7 +21432,7 @@ MonoBehaviour:
   - 
   - 
   currentEncounterType: 
-  roomsCleared: 0
+  currentEncounter: {fileID: 0}
 --- !u!4 &2023888338
 Transform:
   m_ObjectHideFlags: 0
@@ -22243,3 +22291,4 @@ SceneRoots:
   - {fileID: 1495854740}
   - {fileID: 371949765}
   - {fileID: 2029357786}
+  - {fileID: 1489376148}

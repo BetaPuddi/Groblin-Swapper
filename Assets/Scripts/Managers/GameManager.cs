@@ -26,7 +26,7 @@ namespace Managers
             switch (_gameState)
             {
                 case EGameStates.Combat:
-                    EncounterManager.instance.NewEncounter("enemy");
+                    //EncounterManager.instance.NewEncounter("enemy");
                     break;
                 case EGameStates.NPC:
                     EncounterManager.instance.NewEncounter("npc");
@@ -57,6 +57,7 @@ namespace Managers
             }
         }
 
+        //TODO: move this to EnemyManager
         public void EnemyTurn()
         {
             if (_gameState == EGameStates.Combat)

@@ -3,7 +3,8 @@ namespace Enums
     public enum EEncounterTypes
     {
         Enemy,
-        SkillSwapper,
-        UtilitySwapper
+        NPC,
+        Loot,
+        Story
     }
 }
