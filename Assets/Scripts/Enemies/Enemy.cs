@@ -1,4 +1,5 @@
 using Character;
+using Encounters;
 using Enums;
 using Managers;
 using UI;
@@ -20,7 +21,10 @@ namespace Enemies
             print("Enemy dead");
             Reset();
             LogManager.instance.InstantiateTextLog($"{characterName} is defeated!");
-            GameManager.instance.UpdateGameState(3);
+            if (GameManager.instance._gameState == EGameStates.Combat)
+            {
+                DungeonManager.instance.RoomEncounterCleared();
+            }
         }
 
         public override void Reset()

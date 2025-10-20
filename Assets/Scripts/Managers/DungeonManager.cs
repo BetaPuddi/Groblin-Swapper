@@ -13,6 +13,8 @@ namespace Managers
 
         public List<RoomBase> listOfRooms;
         public RoomBase currentRoom;
+        public bool inChainEncounter;
+        public int chainEncountersCleared;
 
         [SerializeField]
         private int roomsCleared;
@@ -29,9 +31,21 @@ namespace Managers
         public void NewRoom()
         {
             currentRoom = listOfRooms[Random.Range(0, listOfRooms.Count)];
-            if (currentRoom.encounters.Count == 1)
+            inChainEncounter = currentRoom.isChainRoom;
+            currentRoom.encounters[0].StartEncounter();
+        }
+
+        public void RoomEncounterCleared()
+        {
+            chainEncountersCleared++;
+            if (chainEncountersCleared > currentRoom.encounters.Count - 1)
             {
-                currentRoom.encounters[0].StartEncounter();
+                chainEncountersCleared = 0;
+                GameManager.instance.UpdateGameState(3);
+            }
+            else
+            {
+                currentRoom.encounters[chainEncountersCleared].StartEncounter();
             }
         }
 

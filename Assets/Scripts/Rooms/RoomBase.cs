@@ -9,5 +9,6 @@ namespace Rooms
     {
         public string roomName;
         public List<Encounter> encounters;
+        public bool isChainRoom;
     }
 }
