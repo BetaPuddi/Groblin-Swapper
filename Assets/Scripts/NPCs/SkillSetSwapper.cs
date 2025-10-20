@@ -14,9 +14,9 @@ namespace NPCs
             {
                 var skillsToSwap = thingToSwap.GetComponent<CharacterDataHolder>().skillSet.skillList;
                 PlayerManager.instance.SwapPlayerSkillSet(skillsToSwap);
-                GameManager.instance._gameState = EGameStates.Advance;
                 var text = "You accept the swap.";
                 LogManager.instance.InstantiateTextLog(text);
+                DungeonManager.instance.RoomEncounterCleared();
             }
         }
 
