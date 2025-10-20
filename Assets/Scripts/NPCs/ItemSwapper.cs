@@ -13,9 +13,9 @@ namespace NPCs
             {
                 var item = thingToSwap.GetComponent<Item>();
                 PlayerManager.instance.SwapItem(item);
-                GameManager.instance._gameState = EGameStates.Advance;
                 var text = "You accept the swap.";
                 LogManager.instance.InstantiateTextLog(text);
+                DungeonManager.instance.RoomEncounterCleared();
             }
         }
 

@@ -6577,8 +6577,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2023888337}
-        m_TargetAssemblyTypeName: Encounters.EncounterManager, Assembly-CSharp
+      - m_Target: {fileID: 729675849}
+        m_TargetAssemblyTypeName: Managers.NPCManager, Assembly-CSharp
         m_MethodName: SkipNPC
         m_Mode: 1
         m_Arguments:
@@ -16564,8 +16564,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listOfRooms:
   - {fileID: 11400000, guid: 68ea26a9ee4bc0744ac5ae6e4b979631, type: 2}
+  - {fileID: 11400000, guid: 67b8db6bf6087ff4580876adb3ac5a59, type: 2}
+  - {fileID: 11400000, guid: 9460f748bcf38d9468be1e9ac2f3d888, type: 2}
   currentRoom: {fileID: 11400000, guid: 68ea26a9ee4bc0744ac5ae6e4b979631, type: 2}
-  encounterCount: 0
+  inChainEncounter: 0
   chainEncountersCleared: 0
   roomsCleared: 0
 --- !u!4 &1489376148

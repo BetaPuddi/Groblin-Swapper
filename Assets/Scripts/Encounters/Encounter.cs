@@ -7,7 +7,6 @@ namespace Encounters
     {
         public string encounterName;
         public EEncounterTypes encounterType;
-        public bool isCleared;
 
         public abstract void StartEncounter();
     }

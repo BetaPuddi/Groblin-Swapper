@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomName: 
   encounters:
-  - {fileID: 11400000, guid: bc041a94290ebb146a50a1d631215a9d, type: 2}
-  - {fileID: 11400000, guid: bc041a94290ebb146a50a1d631215a9d, type: 2}
+  - {fileID: 11400000, guid: faffef3a68f1ab44a9c6dfe6be618a6c, type: 2}
+  - {fileID: 11400000, guid: faffef3a68f1ab44a9c6dfe6be618a6c, type: 2}
   - {fileID: 11400000, guid: bc041a94290ebb146a50a1d631215a9d, type: 2}
   isChainRoom: 1
