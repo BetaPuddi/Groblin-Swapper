@@ -9,7 +9,7 @@ namespace Managers
     {
         public static NPCManager instance;
 
-        public NPC[] npcArray;
+        //public NPC[] npcArray;
         public NPC currentNpc;
 
         private void Awake()

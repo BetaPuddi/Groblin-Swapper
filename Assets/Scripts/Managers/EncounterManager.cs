@@ -12,7 +12,7 @@ namespace Encounters
         public static EncounterManager instance;
 
         [SerializeField]
-        private string[] encounterType;
+        //private string[] encounterType;
         public string currentEncounterType;
 
         public Encounter currentEncounter;
@@ -27,11 +27,11 @@ namespace Encounters
 
         private void Start()
         {
-            encounterType = new string[encounterType.Length];
-            encounterType[0] = "enemy";
-            encounterType[1] = "npc";
-            encounterType[2] = "advance";
-            encounterType[3] = "exit";
+            // encounterType = new string[encounterType.Length];
+            // encounterType[0] = "enemy";
+            // encounterType[1] = "npc";
+            // encounterType[2] = "advance";
+            // encounterType[3] = "exit";
         }
 
         public void NewEncounter(string encounterType)
@@ -48,7 +48,7 @@ namespace Encounters
                 case "advance":
                     break;
                 case "start":
-                    GameManager.instance.UpdateGameState(1);
+                    //GameManager.instance.UpdateGameState(1);
                     break;
                 case "exit":
 

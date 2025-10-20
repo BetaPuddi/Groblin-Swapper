@@ -7400,10 +7400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6520685dfb44cd696a6ae9c178a3da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcArray:
-  - {fileID: 1232963288}
-  - {fileID: 862938009}
-  - {fileID: 2043690510}
   currentNpc: {fileID: 0}
 --- !u!4 &729675850
 Transform:
@@ -9827,17 +9823,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855874722}
   m_CullTransparentMesh: 1
---- !u!114 &862938009 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5963177621633304008, guid: 4b5f6712e25d48341acd9a8868ec1347, type: 3}
-  m_PrefabInstance: {fileID: 6368114941106137545}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44c961f911484c7c93174fe7143151be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &862938010 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5800133225304911575, guid: 4b5f6712e25d48341acd9a8868ec1347, type: 3}
@@ -10572,6 +10557,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Managers.UIManager, Assembly-CSharp
         m_MethodName: PlayButtonSound
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 720616614}
+        m_TargetAssemblyTypeName: Managers.GameManager, Assembly-CSharp
+        m_MethodName: UpdateGameState
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -14076,17 +14073,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3416641853539741057, guid: fa75845ba6d7f1145b61c93ad3470c4d, type: 3}
   m_PrefabInstance: {fileID: 9182670103705024290}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1232963288 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3032243408315378613, guid: fa75845ba6d7f1145b61c93ad3470c4d, type: 3}
-  m_PrefabInstance: {fileID: 9182670103705024290}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2886e133dd38434ebb5b9075bb489a07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1256418058
 GameObject:
   m_ObjectHideFlags: 0
@@ -21207,11 +21193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99d9c2bf76d6dd946bdbd6d16b2ebc06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encounterType:
-  - 
-  - 
-  - 
-  - 
   currentEncounterType: 
   currentEncounter: {fileID: 0}
 --- !u!4 &2023888338
@@ -21546,17 +21527,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8691182917071875885, guid: 9d189f2c586679e4dabfba5de0688cbb, type: 3}
   m_PrefabInstance: {fileID: 356578391353371858}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2043690510 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8839150554503980662, guid: 9d189f2c586679e4dabfba5de0688cbb, type: 3}
-  m_PrefabInstance: {fileID: 356578391353371858}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28449ac4b35d41cc8b5e44b279279f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2100206352
 GameObject:
   m_ObjectHideFlags: 0

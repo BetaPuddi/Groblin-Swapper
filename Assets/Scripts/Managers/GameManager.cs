@@ -29,14 +29,14 @@ namespace Managers
                     //EncounterManager.instance.NewEncounter("enemy");
                     break;
                 case EGameStates.NPC:
-                    EncounterManager.instance.NewEncounter("npc");
+                    //EncounterManager.instance.NewEncounter("npc");
                     break;
                 case EGameStates.Advance:
-                    EncounterManager.instance.NewEncounter("advance");
+                    //EncounterManager.instance.NewEncounter("advance");
                     break;
                 case EGameStates.Start:
                     //UIManager.instance.ToggleUI();
-                    EncounterManager.instance.NewEncounter("start");
+                    //EncounterManager.instance.NewEncounter("start");
                     break;
                 case EGameStates.GameOver:
                     EnemyManager.instance.targetEnemy.Reset();
