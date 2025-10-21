@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7909584431276296215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3416641853539741057}
+  - component: {fileID: 3032243408315378613}
+  m_Layer: 0
+  m_Name: StatSwapper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3416641853539741057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7909584431276296215}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3032243408315378613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7909584431276296215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2886e133dd38434ebb5b9075bb489a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swapTargets:
+  - {fileID: 1060711906349464309, guid: 79b6a59928a7a1d4d836b5b1d4eaa163, type: 3}
+  - {fileID: 6588035416907805408, guid: 3d74096885abc544d856c163f45c3be1, type: 3}
+  - {fileID: 274647178385987908, guid: 1bf11f526c0d78942ac5a89d4c0548de, type: 3}
+  - {fileID: 1832953617695761280, guid: c5b5a4cbd9800d945b12906f1b322bf4, type: 3}
+  - {fileID: 1749498441641504751, guid: 3379f9df1f68cb34081434e2e0c90a7e, type: 3}
+  - {fileID: 4612615161718900991, guid: d01eacd3d9d058b49bf5f0530e8470a3, type: 3}
+  - {fileID: 6553149020769102129, guid: 93216fa52d773474c990bce2777cbf87, type: 3}
+  - {fileID: 4698898313018263264, guid: 41635739bfa966045b7433925e0382f0, type: 3}
+  - {fileID: 6052589351763098394, guid: 33f2c93e40e6fd543b3e59befcd28bf5, type: 3}
+  thingToSwap: {fileID: 0}
+  npcName: Stat Swapper
+  icon: {fileID: 21300000, guid: c9abf8bf5eb92be44a9045342caab590, type: 3}

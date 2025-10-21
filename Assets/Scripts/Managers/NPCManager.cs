@@ -1,4 +1,5 @@
 using System;
+using Enums;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using NPCs;
@@ -9,7 +10,7 @@ namespace Managers
     {
         public static NPCManager instance;
 
-        public NPC[] npcArray;
+        //public NPC[] npcArray;
         public NPC currentNpc;
 
         private void Awake()
@@ -20,9 +21,9 @@ namespace Managers
             }
         }
 
-        public void SpawnNewNPC()
+        public void SpawnNewNPC(NPC selectedNPC)
         {
-            currentNpc = npcArray[Random.Range(0, npcArray.Length)];
+            currentNpc = selectedNPC;
             currentNpc.InitialiseNPC();
             NPCInfoPanel.instance.UpdateNPCInfo();
         }
@@ -30,6 +31,15 @@ namespace Managers
         public void SwapButton()
         {
             currentNpc.Swap();
+        }
+
+        public void SkipNPC()
+        {
+            if (GameManager.instance._gameState == EGameStates.NPC)
+            {
+                LogManager.instance.InstantiateTextLog("You decline the swap.");
+                DungeonManager.instance.RoomEncounterCleared();
+            }
         }
     }
 }

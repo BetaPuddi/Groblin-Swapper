@@ -14,7 +14,6 @@ namespace Managers
     {
         public static EnemyManager instance;
 
-        public GameObject[] enemies;
         public Enemy targetEnemy;
         public CharacterDataHolder enemyData;
 
@@ -26,9 +25,10 @@ namespace Managers
             }
         }
 
-        public void SpawnNewEnemy()
+        public void SpawnNewEnemy(CharacterDataHolder newEnemyData)
         {
-            enemyData = enemies[Random.Range(0, enemies.Length)].gameObject.GetComponent<CharacterDataHolder>();
+            //enemyData = enemies[Random.Range(0, enemies.Length)].gameObject.GetComponent<CharacterDataHolder>();
+            enemyData = newEnemyData;
             SetEnemyData();
             targetEnemy.Initialise();
             EnemyIntroduction();
