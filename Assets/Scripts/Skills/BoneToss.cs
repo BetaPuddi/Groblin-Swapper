@@ -1,6 +1,5 @@
-using Character;
 using Managers;
-using UnityEngine;
+using Utilities;
 
 namespace Skills
 {
@@ -8,9 +7,8 @@ namespace Skills
     {
         public override void UseSkill()
         {
-            //SetTarget();
             print("Bone Toss");
-            var damageOut = 2 + Mathf.Clamp(user.attackStat * (100f - opponentTarget.defenceStat) / 100, 0, Mathf.Infinity);
+            var damageOut = BasicDamageCalculations.BasicStatBasedDamageCalculation(user.attackStat, opponentTarget, 2f, false);
             opponentTarget.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
         }
