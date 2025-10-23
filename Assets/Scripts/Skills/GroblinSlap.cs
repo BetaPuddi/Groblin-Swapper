@@ -1,5 +1,6 @@
 using Managers;
 using UnityEngine;
+using Utilities;
 
 namespace Skills
 {
@@ -8,7 +9,7 @@ namespace Skills
         public override void UseSkill()
         {
             print("Groblin attack!");
-            var damageOut = user.attackStat - Random.Range(-3, 4);
+            var damageOut = BasicDamageCalculations.BasicStatBasedDamageCalculation(user.attackStat, null, Random.Range(-3, 4), true);
             LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
             opponentTarget.TakeDamage(damageOut);
         }

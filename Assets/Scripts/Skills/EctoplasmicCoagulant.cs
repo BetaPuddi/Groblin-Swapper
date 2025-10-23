@@ -1,6 +1,7 @@
 using Managers;
 using UI;
 using UnityEngine;
+using Utilities;
 
 namespace Skills
 {
@@ -9,11 +10,11 @@ namespace Skills
         public override void UseSkill()
         {
             var missingHealth = user.maxHealth - user.currentHealth;
-            var damageOut = missingHealth * (100 - PlayerManager.instance.playerCharacter.defenceStat) / 100 * 0.1f;
+            var damageOut = BasicDamageCalculations.BasicHealthDamageCalculation(missingHealth, opponentTarget, 0.1f, false);
             opponentTarget.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
             user.AdjustBonusDefence(-2);
-            LogManager.instance.InstantiateTextLog($"{user.characterName} loses 2 Defense!");
+            LogManager.instance.InstantiateTextLog($"{user.characterName} loses 2 Defence!");
             user.UpdateCharacterUI();
         }
     }

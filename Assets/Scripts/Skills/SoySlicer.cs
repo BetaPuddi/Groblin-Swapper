@@ -1,5 +1,6 @@
 using Managers;
 using UnityEngine;
+using Utilities;
 
 namespace Skills
 {
@@ -7,7 +8,7 @@ namespace Skills
     {
         public override void UseSkill()
         {
-            var damageOut = user.currentHealth * (100 - opponentTarget.defenceStat) / 100 * 0.2f;
+            var damageOut = BasicDamageCalculations.BasicHealthDamageCalculation(user.currentHealth, opponentTarget, 0.2f, false);
             opponentTarget.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
         }
