@@ -33,16 +33,16 @@ namespace Utilities
             }
         }
 
-        public static float BasicCurrentHealthDamageCalculation(float currentHealthValue, CharacterBase target, float modifier, bool isPiercing)
+        public static float BasicHealthDamageCalculation(float healthValue, CharacterBase target, float modifier, bool isPiercing)
         {
             if (!isPiercing)
             {
-                var damageOut = currentHealthValue * Mathf.Clamp((100 - target.defenceStat) / 100 * modifier, 0, Mathf.Infinity);
+                var damageOut = healthValue * Mathf.Clamp((100 - target.defenceStat) / 100 * modifier, 0, Mathf.Infinity);
                 return damageOut;
             }
             else
             {
-                var damageOut = currentHealthValue * Mathf.Clamp((100 - 0) / 100 * modifier, 0, Mathf.Infinity);
+                var damageOut = healthValue * Mathf.Clamp((100 - 0) / 100 * modifier, 0, Mathf.Infinity);
                 return damageOut;
             }
         }
