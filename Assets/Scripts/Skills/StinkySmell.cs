@@ -7,7 +7,7 @@ namespace Skills
     {
         public override void UseSkill()
         {
-            var damageOut = user.attackStat - Random.Range(3, 9);
+            var damageOut = user.strengthStat - Random.Range(3, 9);
             opponentTarget.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
         }

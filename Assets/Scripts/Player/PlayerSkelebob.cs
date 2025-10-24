@@ -7,14 +7,14 @@ namespace Player
     {
         public virtual void Attack()
         {
-            var damageOut = 2 + Mathf.Clamp(attackStat * (100 - EnemyManager.instance.targetEnemy.defenceStat) / 100, 0, Mathf.Infinity);
+            var damageOut = 2 + Mathf.Clamp(strengthStat * (100 - EnemyManager.instance.targetEnemy.defenceStat) / 100, 0, Mathf.Infinity);
             LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
         }
 
         public virtual void UtilitySkill_01()
         {
-            var damageOut = attackStat / 3;
+            var damageOut = strengthStat / 3;
             LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
         }

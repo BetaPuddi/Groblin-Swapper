@@ -8,12 +8,12 @@ namespace Player
     {
         public virtual void Attack()
         {
-            var damageOut = (attackStat + Random.Range(-3, 3)) * (100 - EnemyManager.instance.targetEnemy.defenceStat) / 100;
+            var damageOut = (strengthStat + Random.Range(-3, 3)) * (100 - EnemyManager.instance.targetEnemy.defenceStat) / 100;
             LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
-            var atkStat = attackStat;
+            var atkStat = strengthStat;
             var defStat = defenceStat;
-            attackStat = defStat;
+            strengthStat = defStat;
             defenceStat = atkStat;
             LogManager.instance.InstantiateTextLog($"You swapped your stats!");
             PlayerInfoPanel.instance.UpdatePlayerInfo();
@@ -21,13 +21,13 @@ namespace Player
 
         public virtual void UtilitySkill_01()
         {
-            var damageOut = (defenceStat + Random.Range(-3, 3)) * (100 - EnemyManager.instance.targetEnemy.attackStat) / 100;
+            var damageOut = (defenceStat + Random.Range(-3, 3)) * (100 - EnemyManager.instance.targetEnemy.strengthStat) / 100;
             LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
-            var atkStat = attackStat;
+            var atkStat = strengthStat;
             var defStat = defenceStat;
             defenceStat = atkStat;
-            attackStat = defStat;
+            strengthStat = defStat;
             LogManager.instance.InstantiateTextLog($"You swapped your stats!");
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }

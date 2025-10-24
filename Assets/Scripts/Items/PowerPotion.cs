@@ -7,7 +7,7 @@ namespace Items
     {
         public override void UseItem()
         {
-            PlayerManager.instance.playerCharacter.AdjustBonusAttack(10);
+            PlayerManager.instance.playerCharacter.AdjustBonusStrength(10);
         }
     }
 }

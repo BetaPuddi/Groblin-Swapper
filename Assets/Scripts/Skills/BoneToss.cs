@@ -8,7 +8,7 @@ namespace Skills
         public override void UseSkill()
         {
             print("Bone Toss");
-            var damageOut = BasicDamageCalculations.BasicStatBasedDamageCalculation(user.attackStat, opponentTarget, 2f, false);
+            var damageOut = BasicDamageCalculations.BasicStatBasedDamageCalculation(user.strengthStat, opponentTarget, 2f, false);
             opponentTarget.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
         }

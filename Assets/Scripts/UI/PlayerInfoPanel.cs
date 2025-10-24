@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 using Managers;
 using Player;
+using UnityEngine.Serialization;
 
 namespace UI
 {
@@ -13,7 +14,7 @@ namespace UI
         public PlayerCharacter playerCharacterRef;
         public TextMeshProUGUI playerNameText;
         public TextMeshProUGUI playerHealthText;
-        public TextMeshProUGUI playerATKText;
+        [FormerlySerializedAs("playerATKText")] public TextMeshProUGUI playerSTRText;
         public TextMeshProUGUI playerDEFText;
         public TextMeshProUGUI playerItemText;
 
@@ -43,7 +44,7 @@ namespace UI
             UpdatePlayerRef();
             playerNameText.text = playerCharacterRef.characterName;
             playerHealthText.text = playerCharacterRef.currentHealth.ToString();
-            playerATKText.text = playerCharacterRef.attackStat.ToString();
+            playerSTRText.text = playerCharacterRef.strengthStat.ToString();
             playerDEFText.text = playerCharacterRef.defenceStat.ToString();
             playerItemText.text = playerCharacterRef.currentItemUses.ToString();
         }

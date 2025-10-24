@@ -112,15 +112,15 @@ namespace Managers
             playerCharacter.Heal(Mathf.RoundToInt(heal));
         }
 
-        public void ChangeDefense(int amount)
+        public void ChangeDefence(int amount)
         {
             playerCharacter.defenceStat += amount;
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
-        public void ChangeAttack(int amount)
+        public void ChangeStrength(int amount)
         {
-            playerCharacter.attackStat += amount;
+            playerCharacter.strengthStat += amount;
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 

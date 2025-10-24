@@ -7,7 +7,7 @@ namespace Player
     {
         public virtual void Attack()
         {
-            var damageOut = attackStat + EnemyManager.instance.targetEnemy.attackStat;
+            var damageOut = strengthStat + EnemyManager.instance.targetEnemy.strengthStat;
             var targetRoll = Random.Range(0, 2);
             switch (targetRoll)
             {
@@ -31,12 +31,12 @@ namespace Player
             switch (targetRoll)
             {
                 case 0:
-                    healOut -= attackStat;
+                    healOut -= strengthStat;
                     LogManager.instance.InstantiateHealLog(characterName, "itself", healOut);
                     Heal(healOut);
                     break;
                 case 1:
-                    healOut -= EnemyManager.instance.targetEnemy.attackStat;
+                    healOut -= EnemyManager.instance.targetEnemy.strengthStat;
                     LogManager.instance.InstantiateHealLog(characterName, EnemyManager.instance.targetEnemy.characterName, healOut);
                     EnemyManager.instance.targetEnemy.Heal(healOut);
                     break;
