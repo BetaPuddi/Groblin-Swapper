@@ -8,6 +8,7 @@ using Skills;
 using UI;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Weapons;
 
 namespace Character
 {
@@ -43,6 +44,9 @@ namespace Character
         [Header("Skills")]
         public SkillSet skills;
         public List<Skill> currentSkills;
+
+        [Header("Equipment")]
+        public WeaponContainer weaponContainer;
 
         private void Start()
         {

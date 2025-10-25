@@ -8,6 +8,7 @@ using Player;
 using ScriptableObjects;
 using Skills;
 using UnityEngine.Serialization;
+using Weapons;
 
 namespace Managers
 {
@@ -17,6 +18,7 @@ namespace Managers
 
         [FormerlySerializedAs("player")] public PlayerCharacter playerCharacter;
         public Item currentItem;
+        public WeaponContainer weaponContainer;
 
         private void Awake()
         {
@@ -79,6 +81,16 @@ namespace Managers
                 playerCharacter.currentSkills[1].SetTarget(playerCharacter, EnemyManager.instance.targetEnemy);
                 playerCharacter.AnnounceAction(playerCharacter.currentSkills[1].skillName);
                 playerCharacter.currentSkills[1].UseSkill();
+            }
+        }
+
+        public void PlayerWeaponAttack()
+        {
+            if (GameManager.instance._gameState == EGameStates.Combat)
+            {
+                playerCharacter.weaponContainer.currentWeaponAttackSkill.SetTarget(playerCharacter, EnemyManager.instance.targetEnemy);
+                playerCharacter.AnnounceAction(playerCharacter.weaponContainer.currentWeaponName);
+                playerCharacter.weaponContainer.UseAttackSkill();
             }
         }
 
