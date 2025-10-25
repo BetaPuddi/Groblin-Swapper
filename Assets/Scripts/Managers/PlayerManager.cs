@@ -64,6 +64,15 @@ namespace Managers
             }
         }
 
+        public void SwapWeapon(WeaponBase newWeapon)
+        {
+            if (GameManager.instance._gameState == EGameStates.NPC)
+            {
+                weaponContainer.currentWeapon = newWeapon;
+                weaponContainer.AssignCurrentAttackSkill();
+            }
+        }
+
         public void PlayerSkill01()
         {
             if (GameManager.instance._gameState == EGameStates.Combat)
@@ -154,6 +163,7 @@ namespace Managers
         public void InitialisePlayer()
         {
             playerCharacter = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCharacter>();
+            weaponContainer = playerCharacter.GetComponent<WeaponContainer>();
             playerCharacter.currentSkills = new List<Skill>(playerCharacter.skills.skillList);
         }
     }
