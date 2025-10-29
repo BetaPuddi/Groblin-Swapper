@@ -1,5 +1,4 @@
 using Managers;
-using UnityEngine;
 
 namespace Skills
 {
@@ -7,7 +6,7 @@ namespace Skills
     {
         public override void UseSkill()
         {
-            opponentTarget.AdjustBonusAttack(-1);
+            opponentTarget.AdjustBonusStrength(-1);
             LogManager.instance.InstantiateTextLog($"{user.characterName} reduces your Attack by 1!");
             opponentTarget.AdjustBonusMaxHealth(-5);
             LogManager.instance.InstantiateTextLog($"{user.characterName} reduces your MaxHealth by 1!");

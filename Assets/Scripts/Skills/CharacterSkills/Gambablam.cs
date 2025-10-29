@@ -7,7 +7,7 @@ namespace Skills
     {
         public override void UseSkill()
         {
-            var damageOut = user.attackStat + opponentTarget.attackStat;
+            var damageOut = user.strengthStat + opponentTarget.strengthStat;
             var targetRoll = Random.Range(0, 2);
             switch (targetRoll)
             {

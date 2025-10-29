@@ -1,13 +1,14 @@
 using Managers;
-using UnityEngine;
+using Utilities;
 
 namespace Skills
 {
-    public class ZestBlast : Skill
+    public class BoneToss : Skill
     {
         public override void UseSkill()
         {
-            var damageOut = user.attackStat * ((100f - opponentTarget.defenceStat) / 100) * 1.5f;
+            print("Bone Toss");
+            var damageOut = BasicDamageCalculations.BasicStatBasedDamageCalculation(user.strengthStat, opponentTarget, 2f, false);
             opponentTarget.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
         }

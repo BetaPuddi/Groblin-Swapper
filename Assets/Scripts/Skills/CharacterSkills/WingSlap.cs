@@ -1,5 +1,4 @@
 using Managers;
-using UnityEngine;
 
 namespace Skills
 {
@@ -8,7 +7,7 @@ namespace Skills
         public override void UseSkill()
         {
             print("Bat Attack");
-            var damageOut = user.attackStat;
+            var damageOut = user.strengthStat;
             opponentTarget.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
         }

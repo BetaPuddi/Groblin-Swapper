@@ -3,6 +3,7 @@ using Enums;
 using Managers;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace UI
@@ -14,7 +15,7 @@ namespace UI
         public GameObject panel;
         public TextMeshProUGUI enemyNameText;
         public TextMeshProUGUI enemyHealthText;
-        public TextMeshProUGUI enemyATKText;
+        [FormerlySerializedAs("enemyATKText")] public TextMeshProUGUI enemySTRText;
         public TextMeshProUGUI enemyDEFText;
         public Image icon;
 
@@ -34,7 +35,7 @@ namespace UI
                 panel.SetActive(true);
                 enemyNameText.text = EnemyManager.instance.targetEnemy.characterName;
                 enemyHealthText.text = EnemyManager.instance.targetEnemy.currentHealth.ToString();
-                enemyATKText.text = EnemyManager.instance.targetEnemy.attackStat.ToString();
+                enemySTRText.text = EnemyManager.instance.targetEnemy.strengthStat.ToString();
                 enemyDEFText.text = EnemyManager.instance.targetEnemy.defenceStat.ToString();
                 icon.sprite = EnemyManager.instance.targetEnemy.characterSprite;
             }

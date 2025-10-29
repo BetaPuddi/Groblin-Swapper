@@ -56,5 +56,16 @@ namespace Managers
             newLogEntry.logBackground.color = new Color(newLogEntry.logBackground.color.r,
                 newLogEntry.logBackground.color.g, newLogEntry.logBackground.color.b, 0.1215686f);
         }
+
+        public void InstantiateAttackLog(string user, string action)
+        {
+            var newLogPrefab = Instantiate(logPrefab, logPanel.transform);
+            var newLogEntry = newLogPrefab.GetComponent<LogEntry>();
+            var text = $"{user} attacks with {action}!";
+            newLogEntry.SetLogText(text);
+            newLogEntry.logBackground.color = Color.cyan;
+            newLogEntry.logBackground.color = new Color(newLogEntry.logBackground.color.r,
+                newLogEntry.logBackground.color.g, newLogEntry.logBackground.color.b, 0.1215686f);
+        }
     }
 }

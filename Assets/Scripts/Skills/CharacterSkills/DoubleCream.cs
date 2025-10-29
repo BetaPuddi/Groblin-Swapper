@@ -1,5 +1,4 @@
 using Managers;
-using UnityEngine;
 
 namespace Skills
 {
@@ -10,11 +9,11 @@ namespace Skills
             float damageOut;
             if (user.currentHealth < user.maxHealth * 0.2f)
             {
-                damageOut = user.attackStat * 2;
+                damageOut = user.strengthStat * 2;
             }
             else
             {
-                damageOut = user.attackStat * (100 - opponentTarget.defenceStat) / 100;
+                damageOut = user.strengthStat * (100 - opponentTarget.defenceStat) / 100;
             }
             opponentTarget.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);

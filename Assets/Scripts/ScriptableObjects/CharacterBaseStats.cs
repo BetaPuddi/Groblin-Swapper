@@ -9,7 +9,7 @@ namespace ScriptableObjects
         public Sprite icon;
         [FormerlySerializedAs("enemyName")] public string characterName;
         public float maxHealth;
-        public float attack;
+        [FormerlySerializedAs("attack")] public float strength;
         [FormerlySerializedAs("defense")] public float defence;
         public int maxItemUses;
     }

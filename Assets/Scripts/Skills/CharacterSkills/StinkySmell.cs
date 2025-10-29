@@ -1,14 +1,13 @@
 using Managers;
-using Utilities;
+using UnityEngine;
 
 namespace Skills
 {
-    public class BoneToss : Skill
+    public class StinkySmell : Skill
     {
         public override void UseSkill()
         {
-            print("Bone Toss");
-            var damageOut = BasicDamageCalculations.BasicStatBasedDamageCalculation(user.attackStat, opponentTarget, 2f, false);
+            var damageOut = user.strengthStat - Random.Range(3, 9);
             opponentTarget.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
         }

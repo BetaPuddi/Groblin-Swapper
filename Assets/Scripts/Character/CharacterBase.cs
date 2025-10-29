@@ -8,6 +8,7 @@ using Skills;
 using UI;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Weapons;
 
 namespace Character
 {
@@ -20,19 +21,19 @@ namespace Character
 
         [Header("Base Stats")]
         public float baseMaxHealth;
-        public float baseAttack;
+        [FormerlySerializedAs("baseAttack")] public float baseStrength;
         [FormerlySerializedAs("baseDefense")] public float baseDefence;
         public int baseMaxItemUses;
 
         [Header("Bonus Stats")]
         public float bonusMaxHealth;
-        public float bonusAttack;
+        [FormerlySerializedAs("bonusAttack")] public float bonusStrength;
         [FormerlySerializedAs("bonusDefense")] public float bonusDefence;
         public int bonusMaxItemUses;
 
         [Header("Total Stats")]
         public float maxHealth;
-        public float attackStat;
+        [FormerlySerializedAs("attackStat")] public float strengthStat;
         [FormerlySerializedAs("defenseStat")] public float defenceStat;
         public int maxItemUses;
 
@@ -43,6 +44,9 @@ namespace Character
         [Header("Skills")]
         public SkillSet skills;
         public List<Skill> currentSkills;
+
+        [Header("Equipment")]
+        public WeaponContainer weaponContainer;
 
         private void Start()
         {
@@ -79,7 +83,7 @@ namespace Character
         public void SetBaseStats()
         {
             baseMaxHealth = characterBase.maxHealth;
-            baseAttack = characterBase.attack;
+            baseStrength = characterBase.strength;
             baseDefence = characterBase.defence;
             baseMaxItemUses = characterBase.maxItemUses;
         }
@@ -91,7 +95,7 @@ namespace Character
             {
                 currentHealth = maxHealth;
             }
-            attackStat = baseAttack + bonusAttack;
+            strengthStat = baseStrength + bonusStrength;
             defenceStat = baseDefence + bonusDefence;
             maxItemUses = baseMaxItemUses + bonusMaxItemUses;
             UpdateCharacterUI();
@@ -99,7 +103,7 @@ namespace Character
 
         public void ClearBonusStats()
         {
-            bonusAttack = 0;
+            bonusStrength = 0;
             bonusDefence = 0;
             bonusMaxHealth = 0;
             bonusMaxItemUses = 0;
@@ -147,9 +151,9 @@ namespace Character
             UpdateCharacterUI();
         }
 
-        public void AdjustBonusAttack(int amount)
+        public void AdjustBonusStrength(int amount)
         {
-            bonusAttack += amount;
+            bonusStrength += amount;
             UpdateTotalStats();
             UpdateCharacterUI();
         }
@@ -175,6 +179,11 @@ namespace Character
         public void AnnounceAction(string action)
         {
             LogManager.instance.InstantiateActionLog(characterName, action);
+        }
+
+        public void AnnounceAttack(string attack)
+        {
+            LogManager.instance.InstantiateAttackLog(characterName, attack);
         }
     }
 }

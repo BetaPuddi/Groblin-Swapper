@@ -9,7 +9,7 @@ namespace Skills
         public override void UseSkill()
         {
             print("Groblin attack!");
-            var damageOut = BasicDamageCalculations.BasicStatBasedDamageCalculation(user.attackStat, null, Random.Range(-3, 4), true);
+            var damageOut = BasicDamageCalculations.BasicStatBasedDamageCalculation(user.strengthStat, null, Random.Range(-3, 4), true);
             LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
             opponentTarget.TakeDamage(damageOut);
         }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Enums;
+using Equipment;
 using Items;
 using UI;
 using UnityEngine;
@@ -8,6 +9,7 @@ using Player;
 using ScriptableObjects;
 using Skills;
 using UnityEngine.Serialization;
+using Weapons;
 
 namespace Managers
 {
@@ -17,6 +19,7 @@ namespace Managers
 
         [FormerlySerializedAs("player")] public PlayerCharacter playerCharacter;
         public Item currentItem;
+        public WeaponContainer weaponContainer;
 
         private void Awake()
         {
@@ -62,6 +65,15 @@ namespace Managers
             }
         }
 
+        public void SwapWeapon(WeaponBase newWeapon)
+        {
+            if (GameManager.instance._gameState == EGameStates.NPC)
+            {
+                weaponContainer.currentWeapon = newWeapon;
+                weaponContainer.UpdateWeaponContainer();
+            }
+        }
+
         public void PlayerSkill01()
         {
             if (GameManager.instance._gameState == EGameStates.Combat)
@@ -79,6 +91,16 @@ namespace Managers
                 playerCharacter.currentSkills[1].SetTarget(playerCharacter, EnemyManager.instance.targetEnemy);
                 playerCharacter.AnnounceAction(playerCharacter.currentSkills[1].skillName);
                 playerCharacter.currentSkills[1].UseSkill();
+            }
+        }
+
+        public void PlayerWeaponAttack()
+        {
+            if (GameManager.instance._gameState == EGameStates.Combat)
+            {
+                playerCharacter.weaponContainer.currentWeaponAttackSkill.SetTarget(playerCharacter, EnemyManager.instance.targetEnemy);
+                playerCharacter.AnnounceAttack(playerCharacter.weaponContainer.currentWeaponName);
+                playerCharacter.weaponContainer.UseAttackSkill();
             }
         }
 
@@ -112,15 +134,15 @@ namespace Managers
             playerCharacter.Heal(Mathf.RoundToInt(heal));
         }
 
-        public void ChangeDefense(int amount)
+        public void ChangeDefence(int amount)
         {
             playerCharacter.defenceStat += amount;
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
-        public void ChangeAttack(int amount)
+        public void ChangeStrength(int amount)
         {
-            playerCharacter.attackStat += amount;
+            playerCharacter.strengthStat += amount;
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 
@@ -142,6 +164,8 @@ namespace Managers
         public void InitialisePlayer()
         {
             playerCharacter = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCharacter>();
+            weaponContainer = playerCharacter.GetComponent<WeaponContainer>();
+            weaponContainer.AssignCurrentAttackSkill();
             playerCharacter.currentSkills = new List<Skill>(playerCharacter.skills.skillList);
         }
     }

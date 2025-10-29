@@ -12,12 +12,12 @@ namespace Skills
             switch (targetRoll)
             {
                 case 0:
-                    healOut -= user.attackStat;
+                    healOut -= user.strengthStat;
                     user.Heal(healOut);
                     LogManager.instance.InstantiateHealLog(user.characterName, "itself", healOut);
                     break;
                 case 1:
-                    healOut -= opponentTarget.attackStat;
+                    healOut -= opponentTarget.strengthStat;
                     opponentTarget.Heal(healOut);
                     LogManager.instance.InstantiateHealLog(user.characterName, opponentTarget.characterName, healOut);
                     break;
