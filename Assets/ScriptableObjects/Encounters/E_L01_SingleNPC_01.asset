@@ -19,4 +19,5 @@ MonoBehaviour:
   - {fileID: 8839150554503980662, guid: 9d189f2c586679e4dabfba5de0688cbb, type: 3}
   - {fileID: 3032243408315378613, guid: fa75845ba6d7f1145b61c93ad3470c4d, type: 3}
   - {fileID: -6523426578426556040, guid: 09452007f0a16c445983d1d99f74649a, type: 3}
-  selectedNPC: {fileID: -6523426578426556040, guid: 09452007f0a16c445983d1d99f74649a, type: 3}
+  - {fileID: -4735754922332512056, guid: 9bf06ac9215d34240ab8f06b604b15cf, type: 3}
+  selectedNPC: {fileID: 3032243408315378613, guid: fa75845ba6d7f1145b61c93ad3470c4d, type: 3}

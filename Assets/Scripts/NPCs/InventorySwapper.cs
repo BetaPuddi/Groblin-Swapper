@@ -1,4 +1,3 @@
-using Equipment;
 using Managers;
 using ScriptableObjects;
 using UnityEngine;
@@ -6,12 +5,15 @@ using Weapons;
 
 namespace NPCs
 {
-    public class WeaponSwapper : NPC
+    public class InventorySwapper : NPC
     {
+        public InventoryData[] inventorySwapTargets;
+        public InventoryData inventoryToSwap;
+
         public override void Swap()
         {
-            var weaponToSwap = thingToSwap.GetComponent<WeaponContainer>().currentWeapon;
-            PlayerManager.instance.SwapWeapon(weaponToSwap);
+            var newInventory = inventoryToSwap;
+            PlayerManager.instance.SwapInventory(newInventory);
             var text = "You accept the swap.";
             LogManager.instance.InstantiateTextLog(text);
             DungeonManager.instance.RoomEncounterCleared();
@@ -24,13 +26,13 @@ namespace NPCs
 
         public override void NewSwapTarget()
         {
-            thingToSwap = swapTargets[Random.Range(0, swapTargets.Length)];
+            inventoryToSwap = inventorySwapTargets[Random.Range(0, swapTargets.Length)];
         }
 
         public override void Introduction()
         {
             var text =
-                $"{npcName} appears and offers to swap your weapon with {thingToSwap.GetComponent<WeaponBase>().weaponName}!";
+                $"{npcName} appears and offers to swap your inventory with {inventoryToSwap.inventoryName}'s!";
             LogManager.instance.InstantiateTextLog(text);
         }
     }

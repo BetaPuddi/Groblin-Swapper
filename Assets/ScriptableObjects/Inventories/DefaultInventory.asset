@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fccc20ddba4f5685fc5a07304eafa2, type: 3}
+  m_Name: DefaultInventory
+  m_EditorClassIdentifier: 
+  inventoryName: Default
+  headSlot: {fileID: -5758234985223219604, guid: 33084322dc2ff4245994cc6511b6e86b, type: 3}
+  chestSlot: {fileID: -8288221704549394017, guid: 24b38e462d89fc9468e17d906a0dd95f, type: 3}
+  legSlot: {fileID: -1509962277570834782, guid: 3f2f8d248f00029419b30e58414a12d4, type: 3}
+  armSlot: {fileID: -1442991553962833197, guid: 3331f252e402f4d4a9b17db808297ea7, type: 3}
