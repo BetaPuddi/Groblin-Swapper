@@ -1,6 +1,4 @@
 using Managers;
-using UI;
-using UnityEngine;
 using Utilities;
 
 namespace Skills

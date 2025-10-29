@@ -1,14 +1,12 @@
 using Managers;
-using UnityEngine;
 
 namespace Skills
 {
-    public class WingSlap : Skill
+    public class ZestBlast : Skill
     {
         public override void UseSkill()
         {
-            print("Bat Attack");
-            var damageOut = user.strengthStat;
+            var damageOut = user.strengthStat * ((100f - opponentTarget.defenceStat) / 100) * 1.5f;
             opponentTarget.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
         }

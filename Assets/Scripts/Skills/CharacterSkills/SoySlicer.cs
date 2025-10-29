@@ -1,13 +1,13 @@
 using Managers;
-using UnityEngine;
+using Utilities;
 
 namespace Skills
 {
-    public class ZestBlast : Skill
+    public class SoySlicer : Skill
     {
         public override void UseSkill()
         {
-            var damageOut = user.strengthStat * ((100f - opponentTarget.defenceStat) / 100) * 1.5f;
+            var damageOut = BasicDamageCalculations.BasicHealthDamageCalculation(user.currentHealth, opponentTarget, 0.2f, false);
             opponentTarget.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
         }

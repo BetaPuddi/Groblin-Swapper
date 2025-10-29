@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Enums;
+using Equipment;
 using Items;
 using UI;
 using UnityEngine;
@@ -69,7 +70,7 @@ namespace Managers
             if (GameManager.instance._gameState == EGameStates.NPC)
             {
                 weaponContainer.currentWeapon = newWeapon;
-                weaponContainer.AssignCurrentAttackSkill();
+                weaponContainer.UpdateWeaponContainer();
             }
         }
 
@@ -164,6 +165,7 @@ namespace Managers
         {
             playerCharacter = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCharacter>();
             weaponContainer = playerCharacter.GetComponent<WeaponContainer>();
+            weaponContainer.AssignCurrentAttackSkill();
             playerCharacter.currentSkills = new List<Skill>(playerCharacter.skills.skillList);
         }
     }
