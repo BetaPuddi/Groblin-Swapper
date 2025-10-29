@@ -180,5 +180,10 @@ namespace Character
         {
             LogManager.instance.InstantiateActionLog(characterName, action);
         }
+
+        public void AnnounceAttack(string attack)
+        {
+            LogManager.instance.InstantiateAttackLog(characterName, attack);
+        }
     }
 }

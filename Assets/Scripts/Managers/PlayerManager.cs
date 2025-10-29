@@ -99,7 +99,7 @@ namespace Managers
             if (GameManager.instance._gameState == EGameStates.Combat)
             {
                 playerCharacter.weaponContainer.currentWeaponAttackSkill.SetTarget(playerCharacter, EnemyManager.instance.targetEnemy);
-                playerCharacter.AnnounceAction(playerCharacter.weaponContainer.currentWeaponName);
+                playerCharacter.AnnounceAttack(playerCharacter.weaponContainer.currentWeaponName);
                 playerCharacter.weaponContainer.UseAttackSkill();
             }
         }
