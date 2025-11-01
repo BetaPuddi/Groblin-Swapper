@@ -146,7 +146,7 @@ namespace Managers
 
         public void ChangeDefence(int amount)
         {
-            playerCharacter.defenceStat += amount;
+            playerCharacter.enduranceStat += amount;
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 

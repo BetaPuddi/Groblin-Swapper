@@ -10,7 +10,7 @@ namespace Skills
             var damageOut = user.strengthStat * 0.5f;
             opponentTarget.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
-            var skillHeal = (user.defenceStat * 0.2f) + (user.currentHealth * 0.02f);
+            var skillHeal = (user.enduranceStat * 0.2f) + (user.currentHealth * 0.02f);
             user.Heal(skillHeal);
             LogManager.instance.InstantiateHealLog(user.characterName, "itself", skillHeal);
         }

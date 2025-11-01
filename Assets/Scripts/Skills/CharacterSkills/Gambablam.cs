@@ -13,13 +13,13 @@ namespace Skills
             {
                 case 0:
                     print(damageOut);
-                    damageOut *= (100 - user.defenceStat) / 100;
+                    damageOut *= (100 - user.enduranceStat) / 100;
                     print(damageOut);
                     user.TakeDamage(damageOut);
                     LogManager.instance.InstantiateDamageLog(user.characterName, "itself", damageOut);
                     break;
                 case 1:
-                    damageOut *= (100 - opponentTarget.defenceStat) / 100;
+                    damageOut *= (100 - opponentTarget.enduranceStat) / 100;
                     print(damageOut);
                     opponentTarget.TakeDamage(damageOut);
                     LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);
