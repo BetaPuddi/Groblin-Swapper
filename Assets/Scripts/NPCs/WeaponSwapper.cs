@@ -1,3 +1,4 @@
+using Equipment;
 using Managers;
 using ScriptableObjects;
 using UnityEngine;
@@ -29,7 +30,7 @@ namespace NPCs
         public override void Introduction()
         {
             var text =
-                $"{npcName} appears and offers to swap your weapon with {thingToSwap.GetComponent<WeaponContainer>().currentWeapon.weaponName}!";
+                $"{npcName} appears and offers to swap your weapon with {thingToSwap.GetComponent<WeaponBase>().weaponName}!";
             LogManager.instance.InstantiateTextLog(text);
         }
     }

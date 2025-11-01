@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swapTargets:
   - {fileID: 2616670279307239841, guid: 3268f5998cd11274099c69c58edc5055, type: 3}
-  thingToSwap: {fileID: 22754743466282660, guid: fa5784fecbc65a344b1dea0dfd8de3b7, type: 3}
-  npcName: 
-  icon: {fileID: 0}
+  thingToSwap: {fileID: 2616670279307239841, guid: 3268f5998cd11274099c69c58edc5055, type: 3}
+  npcName: Weapon Swapper
+  icon: {fileID: 7482667652216324306, guid: d121908d1e929fe41953b378b144a91a, type: 3}

@@ -16,7 +16,7 @@ namespace UI
         public TextMeshProUGUI enemyNameText;
         public TextMeshProUGUI enemyHealthText;
         [FormerlySerializedAs("enemyATKText")] public TextMeshProUGUI enemySTRText;
-        public TextMeshProUGUI enemyDEFText;
+        [FormerlySerializedAs("enemyDEFText")] public TextMeshProUGUI enemyENDText;
         public Image icon;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -36,7 +36,7 @@ namespace UI
                 enemyNameText.text = EnemyManager.instance.targetEnemy.characterName;
                 enemyHealthText.text = EnemyManager.instance.targetEnemy.currentHealth.ToString();
                 enemySTRText.text = EnemyManager.instance.targetEnemy.strengthStat.ToString();
-                enemyDEFText.text = EnemyManager.instance.targetEnemy.defenceStat.ToString();
+                enemyENDText.text = EnemyManager.instance.targetEnemy.enduranceStat.ToString();
                 icon.sprite = EnemyManager.instance.targetEnemy.characterSprite;
             }
             else

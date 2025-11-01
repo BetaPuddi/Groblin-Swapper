@@ -9,7 +9,7 @@ namespace Items
         {
             PlayerManager.instance.playerCharacter.AdjustBonusMaxHealth(50);
             PlayerManager.instance.PlayerHeal(50);
-            PlayerManager.instance.playerCharacter.AdjustBonusDefence(5);
+            PlayerManager.instance.playerCharacter.AdjustEndurance(5);
         }
     }
 }

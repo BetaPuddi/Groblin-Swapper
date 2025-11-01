@@ -15,7 +15,7 @@ namespace UI
         public TextMeshProUGUI playerNameText;
         public TextMeshProUGUI playerHealthText;
         [FormerlySerializedAs("playerATKText")] public TextMeshProUGUI playerSTRText;
-        public TextMeshProUGUI playerDEFText;
+        [FormerlySerializedAs("playerDEFText")] public TextMeshProUGUI playerENDText;
         public TextMeshProUGUI playerItemText;
 
         private void Awake()
@@ -45,7 +45,7 @@ namespace UI
             playerNameText.text = playerCharacterRef.characterName;
             playerHealthText.text = playerCharacterRef.currentHealth.ToString();
             playerSTRText.text = playerCharacterRef.strengthStat.ToString();
-            playerDEFText.text = playerCharacterRef.defenceStat.ToString();
+            playerENDText.text = playerCharacterRef.enduranceStat.ToString();
             playerItemText.text = playerCharacterRef.currentItemUses.ToString();
         }
 

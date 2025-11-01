@@ -20,6 +20,7 @@ namespace Managers
         [FormerlySerializedAs("player")] public PlayerCharacter playerCharacter;
         public Item currentItem;
         public WeaponContainer weaponContainer;
+        public CharacterInventory playerInventory;
 
         private void Awake()
         {
@@ -71,6 +72,15 @@ namespace Managers
             {
                 weaponContainer.currentWeapon = newWeapon;
                 weaponContainer.UpdateWeaponContainer();
+            }
+        }
+
+        public void SwapInventory(InventoryData inventoryData)
+        {
+            if (GameManager.instance._gameState == EGameStates.NPC)
+            {
+                playerInventory.SetInventoryData(inventoryData);
+                playerCharacter.CalculateTotalEquipmentDefence();
             }
         }
 
@@ -136,7 +146,7 @@ namespace Managers
 
         public void ChangeDefence(int amount)
         {
-            playerCharacter.defenceStat += amount;
+            playerCharacter.enduranceStat += amount;
             PlayerInfoPanel.instance.UpdatePlayerInfo();
         }
 

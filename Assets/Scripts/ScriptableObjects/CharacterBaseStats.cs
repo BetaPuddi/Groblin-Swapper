@@ -10,7 +10,7 @@ namespace ScriptableObjects
         [FormerlySerializedAs("enemyName")] public string characterName;
         public float maxHealth;
         [FormerlySerializedAs("attack")] public float strength;
-        [FormerlySerializedAs("defense")] public float defence;
+        [FormerlySerializedAs("defence")] [FormerlySerializedAs("defense")] public float endurance;
         public int maxItemUses;
     }
 }

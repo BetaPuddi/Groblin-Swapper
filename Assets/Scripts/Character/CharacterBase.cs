@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Enums;
+using Equipment;
 using Interfaces;
 using Managers;
 using ScriptableObjects;
@@ -22,20 +23,24 @@ namespace Character
         [Header("Base Stats")]
         public float baseMaxHealth;
         [FormerlySerializedAs("baseAttack")] public float baseStrength;
-        [FormerlySerializedAs("baseDefense")] public float baseDefence;
+        [FormerlySerializedAs("baseDefence")] [FormerlySerializedAs("baseDefense")] public float baseEndurance;
         public int baseMaxItemUses;
 
         [Header("Bonus Stats")]
         public float bonusMaxHealth;
         [FormerlySerializedAs("bonusAttack")] public float bonusStrength;
-        [FormerlySerializedAs("bonusDefense")] public float bonusDefence;
+        [FormerlySerializedAs("bonusDefence")] [FormerlySerializedAs("bonusDefense")] public float bonusEndurance;
         public int bonusMaxItemUses;
 
         [Header("Total Stats")]
         public float maxHealth;
         [FormerlySerializedAs("attackStat")] public float strengthStat;
-        [FormerlySerializedAs("defenseStat")] public float defenceStat;
+        [FormerlySerializedAs("defenceStat")] [FormerlySerializedAs("defenseStat")] public float enduranceStat;
         public int maxItemUses;
+
+        [Header("Equipment Stats")]
+        public float totalEquipmentAttack;
+        public float totalEquipmentDefence;
 
         [Header("Current Resources")]
         public float currentHealth;
@@ -47,6 +52,7 @@ namespace Character
 
         [Header("Equipment")]
         public WeaponContainer weaponContainer;
+        public CharacterInventory characterInventory;
 
         private void Start()
         {
@@ -84,7 +90,7 @@ namespace Character
         {
             baseMaxHealth = characterBase.maxHealth;
             baseStrength = characterBase.strength;
-            baseDefence = characterBase.defence;
+            baseEndurance = characterBase.endurance;
             baseMaxItemUses = characterBase.maxItemUses;
         }
 
@@ -96,15 +102,34 @@ namespace Character
                 currentHealth = maxHealth;
             }
             strengthStat = baseStrength + bonusStrength;
-            defenceStat = baseDefence + bonusDefence;
+            if (strengthStat < 0)
+            {
+                strengthStat = 0;
+            }
+            enduranceStat = baseEndurance + bonusEndurance;
+            if (enduranceStat < 0)
+            {
+                enduranceStat = 0;
+            }
             maxItemUses = baseMaxItemUses + bonusMaxItemUses;
+            if (maxItemUses < 0)
+            {
+                maxItemUses = 0;
+            }
             UpdateCharacterUI();
+        }
+
+        public void CalculateTotalEquipmentDefence()
+        {
+            totalEquipmentDefence = characterInventory.armSlot.defenceValue +
+                                    characterInventory.chestSlot.defenceValue +
+                                    characterInventory.headSlot.defenceValue + characterInventory.legSlot.defenceValue;
         }
 
         public void ClearBonusStats()
         {
             bonusStrength = 0;
-            bonusDefence = 0;
+            bonusEndurance = 0;
             bonusMaxHealth = 0;
             bonusMaxItemUses = 0;
         }
@@ -144,9 +169,9 @@ namespace Character
             UpdateCharacterUI();
         }
 
-        public void AdjustBonusDefence(int amount)
+        public void AdjustEndurance(int amount)
         {
-            bonusDefence += amount;
+            bonusEndurance += amount;
             UpdateTotalStats();
             UpdateCharacterUI();
         }

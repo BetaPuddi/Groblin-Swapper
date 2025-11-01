@@ -7,7 +7,7 @@ namespace Skills
     {
         public override void UseSkill()
         {
-            var healOut = user.defenceStat + opponentTarget.defenceStat;
+            var healOut = user.enduranceStat + opponentTarget.enduranceStat;
             var targetRoll = Random.Range(0, 2);
             switch (targetRoll)
             {

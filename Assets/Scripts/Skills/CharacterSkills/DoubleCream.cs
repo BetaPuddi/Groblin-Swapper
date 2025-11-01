@@ -13,7 +13,7 @@ namespace Skills
             }
             else
             {
-                damageOut = user.strengthStat * (100 - opponentTarget.defenceStat) / 100;
+                damageOut = user.strengthStat * (100 - opponentTarget.enduranceStat) / 100;
             }
             opponentTarget.TakeDamage(damageOut);
             LogManager.instance.InstantiateDamageLog(user.characterName, opponentTarget.characterName, damageOut);

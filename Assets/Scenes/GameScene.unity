@@ -13598,11 +13598,14 @@ MonoBehaviour:
   strengthStat: 0
   defenceStat: 0
   maxItemUses: 0
+  totalEquipmentAttack: 0
+  totalEquipmentDefence: 0
   currentHealth: 0
   currentItemUses: 0
   skills: {fileID: 11400000, guid: b534f9efb83311941a7fdcb9e8edde1e, type: 2}
   currentSkills: []
   weaponContainer: {fileID: 1151553578}
+  characterInventory: {fileID: 0}
 --- !u!114 &1151553578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14328,6 +14331,7 @@ GameObject:
   - component: {fileID: 1226389273}
   - component: {fileID: 1226389274}
   - component: {fileID: 1226389275}
+  - component: {fileID: 1226389276}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -14377,11 +14381,14 @@ MonoBehaviour:
   strengthStat: 0
   defenceStat: 0
   maxItemUses: 0
+  totalEquipmentAttack: 0
+  totalEquipmentDefence: 0
   currentHealth: 0
   currentItemUses: 0
   skills: {fileID: 11400000, guid: 53824ec20720b3440b626942da3f7af5, type: 2}
   currentSkills: []
   weaponContainer: {fileID: 1226389275}
+  characterInventory: {fileID: 1226389276}
 --- !u!114 &1226389275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14398,6 +14405,23 @@ MonoBehaviour:
   currentWeaponName: 
   currentWeaponAttackStat: 0
   currentWeaponAttackSkill: {fileID: 0}
+--- !u!114 &1226389276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226389272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321cfeec65ac4d17aab72bd4d9f6dbfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryData: {fileID: 11400000, guid: d048d3601c8960748a09fc581543a08f, type: 2}
+  headSlot: {fileID: 0}
+  chestSlot: {fileID: 0}
+  legSlot: {fileID: 0}
+  armSlot: {fileID: 0}
 --- !u!4 &1232963287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3416641853539741057, guid: fa75845ba6d7f1145b61c93ad3470c4d, type: 3}
@@ -16864,6 +16888,7 @@ MonoBehaviour:
   playerCharacter: {fileID: 0}
   currentItem: {fileID: 1834600985}
   weaponContainer: {fileID: 0}
+  playerInventory: {fileID: 1226389276}
 --- !u!1 &1489376146
 GameObject:
   m_ObjectHideFlags: 0

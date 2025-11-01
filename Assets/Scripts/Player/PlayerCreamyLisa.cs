@@ -22,7 +22,7 @@ namespace Player
             }
             else
             {
-                damageOut = strengthStat * (100 - EnemyManager.instance.targetEnemy.defenceStat) / 100;
+                damageOut = strengthStat * (100 - EnemyManager.instance.targetEnemy.enduranceStat) / 100;
             }
             LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);

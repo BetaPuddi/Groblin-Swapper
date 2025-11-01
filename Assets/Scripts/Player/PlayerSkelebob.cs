@@ -7,7 +7,7 @@ namespace Player
     {
         public virtual void Attack()
         {
-            var damageOut = 2 + Mathf.Clamp(strengthStat * (100 - EnemyManager.instance.targetEnemy.defenceStat) / 100, 0, Mathf.Infinity);
+            var damageOut = 2 + Mathf.Clamp(strengthStat * (100 - EnemyManager.instance.targetEnemy.enduranceStat) / 100, 0, Mathf.Infinity);
             LogManager.instance.InstantiateDamageLog(characterName, EnemyManager.instance.targetEnemy.characterName, damageOut);
             EnemyManager.instance.targetEnemy.TakeDamage(damageOut);
         }

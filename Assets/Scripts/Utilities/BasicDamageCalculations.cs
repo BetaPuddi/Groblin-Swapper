@@ -9,7 +9,7 @@ namespace Utilities
         {
             if (!isPiercing)
             {
-                var damageOut = Mathf.Clamp(baseDamage * (100f - target.defenceStat) / 100, 0, Mathf.Infinity);
+                var damageOut = Mathf.Clamp(baseDamage * (100f - target.enduranceStat) / 100, 0, Mathf.Infinity);
                 return damageOut;
             }
             else
@@ -23,7 +23,7 @@ namespace Utilities
         {
             if (!isPiercing)
             {
-                var damageOut = baseDamage + Mathf.Clamp(damageStat * (100f - target.defenceStat) / 100, 0, Mathf.Infinity);
+                var damageOut = baseDamage + Mathf.Clamp(damageStat * (100f - target.enduranceStat) / 100, 0, Mathf.Infinity);
                 return damageOut;
             }
             else
@@ -37,7 +37,7 @@ namespace Utilities
         {
             if (!isPiercing)
             {
-                var damageOut = healthValue * Mathf.Clamp((100 - target.defenceStat) / 100 * modifier, 0, Mathf.Infinity);
+                var damageOut = healthValue * Mathf.Clamp((100 - target.enduranceStat) / 100 * modifier, 0, Mathf.Infinity);
                 return damageOut;
             }
             else
