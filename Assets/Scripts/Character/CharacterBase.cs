@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Enums;
+using Equipment;
 using Interfaces;
 using Managers;
 using ScriptableObjects;
@@ -37,6 +38,10 @@ namespace Character
         [FormerlySerializedAs("defenseStat")] public float defenceStat;
         public int maxItemUses;
 
+        [Header("Equipment Stats")]
+        public float totalEquipmentAttack;
+        public float totalEquipmentDefence;
+
         [Header("Current Resources")]
         public float currentHealth;
         [FormerlySerializedAs("itemUses")] public int currentItemUses;
@@ -47,6 +52,7 @@ namespace Character
 
         [Header("Equipment")]
         public WeaponContainer weaponContainer;
+        public CharacterInventory characterInventory;
 
         private void Start()
         {
@@ -99,6 +105,13 @@ namespace Character
             defenceStat = baseDefence + bonusDefence;
             maxItemUses = baseMaxItemUses + bonusMaxItemUses;
             UpdateCharacterUI();
+        }
+
+        public void CalculateTotalEquipmentDefence()
+        {
+            totalEquipmentDefence = characterInventory.armSlot.defenceValue +
+                                    characterInventory.chestSlot.defenceValue +
+                                    characterInventory.headSlot.defenceValue + characterInventory.legSlot.defenceValue;
         }
 
         public void ClearBonusStats()

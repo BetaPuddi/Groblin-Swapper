@@ -80,6 +80,7 @@ namespace Managers
             if (GameManager.instance._gameState == EGameStates.NPC)
             {
                 playerInventory.SetInventoryData(inventoryData);
+                playerCharacter.CalculateTotalEquipmentDefence();
             }
         }
 

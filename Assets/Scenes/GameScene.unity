@@ -13598,11 +13598,14 @@ MonoBehaviour:
   strengthStat: 0
   defenceStat: 0
   maxItemUses: 0
+  totalEquipmentAttack: 0
+  totalEquipmentDefence: 0
   currentHealth: 0
   currentItemUses: 0
   skills: {fileID: 11400000, guid: b534f9efb83311941a7fdcb9e8edde1e, type: 2}
   currentSkills: []
   weaponContainer: {fileID: 1151553578}
+  characterInventory: {fileID: 0}
 --- !u!114 &1151553578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14378,11 +14381,14 @@ MonoBehaviour:
   strengthStat: 0
   defenceStat: 0
   maxItemUses: 0
+  totalEquipmentAttack: 0
+  totalEquipmentDefence: 0
   currentHealth: 0
   currentItemUses: 0
   skills: {fileID: 11400000, guid: 53824ec20720b3440b626942da3f7af5, type: 2}
   currentSkills: []
   weaponContainer: {fileID: 1226389275}
+  characterInventory: {fileID: 1226389276}
 --- !u!114 &1226389275
 MonoBehaviour:
   m_ObjectHideFlags: 0

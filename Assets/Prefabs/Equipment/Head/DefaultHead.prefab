@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentName: 
   equipmentType: 0
-  defenceValue: 0
+  defenceValue: 3
