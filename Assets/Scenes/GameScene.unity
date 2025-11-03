@@ -5247,6 +5247,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1226389277}
+        m_TargetAssemblyTypeName: Passives.PassiveHandler, Assembly-CSharp
+        m_MethodName: TriggerPassives
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1468652581}
         m_TargetAssemblyTypeName: Managers.PlayerManager, Assembly-CSharp
         m_MethodName: PlayerWeaponAttack
@@ -11821,7 +11833,7 @@ MonoBehaviour:
   playerNameText: {fileID: 1520055071}
   playerHealthText: {fileID: 342758860}
   playerSTRText: {fileID: 2128615724}
-  playerDEFText: {fileID: 1256418060}
+  playerENDText: {fileID: 1256418060}
   playerItemText: {fileID: 584139029}
 --- !u!1 &1005544483
 GameObject:
@@ -12962,7 +12974,7 @@ MonoBehaviour:
   enemyNameText: {fileID: 799937249}
   enemyHealthText: {fileID: 1972391260}
   enemySTRText: {fileID: 1949197591}
-  enemyDEFText: {fileID: 1723394969}
+  enemyENDText: {fileID: 1723394969}
   icon: {fileID: 1979657594}
 --- !u!1 &1078256796
 GameObject:
@@ -13588,15 +13600,15 @@ MonoBehaviour:
   characterName: Beep
   baseMaxHealth: 0
   baseStrength: 0
-  baseDefence: 0
+  baseEndurance: 0
   baseMaxItemUses: 0
   bonusMaxHealth: 0
   bonusStrength: 0
-  bonusDefence: 0
+  bonusEndurance: 0
   bonusMaxItemUses: 0
   maxHealth: 0
   strengthStat: 0
-  defenceStat: 0
+  enduranceStat: 0
   maxItemUses: 0
   totalEquipmentAttack: 0
   totalEquipmentDefence: 0
@@ -14332,6 +14344,7 @@ GameObject:
   - component: {fileID: 1226389274}
   - component: {fileID: 1226389275}
   - component: {fileID: 1226389276}
+  - component: {fileID: 1226389277}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -14371,15 +14384,15 @@ MonoBehaviour:
   characterName: 
   baseMaxHealth: 0
   baseStrength: 0
-  baseDefence: 0
+  baseEndurance: 0
   baseMaxItemUses: 0
   bonusMaxHealth: 0
   bonusStrength: 0
-  bonusDefence: 0
+  bonusEndurance: 0
   bonusMaxItemUses: 0
   maxHealth: 0
   strengthStat: 0
-  defenceStat: 0
+  enduranceStat: 0
   maxItemUses: 0
   totalEquipmentAttack: 0
   totalEquipmentDefence: 0
@@ -14422,6 +14435,20 @@ MonoBehaviour:
   chestSlot: {fileID: 0}
   legSlot: {fileID: 0}
   armSlot: {fileID: 0}
+--- !u!114 &1226389277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226389272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46f353e94ad48f098a05d51c9936039, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listOfCharacterPassives:
+  - {fileID: -4055508958940681528, guid: 06459dda154c9674b9422275c4f01508, type: 3}
 --- !u!4 &1232963287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3416641853539741057, guid: fa75845ba6d7f1145b61c93ad3470c4d, type: 3}

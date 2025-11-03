@@ -1,4 +1,5 @@
 using Enums;
+using Passives;
 using UnityEngine;
 
 namespace Equipment
@@ -8,7 +9,7 @@ namespace Equipment
         public string equipmentName;
         public EEquipmentTypes equipmentType;
         public float defenceValue;
-        //public PassiveEffect[] passiveEffects;
+        public PassiveBase[] passiveEffects;
 
 
     }
