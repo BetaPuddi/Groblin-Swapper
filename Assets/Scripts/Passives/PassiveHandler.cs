@@ -37,35 +37,38 @@ namespace Passives
                 inv = GetComponent<CharacterBase>().characterInventory;
             }
 
-            if (inv.headSlot != null)
+            if (inv != null)
             {
-                foreach (var passive in inv.headSlot.passiveEffects.Where(passive => passive.isTriggeredEffect && passive.executionOrder == executionOrder))
+                if (inv.headSlot != null)
                 {
-                    passive.TriggerEffect();
+                    foreach (var passive in inv.headSlot.passiveEffects.Where(passive => passive.isTriggeredEffect && passive.executionOrder == executionOrder))
+                    {
+                        passive.TriggerEffect();
+                    }
                 }
-            }
 
-            if (inv.chestSlot != null)
-            {
-                foreach (var passive in inv.chestSlot.passiveEffects.Where(passive => passive.isTriggeredEffect && passive.executionOrder == executionOrder))
+                if (inv.chestSlot != null)
                 {
-                    passive.TriggerEffect();
+                    foreach (var passive in inv.chestSlot.passiveEffects.Where(passive => passive.isTriggeredEffect && passive.executionOrder == executionOrder))
+                    {
+                        passive.TriggerEffect();
+                    }
                 }
-            }
 
-            if (inv.legSlot != null)
-            {
-                foreach (var passive in inv.legSlot.passiveEffects.Where(passive => passive.isTriggeredEffect && passive.executionOrder == executionOrder))
+                if (inv.legSlot != null)
                 {
-                    passive.TriggerEffect();
+                    foreach (var passive in inv.legSlot.passiveEffects.Where(passive => passive.isTriggeredEffect && passive.executionOrder == executionOrder))
+                    {
+                        passive.TriggerEffect();
+                    }
                 }
-            }
 
-            if (inv.armSlot != null)
-            {
-                foreach (var passive in inv.armSlot.passiveEffects.Where(passive => passive.isTriggeredEffect && passive.executionOrder == executionOrder))
+                if (inv.armSlot != null)
                 {
-                    passive.TriggerEffect();
+                    foreach (var passive in inv.armSlot.passiveEffects.Where(passive => passive.isTriggeredEffect && passive.executionOrder == executionOrder))
+                    {
+                        passive.TriggerEffect();
+                    }
                 }
             }
         }
