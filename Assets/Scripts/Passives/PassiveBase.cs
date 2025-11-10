@@ -1,3 +1,4 @@
+using Character;
 using Enums;
 using Managers;
 using UnityEngine;
@@ -11,10 +12,14 @@ namespace Passives
         public EPassiveTypes passiveType;
         public EExecutionOrder executionOrder;
 
-        public virtual void TriggerEffect()
+        public virtual void TriggerEffect(CharacterBase user, CharacterBase opponent)
         {
-            PlayerManager.instance.playerCharacter.TakeDamage(100);
-            LogManager.instance.InstantiateTextLog("Passive effect worked?");
+            LogManager.instance.InstantiateTextLog("Passive effect worked");
+        }
+
+        public virtual void ApplyConstantEffect()
+        {
+            LogManager.instance.InstantiateTextLog("Constant effect applied");
         }
     }
 }

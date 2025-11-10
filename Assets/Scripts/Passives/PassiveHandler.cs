@@ -11,6 +11,17 @@ namespace Passives
     public class PassiveHandler : MonoBehaviour
     {
         public List<PassiveBase> listOfCharacterPassives;
+        public CharacterBase user;
+        public CharacterBase opponent;
+
+        public void AddCharacterPassive(PassiveBase addedPassive)
+        {
+            listOfCharacterPassives.Add(addedPassive);
+            if (!addedPassive.isTriggeredEffect)
+            {
+                addedPassive.ApplyConstantEffect();
+            }
+        }
 
         public void TriggerPassives(int executionInt)
         {
@@ -22,12 +33,13 @@ namespace Passives
                 3 => EExecutionOrder.EnemyBeforeTurn,
                 4 => EExecutionOrder.EnemyBeforeAction,
                 5 => EExecutionOrder.EnemyAfterAction,
+                6 => EExecutionOrder.OnEquip,
                 _ => EExecutionOrder.PlayerBeforeTurn
             };
 
             foreach (var passive in listOfCharacterPassives.Where(passive => passive.isTriggeredEffect && passive.executionOrder == executionOrder))
             {
-                passive.TriggerEffect();
+                passive.TriggerEffect(user, opponent);
             }
 
             CharacterInventory inv = null;
@@ -43,7 +55,7 @@ namespace Passives
                 {
                     foreach (var passive in inv.headSlot.passiveEffects.Where(passive => passive.isTriggeredEffect && passive.executionOrder == executionOrder))
                     {
-                        passive.TriggerEffect();
+                        passive.TriggerEffect(user, opponent);
                     }
                 }
 
@@ -51,7 +63,7 @@ namespace Passives
                 {
                     foreach (var passive in inv.chestSlot.passiveEffects.Where(passive => passive.isTriggeredEffect && passive.executionOrder == executionOrder))
                     {
-                        passive.TriggerEffect();
+                        passive.TriggerEffect(user, opponent);
                     }
                 }
 
@@ -59,7 +71,7 @@ namespace Passives
                 {
                     foreach (var passive in inv.legSlot.passiveEffects.Where(passive => passive.isTriggeredEffect && passive.executionOrder == executionOrder))
                     {
-                        passive.TriggerEffect();
+                        passive.TriggerEffect(user, opponent);
                     }
                 }
 
@@ -67,7 +79,7 @@ namespace Passives
                 {
                     foreach (var passive in inv.armSlot.passiveEffects.Where(passive => passive.isTriggeredEffect && passive.executionOrder == executionOrder))
                     {
-                        passive.TriggerEffect();
+                        passive.TriggerEffect(user, opponent);
                     }
                 }
             }

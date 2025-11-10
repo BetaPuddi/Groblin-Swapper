@@ -7,6 +7,7 @@ namespace Enums
         PlayerAfterAction,
         EnemyBeforeTurn,
         EnemyBeforeAction,
-        EnemyAfterAction
+        EnemyAfterAction,
+        OnEquip
     }
 }

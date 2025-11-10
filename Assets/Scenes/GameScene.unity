@@ -5254,7 +5254,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5267,6 +5267,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1226389277}
+        m_TargetAssemblyTypeName: Passives.PassiveHandler, Assembly-CSharp
+        m_MethodName: TriggerPassives
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -14449,6 +14461,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listOfCharacterPassives:
   - {fileID: -4055508958940681528, guid: 06459dda154c9674b9422275c4f01508, type: 3}
+  - {fileID: 7410415734629651976, guid: fc5c14c0518127c4a9674b5e1d9bfc51, type: 3}
+  user: {fileID: 0}
+  opponent: {fileID: 0}
 --- !u!4 &1232963287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3416641853539741057, guid: fa75845ba6d7f1145b61c93ad3470c4d, type: 3}

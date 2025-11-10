@@ -47,4 +47,4 @@ MonoBehaviour:
   passiveName: TEST
   isTriggeredEffect: 1
   passiveType: 1
-  executionOrder: 0
+  executionOrder: 1
