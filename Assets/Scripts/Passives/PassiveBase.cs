@@ -21,5 +21,10 @@ namespace Passives
         {
             LogManager.instance.InstantiateTextLog("Constant effect applied");
         }
+
+        public virtual void RemoveConstantEffect()
+        {
+            LogManager.instance.InstantiateTextLog("Constant effect removed");
+        }
     }
 }

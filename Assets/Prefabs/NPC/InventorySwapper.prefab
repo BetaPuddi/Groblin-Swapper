@@ -50,4 +50,5 @@ MonoBehaviour:
   icon: {fileID: 7482667652216324306, guid: d121908d1e929fe41953b378b144a91a, type: 3}
   inventorySwapTargets:
   - {fileID: 11400000, guid: d048d3601c8960748a09fc581543a08f, type: 2}
+  - {fileID: 11400000, guid: 62bd76c727d18ac46a8e11fab0299e34, type: 2}
   inventoryToSwap: {fileID: 11400000, guid: d048d3601c8960748a09fc581543a08f, type: 2}

@@ -70,8 +70,7 @@ namespace Managers
         {
             if (GameManager.instance._gameState == EGameStates.NPC)
             {
-                weaponContainer.currentWeapon = newWeapon;
-                weaponContainer.UpdateWeaponContainer();
+                weaponContainer.AssignNewWeapon(newWeapon);
             }
         }
 
@@ -177,6 +176,7 @@ namespace Managers
             weaponContainer = playerCharacter.GetComponent<WeaponContainer>();
             weaponContainer.AssignCurrentAttackSkill();
             playerCharacter.currentSkills = new List<Skill>(playerCharacter.skills.skillList);
+            playerInventory.SetInventoryData(playerInventory.inventoryData);
         }
     }
 }

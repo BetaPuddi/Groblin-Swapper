@@ -13,6 +13,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4055508958940681528, guid: 06459dda154c9674b9422275c4f01508, type: 3}
+      propertyPath: executionOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -4055508958940681528, guid: 06459dda154c9674b9422275c4f01508, type: 3}
       propertyPath: isTriggeredEffect
       value: 0
       objectReference: {fileID: 0}
