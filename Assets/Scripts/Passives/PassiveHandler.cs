@@ -19,7 +19,7 @@ namespace Passives
             listOfCharacterPassives.Add(addedPassive);
             if (!addedPassive.isTriggeredEffect)
             {
-                addedPassive.ApplyConstantEffect();
+                addedPassive.ApplyConstantEffect(user);
             }
         }
 

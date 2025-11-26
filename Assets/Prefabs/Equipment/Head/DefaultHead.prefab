@@ -48,4 +48,4 @@ MonoBehaviour:
   equipmentType: 0
   defenceValue: 3
   passiveEffects:
-  - {fileID: 2570033367977216417, guid: 71577986b8d533949a8751742fe95e06, type: 3}
+  - {fileID: -5077362573058833537, guid: 3527fea53b565f945b3a117bec67d046, type: 3}

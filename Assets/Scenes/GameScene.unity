@@ -14447,6 +14447,7 @@ MonoBehaviour:
   chestSlot: {fileID: 0}
   legSlot: {fileID: 0}
   armSlot: {fileID: 0}
+  user: {fileID: 1226389274}
 --- !u!114 &1226389277
 MonoBehaviour:
   m_ObjectHideFlags: 0

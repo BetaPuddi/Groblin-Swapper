@@ -169,21 +169,21 @@ namespace Character
             UpdateCharacterUI();
         }
 
-        public void AdjustEndurance(int amount)
+        public void AdjustEndurance(float amount)
         {
             bonusEndurance += amount;
             UpdateTotalStats();
             UpdateCharacterUI();
         }
 
-        public void AdjustBonusStrength(int amount)
+        public void AdjustBonusStrength(float amount)
         {
             bonusStrength += amount;
             UpdateTotalStats();
             UpdateCharacterUI();
         }
 
-        public void AdjustBonusMaxHealth(int amount)
+        public void AdjustBonusMaxHealth(float amount)
         {
             bonusMaxHealth += amount;
             UpdateTotalStats();

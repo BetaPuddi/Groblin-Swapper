@@ -17,12 +17,12 @@ namespace Passives
             LogManager.instance.InstantiateTextLog("Passive effect worked");
         }
 
-        public virtual void ApplyConstantEffect()
+        public virtual void ApplyConstantEffect(CharacterBase user)
         {
             LogManager.instance.InstantiateTextLog("Constant effect applied");
         }
 
-        public virtual void RemoveConstantEffect()
+        public virtual void RemoveConstantEffect(CharacterBase user)
         {
             LogManager.instance.InstantiateTextLog("Constant effect removed");
         }

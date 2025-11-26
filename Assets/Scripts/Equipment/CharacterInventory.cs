@@ -1,4 +1,5 @@
 using System.Linq;
+using Character;
 using Passives;
 using ScriptableObjects;
 using UnityEngine;
@@ -13,6 +14,8 @@ namespace Equipment
         public EquipmentChest chestSlot;
         public EquipmentLegs legSlot;
         public EquipmentArms armSlot;
+
+        public CharacterBase user;
 
         public void SetInventoryData(InventoryData dataToSet)
         {
@@ -49,7 +52,7 @@ namespace Equipment
             {
                 foreach (var passive in armSlot.passiveEffects.Where(passive => !passive.isTriggeredEffect))
                 {
-                    passive.RemoveConstantEffect();
+                    passive.RemoveConstantEffect(user);
                 }
             }
 
@@ -57,7 +60,7 @@ namespace Equipment
 
             foreach (var passive in armSlot.passiveEffects.Where(passive => !passive.isTriggeredEffect))
             {
-                passive.ApplyConstantEffect();
+                passive.ApplyConstantEffect(user);
             }
         }
 
@@ -67,7 +70,7 @@ namespace Equipment
             {
                 foreach (var passive in legSlot.passiveEffects.Where(passive => !passive.isTriggeredEffect))
                 {
-                    passive.RemoveConstantEffect();
+                    passive.RemoveConstantEffect(user);
                 }
             }
 
@@ -75,7 +78,7 @@ namespace Equipment
 
             foreach (var passive in legSlot.passiveEffects.Where(passive => !passive.isTriggeredEffect))
             {
-                passive.ApplyConstantEffect();
+                passive.ApplyConstantEffect(user);
             }
         }
 
@@ -85,7 +88,7 @@ namespace Equipment
             {
                 foreach (var equipmentPassive in headSlot.passiveEffects.Where(passive => !passive.isTriggeredEffect))
                 {
-                    equipmentPassive.RemoveConstantEffect();
+                    equipmentPassive.RemoveConstantEffect(user);
                 }
             }
 
@@ -93,7 +96,7 @@ namespace Equipment
 
             foreach (var passive in headSlot.passiveEffects.Where(passive => !passive.isTriggeredEffect))
             {
-                passive.ApplyConstantEffect();
+                passive.ApplyConstantEffect(user);
             }
         }
 
@@ -103,7 +106,7 @@ namespace Equipment
             {
                 foreach (var passive in chestSlot.passiveEffects.Where(passive => !passive.isTriggeredEffect))
                 {
-                    passive.RemoveConstantEffect();
+                    passive.RemoveConstantEffect(user);
                 }
             }
 
@@ -111,7 +114,7 @@ namespace Equipment
 
             foreach (var passive in chestSlot.passiveEffects.Where(passive => !passive.isTriggeredEffect))
             {
-                passive.ApplyConstantEffect();
+                passive.ApplyConstantEffect(user);
             }
         }
     }
