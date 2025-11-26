@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: NPCTEST
   m_EditorClassIdentifier: 
   encounterName: 
-  encounterType: 0
-  NPCArray: []
+  encounterType: 1
+  NPCArray:
+  - {fileID: -4735754922332512056, guid: 9bf06ac9215d34240ab8f06b604b15cf, type: 3}
   selectedNPC: {fileID: 0}

@@ -10,7 +10,7 @@ namespace NPCs
     {
         public override void Swap()
         {
-            var weaponToSwap = thingToSwap.GetComponent<WeaponContainer>().currentWeapon;
+            var weaponToSwap = thingToSwap.GetComponent<WeaponBase>();
             PlayerManager.instance.SwapWeapon(weaponToSwap);
             var text = "You accept the swap.";
             LogManager.instance.InstantiateTextLog(text);

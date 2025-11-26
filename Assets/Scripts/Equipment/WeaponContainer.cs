@@ -19,6 +19,12 @@ namespace Weapons
             UpdateWeaponContainer();
         }
 
+        public void AssignNewWeapon(WeaponBase newWeapon)
+        {
+            currentWeapon = newWeapon;
+            UpdateWeaponContainer();
+        }
+
         public void UpdateWeaponContainer()
         {
             AssignCurrentAttackSkill();
