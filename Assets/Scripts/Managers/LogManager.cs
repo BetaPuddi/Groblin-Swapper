@@ -40,7 +40,7 @@ namespace Managers
         {
             var newLogPrefab = Instantiate(logPrefab, logPanel.transform);
             var newLogEntry = newLogPrefab.GetComponent<LogEntry>();
-            var text = $"{user} heals {target} for {Mathf.RoundToInt(Mathf.Clamp(heal, 0, Mathf.Infinity))}!";
+            var text = $"{user} heals for {Mathf.RoundToInt(Mathf.Clamp(heal, 0, Mathf.Infinity))}!";
             newLogEntry.SetLogText(text);
             newLogEntry.logBackground.color = Color.green;
             newLogEntry.logBackground.color = new Color(newLogEntry.logBackground.color.r, newLogEntry.logBackground.color.g,  newLogEntry.logBackground.color.b, 0.1215686f);

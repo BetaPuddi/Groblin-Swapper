@@ -10,14 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d2b59d777d040808346463b5d88f3f9, type: 3}
-  m_Name: E_L01_SingleNPC_01
+  m_Name: NPCTEST
   m_EditorClassIdentifier: 
-  encounterName: NPC
+  encounterName: 
   encounterType: 1
   NPCArray:
-  - {fileID: 5963177621633304008, guid: 4b5f6712e25d48341acd9a8868ec1347, type: 3}
-  - {fileID: 8839150554503980662, guid: 9d189f2c586679e4dabfba5de0688cbb, type: 3}
-  - {fileID: 3032243408315378613, guid: fa75845ba6d7f1145b61c93ad3470c4d, type: 3}
-  - {fileID: -6523426578426556040, guid: 09452007f0a16c445983d1d99f74649a, type: 3}
   - {fileID: -4735754922332512056, guid: 9bf06ac9215d34240ab8f06b604b15cf, type: 3}
-  selectedNPC: {fileID: -6523426578426556040, guid: 09452007f0a16c445983d1d99f74649a, type: 3}
+  selectedNPC: {fileID: 0}

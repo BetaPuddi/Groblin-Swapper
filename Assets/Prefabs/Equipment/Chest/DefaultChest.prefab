@@ -47,3 +47,4 @@ MonoBehaviour:
   equipmentName: 
   equipmentType: 1
   defenceValue: 5
+  passiveEffects: []
