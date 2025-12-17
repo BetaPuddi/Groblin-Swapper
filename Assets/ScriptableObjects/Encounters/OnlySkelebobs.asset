@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef568f402ea34026a7bec1171a8b0021, type: 3}
-  m_Name: TEST_SKILLS
+  m_Script: {fileID: 11500000, guid: e8f91e9c4aaf435dbbcce0833d6a09a7, type: 3}
+  m_Name: OnlySkelebobs
   m_EditorClassIdentifier: 
-  skillList:
-  - {fileID: 2455731764645345369, guid: ffa0c5ae8abf107439b10c76fa4e1cca, type: 3}
-  - {fileID: 8313954560037514476, guid: ff7115eb18b31844da55f805f959aea3, type: 3}
+  encounterName: 
+  encounterType: 0
+  enemyData:
+  - {fileID: 5378819199000387797, guid: 33f2c93e40e6fd543b3e59befcd28bf5, type: 3}

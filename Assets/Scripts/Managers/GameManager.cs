@@ -1,6 +1,7 @@
 using System;
 using Encounters;
 using Enums;
+using TemporaryEffects;
 using UnityEngine;
 
 namespace Managers
@@ -63,6 +64,21 @@ namespace Managers
             if (_gameState == EGameStates.Combat)
             {
                 EnemyManager.instance.targetEnemy.EnemyTakeTurn();
+            }
+            TurnCleanup();
+        }
+
+        private void TurnCleanup()
+        {
+            if (_gameState == EGameStates.Combat)
+            {
+                PlayerManager.instance.playerCharacter.GetComponent<TemporaryEffectHandler>().DecrementTurnsRemaining();
+                EnemyManager.instance.targetEnemy.GetComponent<TemporaryEffectHandler>().DecrementTurnsRemaining();
+            }
+            else
+            {
+                PlayerManager.instance.playerCharacter.GetComponent<TemporaryEffectHandler>().ClearAllTemporaryEffects();
+                EnemyManager.instance.targetEnemy.GetComponent<TemporaryEffectHandler>().ClearAllTemporaryEffects();
             }
         }
     }

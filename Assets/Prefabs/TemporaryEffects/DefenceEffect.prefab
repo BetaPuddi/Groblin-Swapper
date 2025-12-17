@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6204320366556650038
+--- !u!1 &6547020830108697564
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 594710197829489942}
-  - component: {fileID: 2455731764645345369}
+  - component: {fileID: 3437870571073093494}
+  - component: {fileID: -737255500013227740}
   m_Layer: 0
-  m_Name: BoneToss
+  m_Name: DefenceEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &594710197829489942
+--- !u!4 &3437870571073093494
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6204320366556650038}
+  m_GameObject: {fileID: 6547020830108697564}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2455731764645345369
+--- !u!114 &-737255500013227740
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6204320366556650038}
+  m_GameObject: {fileID: 6547020830108697564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8ab6746602b4e0d9fbadc355c6330ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 60aa161036764f999e98904f68234afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: Bone Toss
-  user: {fileID: 0}
-  opponentTarget: {fileID: 0}
-  buff: {fileID: -737255500013227740, guid: 9ba3451591556ca44b451c3a343bfbf6, type: 3}
+  tempEffectName: Defence Effect
+  turnsRemaining: 0
+  isStackable: 0
+  isRefreshable: 0
+  character: {fileID: 0}
+  value: 4
