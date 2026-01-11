@@ -16960,7 +16960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236f11eaf395467da92b9d283acb1abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCharacter: {fileID: 0}
+  playerCharacter: {fileID: 1226389274}
   currentItem: {fileID: 1834600985}
   weaponContainer: {fileID: 0}
   playerInventory: {fileID: 1226389276}

@@ -7,6 +7,11 @@ namespace TemporaryEffects
     {
         public float value;
 
+        public TemporaryEnduranceEffect(string effectName, float turns, bool stackable, bool refreshable, float value) : base(effectName, turns, stackable, refreshable)
+        {
+            this.value = value;
+        }
+
         public void AdjustValue(float newValue)
         {
             value = newValue;

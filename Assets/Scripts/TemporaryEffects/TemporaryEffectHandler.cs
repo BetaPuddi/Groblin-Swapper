@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Character;
 using UnityEngine;
 
@@ -13,8 +15,17 @@ namespace TemporaryEffects
 
         public void AddTemporaryEffect(TemporaryEffect effectToAdd)
         {
-            temporaryEffects.Add(effectToAdd);
-            temporaryEffects[temporaryEffects.Count - 1].ApplyTemporaryEffect(user, opponent);
+            if (effectToAdd.isRefreshable && temporaryEffects.Any(i => i.tempEffectName == effectToAdd.tempEffectName))
+            {
+                var effectIndex = temporaryEffects.FindIndex(i => i.tempEffectName == effectToAdd.tempEffectName);
+                temporaryEffects[effectIndex].turnsRemaining = effectToAdd.turnsRemaining;
+            }
+            else
+            {
+                temporaryEffects.Add(effectToAdd);
+                temporaryEffects[temporaryEffects.Count - 1].ApplyTemporaryEffect(user, opponent);
+            }
+
             print(temporaryEffects[temporaryEffects.Count - 1].turnsRemaining.ToString());
         }
 
