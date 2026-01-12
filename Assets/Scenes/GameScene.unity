@@ -13573,6 +13573,7 @@ GameObject:
   - component: {fileID: 1151553576}
   - component: {fileID: 1151553577}
   - component: {fileID: 1151553578}
+  - component: {fileID: 1151553579}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -13646,6 +13647,21 @@ MonoBehaviour:
   currentWeaponName: 
   currentWeaponAttackStat: 0
   currentWeaponAttackSkill: {fileID: 0}
+--- !u!114 &1151553579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151553575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b817e36e3d4443a1953135e60218ffc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  user: {fileID: 1151553577}
+  opponent: {fileID: 1226389274}
+  temporaryEffects: []
 --- !u!1 &1154991787
 GameObject:
   m_ObjectHideFlags: 0
@@ -14357,6 +14373,7 @@ GameObject:
   - component: {fileID: 1226389275}
   - component: {fileID: 1226389276}
   - component: {fileID: 1226389277}
+  - component: {fileID: 1226389278}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -14410,7 +14427,7 @@ MonoBehaviour:
   totalEquipmentDefence: 0
   currentHealth: 0
   currentItemUses: 0
-  skills: {fileID: 11400000, guid: 53824ec20720b3440b626942da3f7af5, type: 2}
+  skills: {fileID: 11400000, guid: b534f9efb83311941a7fdcb9e8edde1e, type: 2}
   currentSkills: []
   weaponContainer: {fileID: 1226389275}
   characterInventory: {fileID: 1226389276}
@@ -14463,8 +14480,23 @@ MonoBehaviour:
   listOfCharacterPassives:
   - {fileID: -4055508958940681528, guid: 06459dda154c9674b9422275c4f01508, type: 3}
   - {fileID: 7410415734629651976, guid: fc5c14c0518127c4a9674b5e1d9bfc51, type: 3}
-  user: {fileID: 0}
-  opponent: {fileID: 0}
+  user: {fileID: 1226389274}
+  opponent: {fileID: 1151553577}
+--- !u!114 &1226389278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226389272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b817e36e3d4443a1953135e60218ffc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  user: {fileID: 1226389274}
+  opponent: {fileID: 1151553577}
+  temporaryEffects: []
 --- !u!4 &1232963287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3416641853539741057, guid: fa75845ba6d7f1145b61c93ad3470c4d, type: 3}
@@ -16928,7 +16960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236f11eaf395467da92b9d283acb1abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCharacter: {fileID: 0}
+  playerCharacter: {fileID: 1226389274}
   currentItem: {fileID: 1834600985}
   weaponContainer: {fileID: 0}
   playerInventory: {fileID: 1226389276}
@@ -16962,9 +16994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listOfRooms:
-  - {fileID: 11400000, guid: 68ea26a9ee4bc0744ac5ae6e4b979631, type: 2}
-  - {fileID: 11400000, guid: 67b8db6bf6087ff4580876adb3ac5a59, type: 2}
-  - {fileID: 11400000, guid: 9460f748bcf38d9468be1e9ac2f3d888, type: 2}
+  - {fileID: 11400000, guid: 5ef59c1828725ff4c892958fb7e00119, type: 2}
   currentRoom: {fileID: 11400000, guid: 68ea26a9ee4bc0744ac5ae6e4b979631, type: 2}
   inChainEncounter: 0
   chainEncountersCleared: 0

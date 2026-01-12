@@ -47,3 +47,4 @@ MonoBehaviour:
   skillName: Bone Toss
   user: {fileID: 0}
   opponentTarget: {fileID: 0}
+  buff: {fileID: -737255500013227740, guid: 9ba3451591556ca44b451c3a343bfbf6, type: 3}

@@ -17,5 +17,10 @@ namespace Skills
             user = self;
             opponentTarget = opponent;
         }
+
+        public virtual void ApplyTemporaryEffect()
+        {
+            print("No effect to apply.");
+        }
     }
 }
