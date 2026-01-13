@@ -3,6 +3,7 @@ namespace Enums
     public enum EExecutionOrder
     {
         PlayerBeforeTurn,
+        PlayerWaitForTurn,
         PlayerBeforeAction,
         PlayerAfterAction,
         EnemyBeforeTurn,

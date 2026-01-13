@@ -28,12 +28,13 @@ namespace Passives
             var executionOrder = executionInt switch
             {
                 0 => EExecutionOrder.PlayerBeforeTurn,
-                1 => EExecutionOrder.PlayerBeforeAction,
-                2 => EExecutionOrder.PlayerAfterAction,
-                3 => EExecutionOrder.EnemyBeforeTurn,
-                4 => EExecutionOrder.EnemyBeforeAction,
-                5 => EExecutionOrder.EnemyAfterAction,
-                6 => EExecutionOrder.OnEquip,
+                1 => EExecutionOrder.PlayerWaitForTurn,
+                2 => EExecutionOrder.PlayerBeforeAction,
+                3 => EExecutionOrder.PlayerAfterAction,
+                4 => EExecutionOrder.EnemyBeforeTurn,
+                5 => EExecutionOrder.EnemyBeforeAction,
+                6 => EExecutionOrder.EnemyAfterAction,
+                7 => EExecutionOrder.OnEquip,
                 _ => EExecutionOrder.PlayerBeforeTurn
             };
 
